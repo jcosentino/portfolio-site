@@ -1,5 +1,4 @@
 # johnscosentino-dot-com
-Source code for my website: https://johnscosentino.com/
 
 ToDo:
 	1. Create React app
