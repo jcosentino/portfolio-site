@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Title from './title.js';
-import Construction from './construction.js';
-import Eff from './eff.js';
+import Title from './title';
+import Construction from './construction';
+import Eff from './eff';
 
 class App extends React.Component {
   render() {
