@@ -10,6 +10,10 @@ class Construction extends React.Component {
         			See my portfolio on:
         			<a href='https://github.com/jcosentino'> Github - github.com/jcosentino</a>
       			</h1>
+			
+			<h1>
+				LinkedIn Profile: <a href='https://www.linkedin.com/in/john-cosentino/'>LinkedIn - John Cosentino</a>
+			</h1>
     		</div>
 		);
 	}
