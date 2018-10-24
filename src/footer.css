@@ -1,0 +1,14 @@
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  line-height: 60px;
+  background-color: rgb(233, 236, 239);
+  text-align: justify;
+}
+
+.footer_img {
+	width: 100px;
+    height: 100px;
+}

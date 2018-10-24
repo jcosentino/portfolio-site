@@ -2,8 +2,7 @@ import React from 'react';
 import './App.css';
 import Title from './title';
 import Construction from './construction';
-import Eff from './eff';
-import Ingredients from './ingredients';
+import Footer from './footer';
 
 class App extends React.Component {
   render() {
@@ -11,8 +10,7 @@ class App extends React.Component {
       <div>
         <Title />
         <Construction />
-        <Eff />
-        <Ingredients />
+        <Footer />
       </div>
     );
   }
