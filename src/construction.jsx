@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './construction.css';
 
-class Construction extends React.Component {
+class Construction extends Component {
 	render(){
 		return (
 			<div class='container' id='main'>
