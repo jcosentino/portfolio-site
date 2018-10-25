@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Title from './title';
-import Construction from './construction';
+import Gallery from './gallery';
 import Footer from './footer';
 
 class App extends React.Component {
@@ -9,7 +9,7 @@ class App extends React.Component {
     return (
       <div>
         <Title />
-        <Construction />
+        <Gallery />
         <Footer />
       </div>
     );
