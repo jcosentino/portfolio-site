@@ -12,12 +12,6 @@ class Footer extends Component {
 							 alt='EFF'/>
 					</a>
 
-					<a href='http://getbootstrap.com/'>
-						<img class='footer_img'
-							 src='../images/bootstrap.png'
-							 alt='Bootstrap'/>
-					</a>
-
 					<a href='https://reactjs.org/'>
 						<img class='footer_img'
 							 src='../images/react.png'
@@ -34,18 +28,6 @@ class Footer extends Component {
 						<img class='footer_img'
 							 src='../images/github.png'
 							 alt='Github:jcosentino/'/>
-					</a>
-
-					<a href='https://www.python.org/'>
-						<img class='footer_img'
-							 src='../images/python.png'
-							 alt='Python'/>
-					</a>
-
-					<a href='https://www.mongodb.com/'>
-						<img class='footer_img'
-							 src='../images/mongo.png'
-							 alt='MongoDB'/>
 					</a>
 
 					<a href='https://www.csi.cuny.edu/'>
