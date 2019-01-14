@@ -6,7 +6,7 @@ class ResumeItems extends Component {
 		return (
 			<div className='resumeItems'>
 				<ul>
-					<li>Goodwill Industries</li>
+					<li>Goodwill Industries NY</li>
 					<li>Bloomberg LP</li>
 					<li>CUNY CSI - OTS</li>
 					<li>RFCUNY</li>
