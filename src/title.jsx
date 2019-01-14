@@ -5,6 +5,7 @@ class Title extends React.Component {
 		return (
 			<div class='jumbotron text-center'>
         		<h1>John Cosentino</h1>
+        		<h3>Software Engineer</h3>
         	</div>
 		);
 	}
