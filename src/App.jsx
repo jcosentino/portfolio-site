@@ -4,7 +4,7 @@ import Title from './title';
 import Home from './home';
 import Footer from './footer';
 import ErrorPage from './error-page';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   render() {
