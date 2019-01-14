@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Title from './title';
 import Gallery from './gallery';
+import ResumeItems from './resume-items';
 import Footer from './footer';
 
 class App extends React.Component {
@@ -9,7 +10,10 @@ class App extends React.Component {
     return (
       <div>
         <Title />
-        <Gallery />
+        <div id='central'>
+        	<Gallery />
+        	<ResumeItems />
+        </div>
         <Footer />
       </div>
     );

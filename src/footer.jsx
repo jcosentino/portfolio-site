@@ -12,16 +12,16 @@ class Footer extends Component {
 							 alt='EFF'/>
 					</a>
 
-					<a href='https://reactjs.org/'>
-						<img className='footer_img'
-							 src='../images/react.png'
-							 alt='ReactJS'/>
-					</a>
-
 					<a href='https://www.linkedin.com/in/john-cosentino/'>
 						<img className='footer_img'
 							 src='../images/linkedin.png'
 							 alt='LinkedIn'/>
+					</a>
+
+					<a href='https://reactjs.org/'>
+						<img className='footer_img'
+							 src='../images/react.png'
+							 alt='ReactJS'/>
 					</a>
 
 					<a href='https://github.com/jcosentino'>
