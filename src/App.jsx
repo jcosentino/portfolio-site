@@ -1,21 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Title from './title';
-import Gallery from './gallery';
-import ResumeItems from './resume-items';
+import Home from './home';
 import Footer from './footer';
+import ErrorPage from './error-page';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
-      <div>
-        <Title />
-        <div id='central'>
-        	<Gallery />
-        	<ResumeItems />
-        </div>
-        <Footer />
-      </div>
+        <Router>
+          <div>
+            <Title />
+            <Switch>
+              <Route path='/' exact component={Home} />
+              <Route component={ErrorPage} />
+            </Switch>
+            <Footer />
+          </div>
+        </Router>
     );
   }
 }
