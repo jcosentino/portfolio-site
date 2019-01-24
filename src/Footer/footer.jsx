@@ -4,14 +4,15 @@ import './footer.css';
 class Footer extends Component {
 	render(){
 		return (
-			<div>
+			<div id='footer-div'>
 				<table id='footer-table'>
 					<tr>
 						<td id='first-row'>
 							<a href='https://eff.org/'
 							   target='_blank'
-							   rel='noopener noreferrer'>
-								<span>
+							   rel='noopener noreferrer'
+							   className='footer-url'>
+								<span className='footer-span'>
 									<img className='footer_img'
 										   src='../images/eff2019.png'
 							 			   alt='EFF'/>
@@ -22,8 +23,9 @@ class Footer extends Component {
 						<td>
 							<a href='https://www.linkedin.com/in/john-cosentino/'
 							   target='_blank'
-							   rel='noopener noreferrer'>
-								<span>
+							   rel='noopener noreferrer'
+							   className='footer-url'>
+								<span className='footer-span'>
 									<img className='footer_img'
 										   src='../images/linkedin.png'
 							 			   alt='LinkedIn'/>
@@ -34,8 +36,9 @@ class Footer extends Component {
 						<td>
 							<a href='https://reactjs.org/'
 							   target='_blank'
-							   rel='noopener noreferrer'>
-								<span>
+							   rel='noopener noreferrer'
+							   className='footer-url'>
+								<span className='footer-span'>
 									<img className='footer_img'
 										   src='../images/react.png'
 							 			   alt='ReactJS'/>
@@ -46,8 +49,9 @@ class Footer extends Component {
 						<td>
 							<a href='https://github.com/jcosentino'
 							   target='_blank'
-							   rel='noopener noreferrer'>
-								<span>
+							   rel='noopener noreferrer'
+							   className='footer-url'>
+								<span className='footer-span'>
 									<img className='footer_img'
 										   src='../images/github.png'
 							 			   alt='Github'/>
@@ -58,8 +62,9 @@ class Footer extends Component {
 						<td id='last-row'>
 							<a href='https://www.csi.cuny.edu/'
 							   target='_blank'
-							   rel='noopener noreferrer'>
-								<span>
+							   rel='noopener noreferrer'
+							   className='footer-url'>
+								<span className='footer-span'>
 									<img className='footer_img'
 										   src='../images/csi.jpg'
 							 			   alt='CUNY - CSI'/>
