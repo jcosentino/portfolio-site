@@ -53,45 +53,6 @@ class Footer extends Component {
 						</td>
 					</tr>
 				</table>
-				{/*<footer className='footer text-center'>
-					<a style={{display: "table-cell"}} 
-					   target="_blank" 
-					   href='https://eff.org/'>
-						<img className='footer_img'
-							 src='../images/eff2019.png'
-							 alt='EFF'/>
-					</a>
-
-					<a style={{display: "table-cell"}} 
-					   target="_blank" 
-					   href='https://www.linkedin.com/in/john-cosentino/'>
-						<img className='footer_img'
-							 src='../images/linkedin.png'
-							 alt='LinkedIn'/>
-					</a>
-
-					<a style={{display: "table-cell"}} 
-					   target="_blank" 
-					   href='https://reactjs.org/'>
-						<img className='footer_img'
-							 src='../images/react.png'
-							 alt='ReactJS'/>
-					</a>
-
-					<a style={{display: "table-cell"}} target="_blank" href='https://github.com/jcosentino'>
-						<img className='footer_img'
-							 src='../images/github.png'
-							 alt='Github:jcosentino/'/>
-					</a>
-
-					<a style={{display: "table-cell"}} 
-					   target="_blank" 
-					   href='https://www.csi.cuny.edu/'>
-						<img className='footer_img'
-							 src='../images/csi.jpg'
-							 alt='CUNY - CSI'/>
-					</a>
-				</footer>*/}
 			</div>
 		);
 	}
