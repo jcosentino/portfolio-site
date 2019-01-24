@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import Title from './Title/title';
 import Home from './Home/home';
 import Footer from './Footer/footer';
