@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import Title from './title';
-import Home from './home';
-import Footer from './footer';
-import ErrorPage from './error-page';
+import Title from './Title/title';
+import Home from './Home/home';
+import Footer from './Footer/footer';
+import ErrorPage from './Error_page/error-page';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
