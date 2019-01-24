@@ -7,7 +7,7 @@ class Footer extends Component {
 			<div>
 				<table id='footer-table'>
 					<tr>
-						<td>
+						<td id='first-row'>
 							<a href='https://eff.org/' target='_blank'>
 								<span><img className='footer_img'
 										   src='../images/eff2019.png'
@@ -43,7 +43,7 @@ class Footer extends Component {
 							</a>
 						</td>
 
-						<td>
+						<td id='last-row'>
 							<a href='https://www.csi.cuny.edu/' target='_blank'>
 								<span><img className='footer_img'
 										   src='../images/csi.jpg'

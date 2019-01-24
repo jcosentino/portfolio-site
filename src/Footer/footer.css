@@ -20,3 +20,11 @@ span {
     text-align: center;
     vertical-align: middle;
 }
+
+#first-row {
+    padding-left: 200px;
+}
+
+#last-row {
+    padding-right: 200px;
+}
