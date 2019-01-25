@@ -1,0 +1,5 @@
+#placeholder {
+	text-align: center;
+	font-size: 25px;
+	padding-bottom: 250px; /*Workaround for the footer hovering above the bottom*/
+}
