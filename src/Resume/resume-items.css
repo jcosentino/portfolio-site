@@ -1,3 +1,4 @@
 .resumeItems {
 	font-size: 30px;
+	padding-bottom: 75px; /*Workaround for the footer hovering above the bottom*/
 }

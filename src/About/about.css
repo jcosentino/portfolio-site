@@ -1,0 +1,7 @@
+.about {
+  background-color: #e1d5dd;
+  width: 800px;
+  height: 400px;
+  overflow: scroll;
+  text-align: center;
+}

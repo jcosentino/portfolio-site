@@ -1,5 +1,6 @@
-h1 {
+#error-page {
 	text-align: center;
+	padding-bottom: 200px; /*Workaround for the footer hovering above the bottom*/
 }
 
 .routeurl {
