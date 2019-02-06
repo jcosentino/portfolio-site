@@ -17,7 +17,7 @@ class About extends Component {
 				<p>Despite a number of hurdles in life, I finished school and finally found a field
 				in which I belong.</p>
 				<p>I have worked multiple jobs, including but limited to positions at 
-				NYC Tech Talent Pipeline, CSI, RFCUNY, Bloomberg LP, Goowdill, with more to come.
+				NYC Tech Talent Pipeline, CSI, RFCUNY, Bloomberg LP, Goodwill, with more to come.
 				</p>
 				<p>I plan on eventually getting my Masters degree. I do not know when, in what major, 
 				nor where this will be obtained. When I get the urge to, I will return to academia.</p>
