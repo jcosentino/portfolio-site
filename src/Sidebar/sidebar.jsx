@@ -10,6 +10,7 @@ class Sidebar extends Component {
 				<a href='/about'>About Me</a>
 				<a href='/employment'>Employment</a>
 				<a href='/education'>Education</a>
+				<a href='/hackathons'>Hackathons</a>
 				<a href='/study-abroad'>Study Abroad</a>
 				<a href='/volunteer'>Volunteerism</a>
 				<a href='/portfolio-site'>johnscosentino.com</a>

@@ -23,6 +23,7 @@ class App extends Component {
                 <Route path='/about' exact component={About} />
                 <Route path='/employment' exact component={ResumeItems} />
                 <Route path='/education' exact component={Placeholder} />
+                <Route path='/hackathons' exact component={Placeholder} />
                 <Route path='/study-abroad' exact component={Placeholder} />
                 <Route path='/volunteer' exact component={Placeholder} />
                 <Route path='/portfolio-site' exact component={Placeholder} />
