@@ -8,6 +8,7 @@ import ResumeItems from './Resume/resume-items';
 import About from './About/about';
 import Placeholder from './Placeholder/placeholder';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './App.css';
 
 class App extends Component {
   render() {
