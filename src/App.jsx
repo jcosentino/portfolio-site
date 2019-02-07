@@ -7,6 +7,7 @@ import Sidebar from './Sidebar/sidebar';
 import ResumeItems from './Resume/resume-items';
 import About from './About/about';
 import Placeholder from './Placeholder/placeholder';
+import Education from './Education/education';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
@@ -23,7 +24,7 @@ class App extends Component {
                     <Route path='/' exact component={Home} />
                     <Route path='/about' exact component={About} />
                     <Route path='/employment' exact component={ResumeItems} />
-                    <Route path='/education' exact component={Placeholder} />
+                    <Route path='/education' exact component={Education} />
                     <Route path='/hackathons' exact component={Placeholder} />
                     <Route path='/study-abroad' exact component={Placeholder} />
                     <Route path='/volunteer' exact component={Placeholder} />
