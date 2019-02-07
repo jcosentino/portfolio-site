@@ -1,29 +1,24 @@
 html, body {
 	height: 100%;
+	position: relative;
 }
 
 #app {
-	display: flex;
-	flex-wrap: nowrap;
+	min-height: 100vh; /* Cover the 100% of viewport */
+	overflow: hidden;
+	display: block;
+	position: relative;
+	padding-bottom: 150px; /* Height of the footer */
 }
 
-#central > div {
+#central > div { /* Center items in the middle of the non-sidebar */
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#sidebar {
-	flex: 0 0 65%;
-}
-
-#not-sidebar {
-	flex: 1;
-}
-
 #footer-div {
 	position: absolute;
 	bottom: 0;
-	left: 0;
-	right: 0;
+	width: 100%;
 }
