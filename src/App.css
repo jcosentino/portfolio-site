@@ -1,3 +1,7 @@
+html, body {
+	height: 100%;
+}
+
 #app {
 	display: flex;
 	flex-wrap: nowrap;
@@ -18,7 +22,8 @@
 }
 
 #footer-div {
-	position: relative;
+	position: absolute;
 	bottom: 0;
-	padding-top: 300px; /*Workaround for positioning*/
+	left: 0;
+	right: 0;
 }
