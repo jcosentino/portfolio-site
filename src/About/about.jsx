@@ -19,6 +19,7 @@ class About extends Component {
 				<p>I have worked multiple jobs, including but limited to positions at 
 				NYC Tech Talent Pipeline, CSI, RFCUNY, Bloomberg LP, Goodwill, with more to come.
 				</p>
+				<p>I have experience in ReactJS, NodeJS, SQL, JavaScript, C++, C#, Java, Ruby, and Python.</p>
 				<p>I plan on eventually getting my Masters degree. I do not know when, in what major, 
 				nor where this will be obtained. When I get the urge to, I will return to academia.</p>
 				<p>In my free time I study data structures, play on my Switch, excercise, and practice guitar.</p>
