@@ -10,6 +10,7 @@ import Placeholder from './Placeholder/placeholder';
 import Education from './Education/education';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   render() {

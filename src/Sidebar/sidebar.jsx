@@ -13,7 +13,7 @@ class Sidebar extends Component {
 				<Link to={'/education'}>Education</Link>
 				<Link to={'/hackathons'}>Hackathons</Link>
 				<Link to={'/study-abroad'}>Study Abroad</Link>
-                <Link to={'/employment'}>Volunteerism</Link>
+                <Link to={'/volunteer'}>Volunteerism</Link>
 				<Link to={'/portfolio-site'}>johnscosentino.com</Link>
 				<Link to={'/csc450-project'}>Research</Link>
 				<Link to={'/ctp-2016'}>CTP 2016</Link>
