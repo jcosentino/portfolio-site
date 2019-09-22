@@ -1,11 +1,17 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
+import { Home, Header, Footer } from './components';
 
-function App() {
-  return (
-    <div className="App">
-    </div>
-  );
+class App extends React.Component {
+  render(){
+    return (
+      <div className="App">
+        <Header />
+        <Home />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
