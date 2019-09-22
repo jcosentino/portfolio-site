@@ -9,11 +9,11 @@ export class Technologies extends React.Component {
     }
     return arr;
   }
+
   render(){
     return (
-      <div className='Technologies home-item'>
-        Technologies
-        {/* temporary */}
+      <div id='technologies' className='home-item'>
+        <h1>Technologies</h1>
         {this.testData()}
       </div>
     );

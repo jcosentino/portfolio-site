@@ -13,9 +13,9 @@ export class Home extends React.Component {
       <div className="Home">
         <Experience />
         <Education />
-        <Hobbies />
         <Projects />
         <Technologies />
+        <Hobbies />
       </div>
     );
   }

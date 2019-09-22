@@ -3,8 +3,8 @@ import './Header.scss';
 
 export class Header extends React.Component {
     headerItems = [
-      'Education',
       'Experience',
+      'Education',
       'Projects',
       'Technologies',
       'Hobbies'
@@ -12,7 +12,9 @@ export class Header extends React.Component {
 
     generateHeaderItems(){
       const items = [];
-      this.headerItems.map(item => items.push(<div>{item}</div>));
+      this.headerItems.map(item => items.push(
+        <div><a href={'#' + item.toLowerCase()}>{item}</a></div>
+      ));
       return items;
     }
 
