@@ -14,14 +14,14 @@
 @media screen and (orientation: portrait) {
     .Header {
         flex-direction: column;
-        max-width: 20vw;
-        height: 100vh;
+        max-width: fit-content;
         justify-content: start;
         padding: 2vh 2vw 2vh 2vw;
-        text-overflow: ellipsis;
+        position: fixed;
+        top: 25vh;
     }
 
     .Header > div {
-        margin-bottom: 2vh;
+        margin: 1vh 0 1vh 0;
     }
 }

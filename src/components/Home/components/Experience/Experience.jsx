@@ -6,7 +6,6 @@ export class Experience extends React.Component {
     return (
       <div className='Experience home-item'>
         <h1>Experience</h1>
-        
       </div>
     );
   }

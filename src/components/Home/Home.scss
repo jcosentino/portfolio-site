@@ -1,6 +1,6 @@
 .Home {
     max-width: 80vw;
-    height: 100vh;
+    height: 100%;
     padding: 0 20vw 0 20vw;
     display: flex;
     flex-direction: column;
@@ -13,6 +13,6 @@
 
 @media screen and (orientation: portrait) {
     .home-item {
-        margin: 0;
+        margin-left: 10vw;
     }
 }

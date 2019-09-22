@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   height: 100%;
   margin: 0;
@@ -9,9 +13,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: rgb(42, 119, 163);
   background: repeating-linear-gradient(
-    rgba(34,193,195,1), rgba(253,187,45,1) 100vh,
-    rgba(253,187,45,1) 100vh,
-    rgba(34,193,195,1) 200vh);
+    rgba(34,193,195,1),
+    rgba(253,187,45,1),
+    rgba(253,187,45,1),
+    rgba(34,193,195,1)
+  );
 }
 
 code {
