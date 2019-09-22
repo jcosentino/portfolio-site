@@ -11,8 +11,17 @@
     justify-content: space-evenly;
 }
 
-@media screen and (orientation:portrait) {
+@media screen and (orientation: portrait) {
     .Header {
         flex-direction: column;
+        max-width: 20vw;
+        height: 100vh;
+        justify-content: start;
+        padding: 2vh 2vw 2vh 2vw;
+        text-overflow: ellipsis;
+    }
+
+    .Header > div {
+        margin-bottom: 2vh;
     }
 }

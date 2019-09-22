@@ -1,3 +1,19 @@
 .App {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (orientation: portrait) {
+    .mobile-container {
+        display: flex;
+    }
+
+    .Header {
+        flex: 1;
+    }
+
+    .Home {
+        flex: 1;
+    }
 }
