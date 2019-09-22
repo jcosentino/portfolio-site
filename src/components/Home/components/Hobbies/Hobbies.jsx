@@ -4,7 +4,7 @@ import './Hobbies.scss';
 export class Hobbies extends React.Component {
   render(){
     return (
-      <div id='hobbies' className='home-item'>
+      <div id='Hobbies' className='home-item'>
         <h1>Hobbies</h1>
       </div>
     );

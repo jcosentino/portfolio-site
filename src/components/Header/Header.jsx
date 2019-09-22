@@ -13,7 +13,7 @@ export class Header extends React.Component {
     generateHeaderItems(){
       const items = [];
       this.headerItems.map(item => items.push(
-        <div><a href={'#' + item.toLowerCase()}>{item}</a></div>
+        <div><a href={'#' + item}>{item}</a></div>
       ));
       return items;
     }
