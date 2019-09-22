@@ -5,7 +5,7 @@ export class Education extends React.Component {
   render(){
     return (
       <div id='education' className='home-item'>
-        <h1>The College of Staten Island</h1>
+        <h1>Education</h1>
       </div>
     );
   }
