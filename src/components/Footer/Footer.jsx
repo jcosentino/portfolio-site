@@ -10,7 +10,7 @@ export class Footer extends React.Component {
            target='blank' rel='noopener noreferrer'>
           <img src='twitter.png' alt='Twitter' />
         </a>
-        
+
         <a href = 'mailto:john.s.cosentino@gmail.com?subject'
            target='_blank' rel='noopener noreferrer'>
           <img src='/email.png' alt='Email' />
@@ -19,6 +19,11 @@ export class Footer extends React.Component {
         <a href='https://www.linkedin.com/in/john-cosentino/'
            target='blank' rel='noopener noreferrer'>
           <img src='linkedin.png' alt='LinkedIn' />
+        </a>
+
+        <a href='https://github.com/jcosentino'
+           target='blank' rel='noopener noreferrer'>
+          <img src='github.png' alt='Github' />
         </a>
         </div>
       </div>
