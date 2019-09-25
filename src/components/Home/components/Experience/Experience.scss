@@ -1,0 +1,16 @@
+.experience-items ul {
+    text-align: center;
+    margin: 0 auto 3vh auto;
+    width: 50%;
+    list-style-type: none;
+}
+
+.experience-items li {
+    margin: 0.6em;
+}
+
+@media screen and (orientation: portrait) {
+    .experience-items ul {
+        width: 70%;
+    }
+}
