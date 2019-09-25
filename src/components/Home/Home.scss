@@ -29,6 +29,8 @@
     background-color: lightgrey;
     margin: 2vh 0 0 0;
     opacity: 0.75;
+    box-shadow: 5px 5px 15px 5px #000000;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
 }
 
 @media screen and (orientation: portrait) {
