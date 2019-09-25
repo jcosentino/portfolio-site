@@ -11,11 +11,16 @@ export class Home extends React.Component {
   render(){
     return (
       <div className="Home">
-        <Experience />
-        <Education />
-        <Projects />
-        <Technologies />
-        <Hobbies />
+        <h1>John Cosentino</h1>
+        <img src='me.jpg' alt='John C' />
+        <p>^ circa 2017</p>
+        <div className='home-menu-items'>
+          <Experience />
+          <Education />
+          <Projects />
+          <Technologies />
+          <Hobbies />
+        </div>
       </div>
     );
   }
