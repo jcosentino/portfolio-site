@@ -7,7 +7,7 @@ export class Header extends React.Component {
       'Education',
       'Projects',
       'Technologies',
-      'Hobbies'
+      'About'
     ];
 
     scrollToTop(){
