@@ -7,10 +7,12 @@ export class Education extends React.Component {
       <div id='Education' className='home-item'>
         <h1>Education</h1>
         <div className='education-items'>
-          <h2>The College of Staten Island - CUNY</h2>
-          <h4>Computer Science BS</h4>
-          <h4>Mathematics minor</h4>
-          <h4>Psychology BS</h4>
+          <h4>The College of Staten Island - CUNY</h4>
+          <ul>
+            <li>Computer Science BS</li>
+            <li>Mathematics minor</li>
+            <li>Psychology BS</li>
+          </ul>
         </div>
       </div>
     );

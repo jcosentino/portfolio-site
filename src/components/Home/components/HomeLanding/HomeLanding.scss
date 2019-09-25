@@ -1,0 +1,35 @@
+.home-img-section {
+    background-color: #333;
+    border: 1em solid #333;
+    margin: 1vh 1vw 0 1vw;
+}
+
+.home-img-section img {
+    display: block;
+    margin: 0 auto 0 auto;
+    max-width: 20vw;
+    max-height: 60vh;
+    width: auto;
+    height: auto;
+}
+
+.home-img-section h1 {
+    color: rgb(138, 138, 138);
+}
+
+.post-h1-break {
+    border-bottom: 0.3em dashed white;
+    margin: 0vh 1vw 2vh 1vw;
+    opacity: 0.7;
+}
+
+.home-img-section p {
+    font-size: 1em;
+    color: rgb(138, 138, 138);
+    font-style: italic;
+}
+
+.separator-dot {
+    font-size: 5em;
+    color: #333;
+}

@@ -1,0 +1,16 @@
+ .education-items ul {
+    text-align: center;
+    margin: 0 auto 3vh auto;
+    width: 50%;
+    list-style-type: none;
+}
+
+.education-items li {
+    margin: 0.6em;
+}
+
+@media screen and (orientation: portrait) {
+    .education-items ul {
+        width: 70%;
+    }
+}

@@ -9,20 +9,7 @@
 
 .home-item {
     margin: 1vh 1vw 1vh 1vw;
-}
-
-.Home img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 20vw;
-    max-height: 60vh;
-    width: auto;
-    height: auto;
-}
-
-.Home p {
-    font-size: 1em;
+    border-bottom: 0.5em solid black;
 }
 
 .home-menu-items {
@@ -31,6 +18,9 @@
     opacity: 0.75;
     box-shadow: 5px 5px 15px 5px #000000;
     -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    border: 1em solid black;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 @media screen and (orientation: portrait) {

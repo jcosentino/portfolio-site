@@ -2,19 +2,22 @@ import React from 'react';
 import './Technologies.scss';
 
 export class Technologies extends React.Component {
-  testData(){
-    const arr = [];
-    for(let i = 0; i < 50; i++){
-      arr.push(<p>TEST</p>);
-    }
-    return arr;
-  }
-
   render(){
     return (
       <div id='Technologies' className='home-item'>
         <h1>Technologies</h1>
-        {this.testData()}
+        <div className='technologies-items'>
+          <ul>
+            <li>Angular</li>
+            <li>AWS</li>
+            <li>Express JS</li>
+            <li>Flask</li>
+            <li>Node JS</li>
+            <li>React JS</li>
+            <li>Ruby On Rails</li>
+            <li>Spring</li>
+          </ul>
+        </div>
       </div>
     );
   }
