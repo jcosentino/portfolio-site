@@ -8,7 +8,6 @@ export class Technologies extends React.Component {
         <span className='anchor' id='Technologies'></span>
         <div className='home-item'>
           <h1>
-            <span role='img' aria-label="right pointer">👉</span>
               Technologies
           </h1>
           <div className='technologies-items'>
@@ -18,7 +17,7 @@ export class Technologies extends React.Component {
               <li>Express JS</li>
               <li>Flask</li>
               <li>Node JS</li>
-              <li>React JS</li>
+              <li>React JS<span role='img' aria-label="right pointer">👈</span></li>
               <li>Ruby On Rails</li>
               <li>Spring</li>
             </ul>
