@@ -4,11 +4,10 @@
     justify-content: center;
     flex-wrap: nowrap;
     background-color: #333;
-    position: sticky;
-    top: 0;
-    width: inherit;
     z-index: 1;
     font-size: 3vh;
+    width: 100%;
+    position: fixed;
 }
   
 .Header a {
@@ -44,8 +43,7 @@
         max-height: 50vh;
         justify-content: start;
         padding: 2vh 2vw 2vh 0;
-        top: 25vh;
-        margin: 0 0 2vh 0;
+        margin: 20vh 0 2vh 0;
     }
 
     .Header > div {
@@ -60,5 +58,6 @@
     .scroll-arrow {
         width: auto;
         font-size: 5vh;
+        padding: 0 0 1vh 0;
     }
 }
