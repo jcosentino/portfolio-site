@@ -4,13 +4,10 @@
     flex-direction: column;
 }
 
-.mobile-container {
-    position: relative;
-}
-
 @media screen and (orientation: portrait) {
     .mobile-container {
         display: flex;
-        flex-direction: column;
+        flex-flow: row;
+        width: 100%;
     }
 }

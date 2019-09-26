@@ -10,10 +10,10 @@ export class Projects extends React.Component {
           <ul>
             <li>
               <span role='img' aria-label="right pointer">👉</span>
-              Doctor Appointment Scheduler AWS
+              Doctor Appointment Scheduler
             </li>
             <li>Portfolio Website</li>
-            <li>CUNY Tech Prep - NYC Tech Talent Pipeline</li>
+            <li>CUNY Tech Prep - NYC TTP</li>
             <li>RFCUNY Honors Research</li>
           </ul>
         </div>
