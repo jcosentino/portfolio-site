@@ -18,6 +18,7 @@
     max-height: 20vh;
     height: auto;
     width: auto;
+    padding: 0 0.2em 0 0.2em;
 }
 
 .footer-content img:hover {
@@ -40,5 +41,16 @@
         -webkit-transform: none;
         -ms-transform: none;
         transform: none;
+    }
+}
+
+// Fixes issues with Edge alignment
+@supports (-ms-ime-align: auto) {
+    .footer-content {
+        justify-content: center;
+    }
+
+    .footer-content img {
+        padding: 0 2vw 0 2vw;
     }
 }

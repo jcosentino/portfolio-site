@@ -5,7 +5,7 @@ export class About extends React.Component {
   render(){
     return (
       <div id='About' className='home-item'>
-        <h1>About</h1>
+        <h1>About👋</h1>
         <div className='about-item'>
           <p>I am from Staten Island, NY, USA.</p>
           <span className='separator-dot-about'>&#183;</span>
@@ -13,10 +13,9 @@ export class About extends React.Component {
           <span className='separator-dot-about'>&#183;</span>
           <p>My short-term goals include moving out on my own and landing a full-time position.</p>
           <span className='separator-dot-about'>&#183;</span>
-          <p>My long-term goal is to make a major, widespread, beneficial impact on this world.</p>
+          <p>My long-term goal is to make a major, widespread, and beneficial impact on this world.</p>
           <span className='separator-dot-about'>&#183;</span>
           <p>I want to be admired like Steve Jobs, impactful like Linus Torvalds, and honored like FDR.</p>
-          <span className='separator-dot-about'>&#183;</span>
         </div>
       </div>
     );

@@ -25,27 +25,16 @@
     color: black;
 }
 
-.scroll-arrow:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-i {
-    border: solid black;
-    border-width: 0 0.3em 0.3em 0;
-    display: inline-block;
-    padding: 0.2em;
+.scroll-arrow {
+    width: 2em;
+    font-size: 2em;
+    color: white;
     text-align: center;
 }
 
-.up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-}
-  
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+.scroll-arrow:hover {
+    background-color: #ddd;
+    color: black;
 }
 
 @media screen and (orientation: portrait) {
@@ -55,6 +44,7 @@ i {
         justify-content: start;
         padding: 2vh 2vw 2vh 2vw;
         top: 25vh;
+        margin: 0 0 2vh 0;
     }
 
     .Header > div {

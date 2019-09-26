@@ -10,33 +10,41 @@ export class Header extends React.Component {
       'About'
     ];
 
-    scrollToTop(){
-      window.scrollTo({
+    scrollToTop(){ // fixes for Edge and Internet Explorer
+      if(!!document.documentMode || !!window.StyleMedia){
+        window.scrollTo(0, 0);
+      } else {
+        window.scrollTo({
           top: 0,
           left: 0,
           behavior: 'smooth'
-      });
+        });
+      }
     }
 
     scrollToBottom(){
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: 'smooth'
-      });
+      if(!!document.documentMode || !!window.StyleMedia){
+        window.scrollTo(0, document.body.scrollHeight);
+      } else{
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: 'smooth'
+        });
+      }
     }
 
     generateHeaderItems(){
       const items = [];
       items.push(<div className='scroll-arrow'
                       onClick={this.scrollToTop}>
-                    <i className='arrow up'></i>
+                    &#8593;
                   </div>);
       this.headerItems.map(item => items.push(
         <div><a href={'#' + item}>{item}</a></div>
       ));
       items.push(<div className='scroll-arrow'
                       onClick={this.scrollToBottom}>
-                   <i className='arrow down'></i>
+                   &#8595;
                  </div>);
       return items;
     }

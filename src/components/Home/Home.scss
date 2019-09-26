@@ -9,15 +9,15 @@
 
 .home-item {
     margin: 1vh 1vw 1vh 1vw;
-    border-bottom: 0.5em solid black;
+    border-bottom: 0.25em solid black;
 }
 
 .home-menu-items {
     background-color: lightgrey;
     margin: 2vh 0 0 0;
     opacity: 0.75;
-    box-shadow: 5px 5px 15px 5px #000000;
-    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 0.2em 0.2em 0.6em 0.2em #000000;
+    -webkit-box-shadow: 0.2em 0.2em 0.6em 0.2em #000000; 
     border: 1em solid black;
     overflow: hidden;
     word-wrap: break-word;
@@ -31,5 +31,9 @@
     .Home img {
         max-width: 300vw;
         max-height: 60vh;
+    }
+
+    .home-menu-items {
+        border: none;
     }
 }
