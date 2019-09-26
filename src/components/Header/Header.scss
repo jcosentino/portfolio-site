@@ -47,9 +47,10 @@
 @media screen and (orientation: portrait) {
     .Header {
         flex-direction: column;
-        max-width: 20vw;
+        max-width: 25vw;
         max-height: 50vh;
         height: inherit;
+        width: 22vw;
         justify-content: start;
         padding: 2vh 2vw 2vh 0;
         margin: 20vh 0 2vh 0;
