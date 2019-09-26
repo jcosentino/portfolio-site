@@ -8,7 +8,6 @@ export class Technologies extends React.Component {
         <h1>
           <span role='img' aria-label="right pointer">👉</span>
             Technologies
-          <span role='img' aria-label="left pointer">👈</span>
         </h1>
         <div className='technologies-items'>
           <ul>
