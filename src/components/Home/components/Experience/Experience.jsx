@@ -8,7 +8,10 @@ export class Experience extends React.Component {
         <h1>Experience</h1>
         <div className='experience-items'>
           <ul>
-            <li>👉Prudential Financial</li>
+            <li>
+              <span role='img' aria-label="right pointer">👉</span>
+              Prudential Financial
+            </li>
             <li>Goodwill Industries NY / NJ</li>
             <li>Bloomberg LP</li>
             <li>CUNY - College of Staten Island OTS</li>

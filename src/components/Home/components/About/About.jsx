@@ -5,7 +5,7 @@ export class About extends React.Component {
   render(){
     return (
       <div id='About' className='home-item'>
-        <h1>About👋</h1>
+        <h1>About<span role='img' aria-label="waving hand">👋</span></h1>
         <div className='about-item'>
           <p>I am from Staten Island, NY, USA.</p>
           <span className='separator-dot-about'>&#183;</span>

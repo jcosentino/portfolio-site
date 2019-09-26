@@ -5,7 +5,11 @@ export class Technologies extends React.Component {
   render(){
     return (
       <div id='Technologies' className='home-item'>
-        <h1>👉Technologies👈</h1>
+        <h1>
+          <span role='img' aria-label="right pointer">👉</span>
+            Technologies
+          <span role='img' aria-label="left pointer">👈</span>
+        </h1>
         <div className='technologies-items'>
           <ul>
             <li>Angular</li>
