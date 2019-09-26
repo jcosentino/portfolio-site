@@ -5,7 +5,7 @@ export class Education extends React.Component {
   render(){
     return (
       <>
-        <span class='anchor' id='Education'></span>
+        <span className='anchor' id='Education'></span>
         <div className='home-item'>
           <h1>Education</h1>
           <div className='education-items'>

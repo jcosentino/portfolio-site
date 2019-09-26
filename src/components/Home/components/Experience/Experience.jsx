@@ -5,7 +5,7 @@ export class Experience extends React.Component {
   render(){
     return (
       <>
-        <span class='anchor' id='Experience'></span>
+        <span className='anchor' id='Experience'></span>
         <div className='home-item'>
           <h1>Experience</h1>
           <div className='experience-items'>

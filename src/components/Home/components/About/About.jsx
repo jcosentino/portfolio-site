@@ -5,7 +5,7 @@ export class About extends React.Component {
   render(){
     return (
       <>
-        <span class='anchor' id='About'></span>
+        <span className='anchor' id='About'></span>
         <div className='home-item'>
           <h1>About<span role='img' aria-label='waving hand'>👋</span></h1>
           <div className='about-item'>

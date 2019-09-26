@@ -5,7 +5,7 @@ export class Projects extends React.Component {
   render(){
     return (
       <>
-        <span class='anchor' id='Projects'></span>
+        <span className='anchor' id='Projects'></span>
         <div className='home-item'>
           <h1>Projects</h1>
           <div className='projects-items'>

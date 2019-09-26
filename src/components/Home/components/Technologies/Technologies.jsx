@@ -5,7 +5,7 @@ export class Technologies extends React.Component {
   render(){
     return (
       <>
-        <span class='anchor' id='Technologies'></span>
+        <span className='anchor' id='Technologies'></span>
         <div className='home-item'>
           <h1>
             <span role='img' aria-label="right pointer">👉</span>
