@@ -1,4 +1,4 @@
-.technologies-items ul {
+.technology-items ul {
     text-align: center;
     list-style-type: none;
     columns: 2;
@@ -6,12 +6,12 @@
     -moz-columns: 2;
 }
 
-.technologies-items li {
+.technology-items li {
     margin: 0.6em;
 }
 
 @media screen and (orientation: portrait) {
-    .technologies-items ul {
+    .technoloy-items ul {
         width: 70%;
         columns: 1;
         -webkit-columns: 1;

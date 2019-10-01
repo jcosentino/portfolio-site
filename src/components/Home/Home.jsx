@@ -5,7 +5,7 @@ import {
   Experience,
   About,
   Projects,
-  Technologies, 
+  Technology, 
   HomeLanding } from './components';
 
 export class Home extends React.Component {
@@ -17,7 +17,7 @@ export class Home extends React.Component {
           <Experience />
           <Education />
           <Projects />
-          <Technologies />
+          <Technology />
           <About />
         </div>
       </div>
