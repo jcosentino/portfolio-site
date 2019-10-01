@@ -35,14 +35,14 @@ export class Header extends React.Component {
 
     generateHeaderItems(){
       const items = [];
-      items.push(<div className='scroll-arrow'
+      items.push(<div className='scroll-arrow-up'
                       onClick={this.scrollToTop}>
                     &#8593;
                   </div>);
       this.headerItems.map(item => items.push(
         <div><a href={'#' + item}>{item}</a></div>
       ));
-      items.push(<div className='scroll-arrow'
+      items.push(<div className='scroll-arrow-down'
                       onClick={this.scrollToBottom}>
                    &#8595;
                  </div>);

@@ -25,14 +25,21 @@
     color: black;
 }
 
-.scroll-arrow {
+.scroll-arrow-up {
     width: 2em;
     font-size: 2em;
     color: white;
     text-align: center;
 }
 
-.scroll-arrow:hover {
+.scroll-arrow-down {
+    width: 2em;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+.scroll-arrow-up:hover, .scroll-arrow-down:hover {
     background-color: #ddd;
     color: black;
 }
@@ -73,8 +80,41 @@
         border-radius: 0 5em 5em 0;
     }
 
+    .scroll-arrow-up {
+        width: 20vw;
+        font-size: 5vh;
+        padding: 0 0 1vh 0;
+        border-radius: 0 5em 5em 0;
+    }
+    
+    .scroll-arrow-down {
+        width: 20vw;
+        font-size: 5vh;
+        padding: 0 0 1vh 0;
+        border-radius: 0 5em 5em 0;
+    }
+
     .anchor {
         height: 0vh;
         margin: 0vh 0 0 0;
      }
+    
+    // For Safari
+    @supports (-webkit-appearance: none) {
+        .Header > div {
+            margin: 0;
+        }
+
+        .Header a {
+            font-size: 2.0vh;
+        }
+
+        .scroll-arrow-up {
+            border-radius: 0 100em 5em 0;
+        }
+        
+        .scroll-arrow-down {
+            border-radius: 0 5em 100em 0;
+        }
+    }
 }
