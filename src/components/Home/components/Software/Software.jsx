@@ -1,16 +1,16 @@
 import React from 'react';
-import './Technology.scss';
+import './Software.scss';
 
-export class Technology extends React.Component {
+export class Software extends React.Component {
   render(){
     return (
       <>
-        <span className='anchor' id='Technology'></span>
+        <span className='anchor' id='Software'></span>
         <div className='home-item'>
           <h1>
-          Technology
+          Software
           </h1>
-          <div className='technology-items'>
+          <div className='software-items'>
             <ul>
               <li>Angular</li>
               <li>AWS</li>

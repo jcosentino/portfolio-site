@@ -6,7 +6,7 @@ export class Header extends React.Component {
       'Experience',
       'Education',
       'Projects',
-      'Technology',
+      'Software',
       'About'
     ];
 
