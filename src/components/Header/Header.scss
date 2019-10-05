@@ -17,7 +17,6 @@
     text-align: center;
     padding: 0.8em 1.8em;
     text-decoration: none;
-    font-size: 100%;
 }
   
 .Header a:hover {
@@ -64,34 +63,20 @@
         border-radius: 0 5em 5em 0;
     }
 
-    .Header > div {
-        margin: 1vh 0 1vh 0;
-        overflow: hidden;
-    }
-
-    .Header a {
-        font-size: 2.6vw;
-    }
-
-    .scroll-arrow {
-        width: 20vw;
-        font-size: 5vh;
-        padding: 0 0 1vh 0;
-        border-radius: 0 5em 5em 0;
+    .Header div a {
+        font-size: 3vw;
     }
 
     .scroll-arrow-up {
         width: 20vw;
-        font-size: 5vh;
+        font-size: 4vh;
         padding: 0 0 1vh 0;
-        border-radius: 0 5em 5em 0;
     }
     
     .scroll-arrow-down {
         width: 20vw;
-        font-size: 5vh;
+        font-size: 4vh;
         padding: 0 0 1vh 0;
-        border-radius: 0 5em 5em 0;
     }
 
     .anchor {
@@ -105,8 +90,9 @@
             margin: 0;
         }
 
-        .Header a {
-            font-size: 2.0vh;
+        .Header div a {
+            padding-left: 3vw;
+            font-size: 1.9vh;
         }
 
         .scroll-arrow-up {
