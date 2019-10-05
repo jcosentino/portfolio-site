@@ -8,8 +8,7 @@ import {
   Software, 
   HomeLanding } from './components';
 
-export class Home extends React.Component {
-  render(){
+  export const Home = () => {
     return (
       <div className="Home">
         <HomeLanding />
@@ -23,4 +22,4 @@ export class Home extends React.Component {
       </div>
     );
   }
-}
+
