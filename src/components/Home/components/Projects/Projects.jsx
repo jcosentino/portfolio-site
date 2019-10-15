@@ -13,6 +13,7 @@ export const Projects = () => {
               <span role='img' aria-label="right pointer">👉</span>
               Doctor Appointment Scheduler
             </li>
+            <li>Goodwill PO Search / Indexer</li>
             <li>Portfolio Website</li>
             <li>CUNY Tech Prep - NYC TTP</li>
             <li>RFCUNY Honors Research</li>
