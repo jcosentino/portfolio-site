@@ -1,14 +1,9 @@
 .experience-items ul {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
 }
 
 .experience-items li {
     margin: 0.6em;
-}
-
-@media screen and (orientation: portrait) {
-    .experience-items ul {
-        width: auto;
-    }
 }

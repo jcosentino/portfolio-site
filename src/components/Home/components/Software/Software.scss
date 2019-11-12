@@ -9,12 +9,3 @@
 .software-items li {
     margin: 0.6em;
 }
-
-@media screen and (orientation: portrait) {
-    .technoloy-items ul {
-        width: 70%;
-        columns: 1;
-        -webkit-columns: 1;
-        -moz-columns: 1;
-    }
-}

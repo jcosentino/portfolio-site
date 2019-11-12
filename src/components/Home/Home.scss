@@ -30,6 +30,10 @@
     word-wrap: break-word;
 }
 
+.home-menu-items ul {
+    padding: 0;
+}
+
 @media screen and (orientation: portrait) {
     .Home {
         max-width: 80vw;
