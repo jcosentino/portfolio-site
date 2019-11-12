@@ -1,3 +1,5 @@
+@import '../../styles/constants';
+
 .Header {
     display: flex;
     flex-direction: row;
@@ -45,8 +47,8 @@
 
 .anchor {
     display: block;
-    height: 9vh;
-    margin: -9vh 0 0 0;
+    height: $anchor-tag-height;
+    margin: $anchor-tag-reverse-height 0 0 0;
     visibility: hidden;
  }
 
