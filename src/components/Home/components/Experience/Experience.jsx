@@ -15,7 +15,7 @@ export const Experience = () => {
             </li>
             <li>Goodwill Industries NY / NJ</li>
             <li>Bloomberg LP</li>
-            <li>CUNY - College of Staten Island OTS</li>
+            <li>College of Staten Island OTS</li>
             <li>RFCUNY</li>
           </ul>
         </div>
