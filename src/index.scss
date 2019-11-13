@@ -12,12 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: rgb(30, 104, 105);
-  background: repeating-linear-gradient(
-    rgba(6, 65, 66, 1),
-    rgba(120, 214, 216, 1),
-    rgba(120, 214, 216, 1),
-    rgba(6, 65, 66, 1)
-  );
+  background-image: url('/background.jpg');
 }
 
 code {
