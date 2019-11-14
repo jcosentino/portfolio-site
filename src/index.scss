@@ -1,5 +1,23 @@
+@import '../src/styles/style_constants.scss';
+
 html {
   height: 100%;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgb(30, 104, 105);
+  background-size: cover;
+  background-repeat: round;
+  background-image: url('/background.jpg');
+  filter: blur(0.2vh);
+  -webkit-filter: blur($background-blur);
+  -moz-filter: blur($background-blur);
+  -o-filter: blur($background-blur);
+  -ms-filter: blur($background-blur);
 }
 
 body {
@@ -11,8 +29,6 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(30, 104, 105);
-  background-image: url('/background.jpg');
 }
 
 code {
