@@ -13,11 +13,6 @@ body::before {
   background-size: cover;
   background-repeat: round;
   background-image: url('/background.jpg');
-  filter: blur(0.2vh);
-  -webkit-filter: blur($background-blur);
-  -moz-filter: blur($background-blur);
-  -o-filter: blur($background-blur);
-  -ms-filter: blur($background-blur);
 }
 
 body {
