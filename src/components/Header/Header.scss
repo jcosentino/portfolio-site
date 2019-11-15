@@ -11,6 +11,12 @@
     width: 100%;
     height: 9vh;
     position: fixed;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
   
 .Header a {
@@ -55,54 +61,38 @@
 @media screen and (orientation: portrait) {
     .Header {
         flex-direction: column;
-        max-width: 25vw;
         max-height: 50vh;
+        max-width: 22vw;
         height: inherit;
-        width: 22vw;
+        width: 20vw;
         justify-content: start;
-        padding: 2vh 2vw 2vh 0;
+        padding: 2vh 0 2vh 0;
         margin: 20vh 0 2vh 0;
         border-radius: 0 5em 5em 0;
     }
 
     .Header div a {
-        font-size: 3vw;
+        padding-left: 2.8vw;
+        font-size: 2.4vw;
+        width: 10vw;
     }
 
     .scroll-arrow-up {
-        width: 20vw;
+        width: 16vw;
         font-size: 4vh;
         padding: 0 0 1vh 0;
+        border-radius: 0 100em 5em 0;
     }
     
     .scroll-arrow-down {
-        width: 20vw;
+        width: 16vw;
         font-size: 4vh;
         padding: 0 0 1vh 0;
+        border-radius: 0 5em 100em 0;
     }
 
     .anchor {
         height: 0vh;
         margin: 0vh 0 0 0;
      }
-    
-    // For Safari
-    @supports (-webkit-appearance: none) {
-        .Header > div {
-            margin: 0;
-        }
-
-        .Header div a {
-            padding-left: 2.8vw;
-            font-size: 1.9vh;
-        }
-
-        .scroll-arrow-up {
-            border-radius: 0 100em 5em 0;
-        }
-        
-        .scroll-arrow-down {
-            border-radius: 0 5em 100em 0;
-        }
-    }
 }
