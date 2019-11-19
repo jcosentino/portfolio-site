@@ -7,6 +7,7 @@ export const Header = () => {
     'Education',
     'Projects',
     'Software',
+    'Events',
     'About'
   ];
 

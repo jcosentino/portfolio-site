@@ -1,12 +1,14 @@
 import React from 'react';
 import './Home.scss';
-import { 
-  Education,
+import {
+  HomeLanding,
   Experience,
-  About,
+  Education,
   Projects,
-  Software, 
-  HomeLanding } from './components';
+  Software,
+  Events,
+  About,
+   } from './components';
 
   export const Home = () => {
     return (
@@ -17,6 +19,7 @@ import {
           <Education />
           <Projects />
           <Software />
+          <Events />
           <About />
         </div>
       </div>

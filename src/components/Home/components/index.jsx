@@ -1,6 +1,7 @@
-export { Education } from './Education/Education';
+export { HomeLanding } from './HomeLanding/HomeLanding';
 export { Experience } from './Experience/Experience';
-export { About } from './About/About';
+export { Education } from './Education/Education';
 export { Projects } from './Projects/Projects';
 export { Software } from './Software/Software';
-export { HomeLanding } from './HomeLanding/HomeLanding';
+export { Events } from './Events/Events';
+export { About } from './About/About';
