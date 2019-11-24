@@ -12,7 +12,7 @@ export const About = () => {
           <span role='img' aria-label='pointing down'>👇</span>
           <p>Currently working in Newark, NJ.</p>
           <span role='img' aria-label='looking eyes'>👀</span>
-          <p>I want to be admired like Steve Jobs, impactful like Linus Torvalds, and honored like Dennis Ritchie.</p>
+          <p>I want to be admired like Steve Jobs, impactful like Linus Torvalds, and innovative like Whitney Wolfe Herd.</p>
         </div>
       </div>
     </>
