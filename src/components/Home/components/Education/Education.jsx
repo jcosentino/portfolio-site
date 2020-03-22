@@ -1,7 +1,7 @@
 import React from 'react';
 import './Education.scss';
 
-export const Education = () => {
+export function Education() {
   return (
     <>
       <span className='anchor' id='Education'></span>

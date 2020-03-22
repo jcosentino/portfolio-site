@@ -1,7 +1,7 @@
 import React from 'react';
 import './Software.scss';
 
-export const Software = () => {
+export function Software() {
   return (
     <>
       <span className='anchor' id='Software'></span>

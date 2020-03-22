@@ -1,7 +1,7 @@
 import React from 'react';
 import './HomeLanding.scss';
 
-export const HomeLanding = () => {
+export function HomeLanding() {
   return (
     <>
       <div className='home-img-section'>

@@ -3,7 +3,7 @@ import './App.scss';
 import { Home, Header, Footer } from './components';
 import { BrowserRouter, Switch, Redirect } from 'react-router-dom';
 
-const App = () => {
+function App() {
   return (
     <>
     <BrowserRouter>

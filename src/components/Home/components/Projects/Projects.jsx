@@ -1,7 +1,7 @@
 import React from 'react';
 import './Projects.scss';
 
-export const Projects = () => {
+export function Projects() {
   return (
     <>
       <span className='anchor' id='Projects'></span>

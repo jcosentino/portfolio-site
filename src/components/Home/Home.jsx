@@ -10,18 +10,18 @@ import {
   About,
    } from './components';
 
-  export const Home = () => {
-    return (
-      <div className='Home'>
-        <HomeLanding />
-        <div className='home-menu-items'>
-          <Experience />
-          <Education />
-          <Projects />
-          <Software />
-          <Events />
-          <About />
-        </div>
+export function Home() {
+  return (
+    <div className='Home'>
+      <HomeLanding />
+      <div className='home-menu-items'>
+        <Experience />
+        <Education />
+        <Projects />
+        <Software />
+        <Events />
+        <About />
       </div>
-    );
-  }
+    </div>
+  );
+}

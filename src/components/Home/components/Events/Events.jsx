@@ -1,7 +1,7 @@
 import React from 'react';
 import './Events.scss';
 
-export const Events = () => {
+export function Events() {
   return (
     <>
       <span className='anchor' id='Events'></span>

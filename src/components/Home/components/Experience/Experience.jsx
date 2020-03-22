@@ -1,7 +1,7 @@
 import React from 'react';
 import './Experience.scss';
 
-export const Experience = () => {
+export function Experience() {
   return (
     <>
       <span className='anchor' id='Experience'></span>
