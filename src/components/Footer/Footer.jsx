@@ -5,22 +5,22 @@ import { EMAIL } from 'constants/constants';
 const FOOTER_DATA = [
   {
       "url": "https://twitter.com/jcosentino91",
-      "imageSrc": "twitter.png",
+      "imageSrc": "footer/twitter.png",
       "alt": "Twitter"
   },
   {
       "url": `mailto:${EMAIL}?subject`,
-      "imageSrc": "email.png",
+      "imageSrc": "footer/email.png",
       "alt": "Email"
   },
   {
       "url": "https://www.linkedin.com/in/john-cosentino/",
-      "imageSrc": "linkedin.png",
+      "imageSrc": "footer/linkedin.png",
       "alt": "LinkedIn"
   },
   {
       "url": "https://github.com/jcosentino",
-      "imageSrc": "github.png",
+      "imageSrc": "footer/github.png",
       "alt": "GitHub"
   }
 ];
