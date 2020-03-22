@@ -11,7 +11,7 @@ export const Education = () => {
           <h4>The College of Staten Island - CUNY</h4>
           <ul>
             <li>
-              <span role='img' aria-label="right pointer">👉</span>
+              <span role='img' aria-label='right pointer'>👉</span>
               Computer Science BS
             </li>
             <li>Mathematics Minor</li>

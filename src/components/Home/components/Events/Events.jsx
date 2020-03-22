@@ -12,7 +12,7 @@ export const Events = () => {
         <div className='events-items'>
           <ul>
           <li>Google Sandbox Machine Learning Lab
-            <span role='img' aria-label="right pointer">👈</span>
+            <span role='img' aria-label='right pointer'>👈</span>
           </li>
           <li>Electronic Frontier Foundation Meetup</li>
           <li>CUNY Hackathon</li>

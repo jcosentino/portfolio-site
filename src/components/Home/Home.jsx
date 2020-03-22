@@ -12,7 +12,7 @@ import {
 
   export const Home = () => {
     return (
-      <div className="Home">
+      <div className='Home'>
         <HomeLanding />
         <div className='home-menu-items'>
           <Experience />

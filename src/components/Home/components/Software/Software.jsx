@@ -16,7 +16,7 @@ export const Software = () => {
             <li>Express JS</li>
             <li>Flask</li>
             <li>Node JS</li>
-            <li>React JS<span role='img' aria-label="right pointer">👈</span></li>
+            <li>React JS<span role='img' aria-label='right pointer'>👈</span></li>
             <li>Ruby On Rails</li>
             <li>Spring</li>
           </ul>

@@ -10,7 +10,7 @@ export const Experience = () => {
         <div className='experience-items'>
           <ul>
             <li>
-              <span role='img' aria-label="right pointer">👉</span>
+              <span role='img' aria-label='right pointer'>👉</span>
               Prudential Financial
             </li>
             <li>Goodwill Industries NY / NJ</li>
