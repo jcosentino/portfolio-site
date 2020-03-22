@@ -9,7 +9,7 @@ export function HomeLanding() {
         <div className='post-h1-break'></div>
         <img src='me.jpg' alt='John C' />
         <p>^ circa 2017</p>
-    </div>
+      </div>
     <span className='separator-dot'>&#183;</span>
   </>
   );
