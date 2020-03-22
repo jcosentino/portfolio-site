@@ -1,7 +1,6 @@
 @import 'styles/style_constants.scss';
 
 .software-items ul {
-    text-align: center;
     list-style-type: none;
     columns: 2;
     -webkit-columns: 2;
@@ -9,5 +8,39 @@
 }
 
 .software-items li {
-    margin: $home-list-margin;
+    margin: 1em 0;
+}
+
+.software-items img {
+    max-width: 25vw;
+    max-height: 25vh;
+    transform: rotate(0deg) scale(1.0);
+    transition: all 1.5s ease;
+}
+
+.software-items img:hover {
+    transform: rotate(360deg) scale(0.5);
+    transition: all 1.5s ease;
+}
+
+.software-items img:active {
+    transform: scale(1.0) scale(0.5) scale(1.0) scale(0.5);
+    transition: all 0.5s ease;
+}
+
+@media screen and (orientation: portrait) {
+    .software-items li {
+        margin: $home-list-margin;
+    }
+
+    .software-items img {
+        max-width: 18vw;
+        max-height: 18vh;
+        transform: none;
+        transition: none;
+    }
+
+    .software-items img:hover {
+        transform: none;
+    }    
 }
