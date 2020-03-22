@@ -1,4 +1,4 @@
-@import '../src/styles/style_constants.scss';
+@import 'styles/style_constants.scss';
 
 html {
   height: 100%;
@@ -10,7 +10,7 @@ body::before {
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color: rgb(30, 104, 105);
+  background-color: $background-color;
   background-size: cover;
   background-repeat: round;
   background-image: url('/background.jpg');

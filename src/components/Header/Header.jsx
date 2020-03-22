@@ -1,16 +1,16 @@
 import React from 'react';
 import './Header.scss';
 
-export function Header() {
-  const headerItems = [
-    'Experience',
-    'Education',
-    'Projects',
-    'Software',
-    'Events',
-    'About'
-  ];
+const HEADER_ITEMS = [
+  'Experience',
+  'Education',
+  'Projects',
+  'Software',
+  'Events',
+  'About'
+];
 
+export function Header() {
   function scrollToTop(){ // fixes for Edge and Internet Explorer
     if(!!document.documentMode || !!window.StyleMedia){
       window.scrollTo(0, 0);
@@ -40,7 +40,7 @@ export function Header() {
                     onClick={scrollToTop}>
                   &#8593;
                 </div>);
-    headerItems.map(item => items.push(
+    HEADER_ITEMS.map(item => items.push(
       <div><a href={'#' + item}>{item}</a></div>
     ));
     items.push(<div className='scroll-arrow-down'

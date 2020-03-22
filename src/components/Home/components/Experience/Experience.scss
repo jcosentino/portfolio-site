@@ -1,3 +1,5 @@
+@import 'styles/style_constants.scss';
+
 .experience-items ul {
     display: flex;
     flex-direction: column;
@@ -5,5 +7,5 @@
 }
 
 .experience-items li {
-    margin: 0.6em;
+    margin: $home-list-margin;
 }

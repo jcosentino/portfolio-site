@@ -1,3 +1,5 @@
+@import 'styles/style_constants.scss';
+
 .education-items h4 {
     margin: 0;
 }
@@ -8,5 +10,5 @@
 }
 
 .education-items li {
-    margin: 0.6em;
+    margin: $home-list-margin;
 }

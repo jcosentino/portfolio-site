@@ -1,8 +1,10 @@
+@import 'styles/style_constants';
+
 .home-img-section {
-    background-color: #333;
-    border: 1em solid #333;
+    background-color: $header-background-color;
+    border: 1em solid $header-background-color;
     margin: 1vh 1vw 0 1vw;
-    font-size: 4vh;
+    font-size: $home-img-sect-font-size;
 }
 
 .home-img-section img {

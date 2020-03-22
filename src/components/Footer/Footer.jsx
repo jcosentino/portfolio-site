@@ -1,29 +1,52 @@
 import React from 'react';
 import './Footer.scss';
+import { EMAIL } from 'constants/constants';
+
+const FOOTER_DATA = [
+  {
+      "url": "https://twitter.com/jcosentino91",
+      "imageSrc": "twitter.png",
+      "alt": "Twitter"
+  },
+  {
+      "url": `mailto:${EMAIL}?subject`,
+      "imageSrc": "email.png",
+      "alt": "Email"
+  },
+  {
+      "url": "https://www.linkedin.com/in/john-cosentino/",
+      "imageSrc": "linkedin.png",
+      "alt": "LinkedIn"
+  },
+  {
+      "url": "https://github.com/jcosentino",
+      "imageSrc": "github.png",
+      "alt": "GitHub"
+  }
+];
 
 export function Footer() {
+  function createFooterComp(url, imageSrc, alt){
+    return (
+      <a href={url}
+          target='blank' rel='noopener noreferrer'>
+        <img src={imageSrc} alt={alt} />
+      </a>
+    );
+  }
+
+  function generateFooterComps(){
+    const footerComps = [];
+    for(const data of FOOTER_DATA){
+      footerComps.push(createFooterComp(data.url, data.imageSrc, data.alt));
+    }
+    return footerComps;
+  }
+
   return (
     <div className='Footer'>
       <div className='footer-content'>
-      <a href='https://twitter.com/jcosentino91'
-         target='blank' rel='noopener noreferrer'>
-        <img src='twitter.png' alt='Twitter' />
-      </a>
-
-      <a href = 'mailto:john.s.cosentino@gmail.com?subject'
-         target='_blank' rel='noopener noreferrer'>
-        <img src='/email.png' alt='Email' />
-      </a>
-
-      <a href='https://www.linkedin.com/in/john-cosentino/'
-         target='blank' rel='noopener noreferrer'>
-        <img src='linkedin.png' alt='LinkedIn' />
-      </a>
-
-      <a href='https://github.com/jcosentino'
-         target='blank' rel='noopener noreferrer'>
-        <img src='github.png' alt='Github' />
-      </a>
+        {generateFooterComps()}
       </div>
     </div>
   );

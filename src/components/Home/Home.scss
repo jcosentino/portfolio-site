@@ -1,11 +1,13 @@
+@import 'styles/style_constants';
+
 .Home {
-    max-width: 80vw;
+    max-width: $home-max-width;
     height: 100%;
-    padding: 0 20vw 7vh 20vw;
+    padding: 0 $home-hor-padding 7vh $home-hor-padding;
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 3.5vh;
+    font-size: $home-font-size;
     position: relative;
     margin: 10vh 0 0 0;
 }
@@ -15,7 +17,7 @@
 }
 
 .home-item {
-    margin: 1vh 1vw 1vh 1vw;
+    margin: $home-item-margin-hor $home-item-margin-vert $home-item-margin-hor $home-item-margin-vert;
     border-bottom: 0.25em solid black;
 }
 
@@ -23,8 +25,8 @@
     background-color: lightgrey;
     margin: 2vh 0 0 0;
     opacity: 0.85;
-    box-shadow: 0.2em 0.2em 0.6em 0.2em #000000;
-    -webkit-box-shadow: 0.2em 0.2em 0.6em 0.2em #000000; 
+    box-shadow: $home-item-box-shadow;
+    -webkit-box-shadow: $home-item-box-shadow; 
     border: 1em solid black;
     overflow: hidden;
     word-wrap: break-word;
