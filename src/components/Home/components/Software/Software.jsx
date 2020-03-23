@@ -58,11 +58,11 @@ export function Software() {
 
   function generateSoftwareItems(){
     const software_items = [];
-    for(const soft of SOFTWARE){
+    SOFTWARE.map(soft => {
       software_items.push(
         createSoftwareComp(soft.url, soft.imageSrc, soft.alt)
       );
-    }
+    });
     return software_items;
   }
 

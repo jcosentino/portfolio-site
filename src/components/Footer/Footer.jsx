@@ -37,9 +37,9 @@ export function Footer() {
 
   function generateFooterComps(){
     const footerComps = [];
-    for(const data of FOOTER_DATA){
+    FOOTER_DATA.map(data => {
       footerComps.push(createFooterComp(data.url, data.imageSrc, data.alt));
-    }
+    });
     return footerComps;
   }
 
