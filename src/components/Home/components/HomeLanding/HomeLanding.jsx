@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { CLICK_IMAGE } from 'constants/constants';
 import './HomeLanding.scss';
 
 const PHOTOS = [
@@ -50,8 +51,9 @@ export function HomeLanding() {
   function createPhotoObj(src, caption, index){
     return (
       <div class={isActivePhoto(index)}>
-        <figure onClick={() => setNewActivePhoto(index++)}>
-          <img src={`self/${src}`} alt={src} />
+        <figure>
+          <img src={`self/${src}`} alt={src} title={CLICK_IMAGE}
+               onClick={() => setNewActivePhoto(index+1)} />
           <figcaption>{caption}</figcaption>
         </figure>
       </div>
@@ -71,7 +73,7 @@ export function HomeLanding() {
       <div className='home-img-section'>
         <h1>John Cosentino</h1>
         <div className='post-h1-break'></div>
-        {generatePhotos()}
+          {generatePhotos()}
       </div>
     <span className='separator-dot'>&#183;</span>
   </>
