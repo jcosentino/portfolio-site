@@ -1,14 +1,77 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './HomeLanding.scss';
 
+const PHOTOS = [
+  {
+    "src": "me.jpg",
+    "caption": "Me at a party circa 2017"
+  },
+  {
+    "src": "1n.jpg",
+    "caption": "In front of my departmental building after graduation"
+  },
+  {
+    "src": "honors_convocation.jpg",
+    "caption": "Honors Convocation 2017"
+  },
+  {
+    "src": "honors_convocation_group.jpg",
+    "caption": "Honors Convocation 2017 computer science group"
+  },
+  {
+    "src": "hackathon_team.jpg",
+    "caption": "My team at CUNY Hackathon"
+  },
+  {
+    "src": "hackathon_crowd.jpg",
+    "caption": "The CUNY Hackathon crowd during the presentations"
+  },
+  {
+    "src": "hackathon_prizes.jpg",
+    "caption": "The prizes at the hackathon"
+  }
+];
+
 export function HomeLanding() {
+  const [activePhoto, setActivePhoto] = useState(0);
+
+  function isActivePhoto(index){
+    return index === activePhoto ? '' : 'inactive-landing-img';
+  }
+
+  function setNewActivePhoto(newIndex){
+    if(newIndex >= PHOTOS.length){
+      setActivePhoto(0);
+    } else {
+      setActivePhoto(newIndex);
+    }
+  }
+
+  function createPhotoObj(src, caption, index){
+    return (
+      <div class={isActivePhoto(index)}>
+        <figure onClick={() => setNewActivePhoto(index++)}>
+          <img src={`self/${src}`} alt={src} />
+          <figcaption>{caption}</figcaption>
+        </figure>
+      </div>
+    );
+  }
+
+  function generatePhotos(){
+    const photo_reel = [];
+    PHOTOS.map((photo, index) => {
+      photo_reel.push(createPhotoObj(photo.src, photo.caption, index));
+    });
+    return photo_reel;
+  }
+
   return (
     <>
       <div className='home-img-section'>
         <h1>John Cosentino</h1>
         <div className='post-h1-break'></div>
-        <img src='self/me.jpg' alt='John C' />
-        <p>^ circa 2017</p>
+        {generatePhotos()}
       </div>
     <span className='separator-dot'>&#183;</span>
   </>

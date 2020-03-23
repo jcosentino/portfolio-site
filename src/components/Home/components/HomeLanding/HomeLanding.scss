@@ -3,17 +3,20 @@
 .home-img-section {
     background-color: $header-background-color;
     border: 1em solid $header-background-color;
-    margin: 1vh 1vw 0 1vw;
     font-size: $home-img-sect-font-size;
 }
 
 .home-img-section img {
     display: block;
     margin: 0 auto 0 auto;
-    max-width: 20vw;
+    max-width: 60vw;
     max-height: 60vh;
     width: auto;
     height: auto;
+}
+
+.inactive-landing-img {
+    display: none;
 }
 
 .home-img-section h1 {
@@ -41,6 +44,7 @@
 @media screen and (orientation: portrait) {
     .home-img-section {
         font-size: 3vh;
+        margin-top: 1vh;
     }
     
     .home-img-section h1 {
