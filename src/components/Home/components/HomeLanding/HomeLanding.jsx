@@ -50,7 +50,7 @@ export function HomeLanding() {
 
   function createPhotoObj(src, caption, index){
     return (
-      <div class={isActivePhoto(index)}>
+      <div className={isActivePhoto(index)}>
         <figure>
           <img src={`self/${src}`} alt={src} title={CLICK_IMAGE}
                onClick={() => setNewActivePhoto(index+1)} />

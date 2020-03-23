@@ -109,13 +109,13 @@ export function Events() {
   function createEvent(title, gmap_url, location, date, info_url, blurb, index){
     return (
       <li>
-        <button type='button' class='info-item-banner'
+        <button type='button' className='info-item-banner'
                 onClick={() => handleClick(index)} >
           {title}
         </button>
         <div className={'info-item-para ' + findActiveTabs(index)} >
           <p>Location: {location}</p>
-          <div class='google-map'>
+          <div className='google-map'>
             <iframe width='600' height='500'
                     src={gmap_url}>
             </iframe>

@@ -5,22 +5,22 @@ import { EMAIL } from 'constants/constants';
 const FOOTER_DATA = [
   {
     "url": "https://twitter.com/jcosentino91",
-    "imageSrc": "footer/twitter.png",
+    "imageSrc": "twitter.png",
     "alt": "Twitter"
   },
   {
     "url": `mailto:${EMAIL}?subject`,
-    "imageSrc": "footer/email.png",
+    "imageSrc": "email.png",
     "alt": "Email"
   },
   {
     "url": "https://www.linkedin.com/in/john-cosentino/",
-    "imageSrc": "footer/linkedin.png",
+    "imageSrc": "linkedin.png",
     "alt": "LinkedIn"
   },
   {
     "url": "https://github.com/jcosentino",
-    "imageSrc": "footer/github.png",
+    "imageSrc": "github.png",
     "alt": "GitHub"
   }
 ];
@@ -38,7 +38,7 @@ export function Footer() {
   function generateFooterComps(){
     const footerComps = [];
     FOOTER_DATA.map(data => {
-      footerComps.push(createFooterComp(data.url, data.imageSrc, data.alt));
+      footerComps.push(createFooterComp(data.url, `footer/${data.imageSrc}`, data.alt));
     });
     return footerComps;
   }
