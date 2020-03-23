@@ -55,6 +55,7 @@ export function HomeLanding() {
           <img src={`self/${src}`} alt={src} title={CLICK_IMAGE}
                onClick={() => setNewActivePhoto(index+1)} />
           <figcaption>{caption}</figcaption>
+          <p className='photo-click-caption'>Feel free to click through the photos ^</p>
         </figure>
       </div>
     );

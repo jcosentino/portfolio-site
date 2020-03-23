@@ -102,14 +102,15 @@ export function Events() {
     }
   }
 
-  function findActiveTabs(index){
-    return activeItems[index] ? '' : 'info-item-para-inactive';
+  function findActiveTabs(index, type='para'){
+    return type === 'para' ? activeItems[index] ? '' : 'info-item-para-inactive'
+                           : activeItems[index] ? 'info-item-banner-opened' : '';
   }
 
   function createEvent(title, gmap_url, location, date, info_url, blurb, index){
     return (
       <li key={index}>
-        <button type='button' className='info-item-banner'
+        <button type='button' className={'info-item-banner ' + findActiveTabs(index, 'button')}
                 onClick={() => handleClick(index)} >
           {title}
         </button>

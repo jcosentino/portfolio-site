@@ -69,6 +69,11 @@
         border-radius: 0 5em 5em 0;
     }
 
+    .Header a:hover, .scroll-arrow-up:hover, .scroll-arrow-down:hover {
+        background-color: $header-background-color;
+        color: white;
+    }
+
     .Header div a {
         padding-left: 2.8vw;
         font-size: 2.6vw;
