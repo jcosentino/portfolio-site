@@ -9,3 +9,26 @@
 .events-items li {
     margin: $home-list-margin;
 }
+
+.info-item-banner {
+    height: 5em;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.0em;
+    background-color: rgb(110, 110, 148);
+}
+
+.info-item-banner:hover {
+    background-color: rgb(154, 154, 207);
+}
+
+.info-item-para {
+    height: auto;
+    width: 100%;
+    background-color: rgb(198, 198, 238);
+    overflow: hidden;
+}
+
+.info-item-para-inactive {
+    display: none;
+}
