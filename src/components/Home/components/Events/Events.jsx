@@ -108,7 +108,7 @@ export function Events() {
 
   function createEvent(title, gmap_url, location, date, info_url, blurb, index){
     return (
-      <li>
+      <li key={index}>
         <button type='button' className='info-item-banner'
                 onClick={() => handleClick(index)} >
           {title}
@@ -116,12 +116,12 @@ export function Events() {
         <div className={'info-item-para ' + findActiveTabs(index)} >
           <p>Location: {location}</p>
           <div className='google-map'>
-            <iframe width='600' height='500'
-                    src={gmap_url}>
+            <iframe src={gmap_url} 
+                    title={location} >
             </iframe>
           </div>
           <p>Date: {date}</p>
-          <p>URL: {info_url}</p>
+          <p>URL: <a href={info_url}>{info_url}</a></p>
           <p>Blurb: {blurb}</p>
         </div>
       </li>
@@ -129,19 +129,16 @@ export function Events() {
   }
 
   function generateEvents(){
-    const events_list = [];
-    EVENTS.map((event, index) => {
-      events_list.push(createEvent(event.title,
-                                   event.gmap_url,
-                                   event.location,
-                                   event.date,
-                                   event.info_url,
-                                   event.blurb,
-                                   index
-                                  )
-                      );
-    });
-    return events_list;
+    return EVENTS.map((event, index) => 
+      createEvent(event.title,
+        event.gmap_url,
+        event.location,
+        event.date,
+        event.info_url,
+        event.blurb,
+        index
+      )
+    );
   }
 
   return (

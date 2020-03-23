@@ -29,18 +29,17 @@ export function Footer() {
   function createFooterComp(url, imageSrc, alt){
     return (
       <a href={url}
-          target='blank' rel='noopener noreferrer'>
+         target='blank' rel='noopener noreferrer'
+         key={alt}>
         <img src={imageSrc} alt={alt} />
       </a>
     );
   }
 
   function generateFooterComps(){
-    const footerComps = [];
-    FOOTER_DATA.map(data => {
-      footerComps.push(createFooterComp(data.url, `footer/${data.imageSrc}`, data.alt));
-    });
-    return footerComps;
+    return FOOTER_DATA.map(data => 
+      createFooterComp(data.url, `footer/${data.imageSrc}`, data.alt)
+    );
   }
 
   return (

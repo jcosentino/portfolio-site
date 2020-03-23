@@ -11,16 +11,9 @@ const PROJECTS = [
 
 export function Projects() {
   function generateProjects(){
-    const projects = [
-      <li>
-        <span role='img' aria-label='right pointer'>👉</span>
-        {PROJECTS[0]}
-      </li>
-    ];
-    for(const project of PROJECTS.slice(1)){
-      projects.push(<li>{project}</li>);
-    }
-    return projects;
+    return PROJECTS.map(proj =>
+      <li key={proj}>{proj}</li>
+    );
   }
 
   return (

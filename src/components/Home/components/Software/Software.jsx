@@ -47,7 +47,7 @@ const SOFTWARE = [
 export function Software() {
   function createSoftwareComp(url, imageSrc, alt){
     return (
-      <li>
+      <li key={alt}>
         <a href={url}
           target='blank' rel='noopener noreferrer'>
             <img src={imageSrc} alt={alt} title={alt} />
@@ -57,13 +57,9 @@ export function Software() {
   }
 
   function generateSoftwareItems(){
-    const software_items = [];
-    SOFTWARE.map(soft => {
-      software_items.push(
-        createSoftwareComp(soft.url, soft.imageSrc, soft.alt)
-      );
-    });
-    return software_items;
+    return SOFTWARE.map(soft => 
+      createSoftwareComp(soft.url, soft.imageSrc, soft.alt)
+    );
   }
 
   return (

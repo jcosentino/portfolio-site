@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.scss';
+import { UP_ARROW_KEY, DOWN_ARROW_KEY } from 'constants/constants';
 
 const HEADER_ITEMS = [
   'Experience',
@@ -36,17 +37,25 @@ export function Header() {
 
   function generateHeaderItems(){
     const items = [];
-    items.push(<div className='scroll-arrow-up'
-                    onClick={scrollToTop}>
-                  &#8593;
-                </div>);
+    items.push(
+      <div className='scroll-arrow-up'
+            onClick={scrollToTop}
+            key={UP_ARROW_KEY}>
+                    &#8593;
+      </div>
+    );
+
     HEADER_ITEMS.map(item => items.push(
-      <div><a href={'#' + item}>{item}</a></div>
+      <div key={items}><a href={'#' + item}>{item}</a></div>
     ));
-    items.push(<div className='scroll-arrow-down'
-                    onClick={scrollToBottom}>
-                 &#8595;
-               </div>);
+    
+    items.push(
+      <div className='scroll-arrow-down'
+          onClick={scrollToBottom}
+          key={DOWN_ARROW_KEY}>
+                  &#8595;
+      </div>
+      );
     return items;
   }
   

@@ -11,16 +11,9 @@ const EXPERIENCE_ROLES = [
 
 export function Experience() {
   function generateExperienceRoles(){
-    const experience = [
-      <li>
-        <span role='img' aria-label='right pointer'>👉</span>
-        {EXPERIENCE_ROLES[0]}
-      </li>
-    ];
-    for(const exp of EXPERIENCE_ROLES.slice(1)){
-      experience.push(<li>{exp}</li>);
-    }
-    return experience;
+    return EXPERIENCE_ROLES.map(role => 
+      <li key={role}>{role}</li>
+    );
   }
 
   return (

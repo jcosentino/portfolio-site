@@ -50,7 +50,7 @@ export function HomeLanding() {
 
   function createPhotoObj(src, caption, index){
     return (
-      <div className={isActivePhoto(index)}>
+      <div className={isActivePhoto(index)} key={index}>
         <figure>
           <img src={`self/${src}`} alt={src} title={CLICK_IMAGE}
                onClick={() => setNewActivePhoto(index+1)} />
@@ -61,11 +61,9 @@ export function HomeLanding() {
   }
 
   function generatePhotos(){
-    const photo_reel = [];
-    PHOTOS.map((photo, index) => {
-      photo_reel.push(createPhotoObj(photo.src, photo.caption, index));
-    });
-    return photo_reel;
+    return PHOTOS.map((photo, index) => 
+      createPhotoObj(photo.src, photo.caption, index)
+    );
   }
 
   return (
