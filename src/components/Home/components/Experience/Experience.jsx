@@ -73,10 +73,12 @@ export function Experience(){
     const techList = tech.split(',');
     if(techList[0] === ''){ return ''; }
     return techList.map(techItem => 
-      <img src={`software/${techItem}`}
-           className='experience-key_tech-icon'
-           alt={techItem}
-           title={techItem} />
+      <React.Fragment key={techItem}>
+        <img src={`software/${techItem}`}
+            className='experience-key_tech-icon'
+            alt={techItem}
+            title={techItem} />
+      </React.Fragment>
     );
   }
 
@@ -119,7 +121,7 @@ export function Experience(){
                    dragSelectionEnabled={false}
           />
         <div className='key_tech_icons'>{keyTech(key_tech)}</div>
-        <p class={activeLink(code_link)}>Code: {code_link}</p>
+        <p className={activeLink(code_link)}>Code: {code_link}</p>
         <p className={activeLink(host_link)}>Hosted application: {host_link}</p>
       </React.Fragment>
     );

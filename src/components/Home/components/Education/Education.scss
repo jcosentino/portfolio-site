@@ -1,24 +1,62 @@
 @import 'styles/style_constants.scss';
 
 .education-items h4 {
-    margin: 0;
+    margin: 0 0 2vh 0;
 }
 
 .education-items ul {
     text-align: center;
     list-style-type: none;
+    padding-top: 1vh;
+    background-color: rgb(243, 200, 181);
+    border: rgb(194, 121, 92) dashed 0.1em;
+    opacity: 0.9;
 }
 
 .education-items li {
     margin: $home-list-margin;
 }
 
+.education-items li:not(:first-child) {
+    margin: $home-list-margin;
+    border-top: rgb(194, 121, 92) dashed 0.1em;
+    padding-top: 2vh;
+}
+
 .college-photo-csi {
     max-width: 60vw;
 }
 
-// @media screen and (orientation: portrait) {
-//     .college-photo-csi {
-//         max-width: 60vw;
-//     }
-// }
+.edu-class-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+}
+
+.edu-class-list a {
+    padding: 2vh 0 2vh 0;
+    color: rgb(100, 89, 89);
+}
+
+.edu-class-list a:hover, .edu-class-list a:visited:hover {
+    color: rgb(83, 172, 117);
+}
+
+.edu-class-list a:visited {
+    color: rgb(35, 57, 128);
+}
+
+.degree-heading {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5vh;
+    padding-bottom: 1vh;
+}
+
+.grad-date-label {
+    font-size: 3.5vh;
+}
+
+.edu-classes-arrow {
+    font-size-adjust: 2vh;
+    font-weight: 900;
+}
