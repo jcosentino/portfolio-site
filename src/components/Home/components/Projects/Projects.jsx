@@ -71,7 +71,7 @@ const PROJECTS = [
   }
 ];
 
-export function Projects() {
+export function Projects(){
   const anchorId = 'Projects';
   const headerTitle = 'Projects';
   const renderItems = PROJECTS.map(proj => proj.project);

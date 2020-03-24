@@ -23,10 +23,6 @@
     -webkit-transition: all 1.2s ease;
 }
 
-.inactive-landing-img {
-    display: none;
-}
-
 .home-img-section h1 {
     color: rgb(138, 138, 138);
     font-size: 7vh;
@@ -38,30 +34,14 @@
     opacity: 0.7;
 }
 
-.home-img-section p {
-    font-size: 1em;
-    color: rgb(138, 138, 138);
-    font-style: italic;
-}
-
 .separator-dot {
     font-size: 5em;
     color: #333;
 }
 
-.photo-click-caption {
-    display: none;
-}
-
 @media screen and (orientation: portrait) {
-    @keyframes color-change {
-        0% { color: inherit; }
-        50% { color: rgb(153, 153, 94); }
-        100% { color: inherit; }
-    }
-
     .home-img-section {
-        font-size: 3vh;
+        font-size: $home-img-sect-mobile-font-size;
         margin-top: 1vh;
     }
     
@@ -69,17 +49,7 @@
         font-size: 4vh;
     }
 
-    .home-img-section img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-
     .home-img-section img:hover {
         filter: none;
-    }
-
-    .photo-click-caption {
-        display: block;
-        animation: color-change 1s infinite;
     }
 }

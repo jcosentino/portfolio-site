@@ -95,7 +95,10 @@ export function Events(){
           </iframe>
         </div>
         <p>Date: {date}</p>
-        <p>URL: <a href={info_url}>{info_url}</a></p>
+        <p>URL: <a href={info_url} target='blank' rel='noopener noreferrer'>
+                  {info_url}
+                </a>
+        </p>
         <p>Blurb: {blurb}</p>
       </React.Fragment>
     );

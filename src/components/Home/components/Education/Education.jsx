@@ -80,7 +80,7 @@ const EDUCATION = [
   }
 ];
 
-export function Education() {
+export function Education(){
   function generateClassNames(class_names){
     return class_names.map(klass => 
       <React.Fragment key={klass.class_name}>

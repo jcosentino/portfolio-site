@@ -44,7 +44,7 @@ const SOFTWARE = [
   }
 ];
 
-export function Software() {
+export function Software(){
   function createSoftwareComp(url, imageSrc, alt){
     return (
       <li key={alt}>

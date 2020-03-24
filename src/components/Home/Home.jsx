@@ -10,7 +10,7 @@ import {
   About,
    } from './components';
 
-export function Home() {
+export function Home(){
   return (
     <div className='Home'>
       <HomeLanding />

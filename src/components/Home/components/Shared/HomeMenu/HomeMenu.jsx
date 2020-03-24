@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './HomeMenu.scss';
 
-export function HomeMenu(props) {
+export function HomeMenu(props){
   const [activeItems, setActiveItems] = useState([]);
   const { 
     anchorId,

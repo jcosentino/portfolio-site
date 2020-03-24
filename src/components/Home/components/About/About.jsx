@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.scss';
 
-export function About() {
+export function About(){
   return (
     <>
       <span className='anchor' id='About'></span>
