@@ -1,6 +1,8 @@
 import React from 'react';
 import './Education.scss';
 
+const CSI_LINK = 'https://www.csi.cuny.edu/';
+
 const EDUCATION = [
   {
     "degree": "Computer Science BS",
@@ -110,10 +112,13 @@ export function Education() {
         <h1>Education</h1>
         <div className='education-items'>
           <h4>The College of Staten Island - CUNY</h4>
-          <img src={'college/cunycsi_college.jpg'}
-               className='college-photo-csi'
-               alt='CSI'
-               title='CSI' />
+          <a href={CSI_LINK}
+             target='blank' rel='noopener noreferrer'>
+            <img src={'college/cunycsi_college.jpg'}
+                className='college-photo-csi'
+                alt='CSI'
+                title='CSI' />
+          </a>
           <ul>
             {generateEduComponents()}
           </ul>
