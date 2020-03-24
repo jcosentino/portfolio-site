@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Events.scss';
+import { HomeMenu } from '../Shared';
 
 const EVENTS = [
   {
@@ -17,7 +18,7 @@ const EVENTS = [
     "location": "Google @ New York, NY",
     "date": "November 16, 2018",
     "info_url": "https://sandbox.withgoogle.com/highlights",
-    "blurb": `Workshop and seminar about Google's uses of machine learning, how Google + 
+    "blurb": `Workshop and seminar about Google's uses of machine learning, how Google+ 
               aided in AI technologies, and how JavaScript is just as capable as Python in the 
               world of ML.`
   },
@@ -79,60 +80,30 @@ const EVENTS = [
   }
 ];
 
-export function Events() {
-  const [activeItems, setActiveItems] = useState([]);
+export function Events(){
+  const anchorId = 'Events';
+  const headerTitle = 'Events';
+  const renderItems = EVENTS.map(event => event.title);
 
-  function openItem(index){
-    const openItems = activeItems.slice(0);
-    openItems[index] = true;
-    setActiveItems(openItems);
-  }
-
-  function closeItem(index){
-    const openItems = activeItems.slice(0);
-    openItems[index] = false;
-    setActiveItems(openItems);
-  }
-
-  function handleClick(index){
-    if(activeItems[index]){
-      closeItem(index);
-    } else {
-      openItem(index);
-    }
-  }
-
-  function findActiveTabs(index, type='para'){
-    return type === 'para' ? activeItems[index] ? '' : 'info-item-para-inactive'
-                           : activeItems[index] ? 'info-item-banner-opened' : '';
-  }
-
-  function createEvent(title, gmap_url, location, date, info_url, blurb, index){
+  function createEvent(gmap_url, location, date, info_url, blurb, index){
     return (
-      <li key={index}>
-        <button type='button' className={'info-item-banner ' + findActiveTabs(index, 'button')}
-                onClick={() => handleClick(index)} >
-          {title}
-        </button>
-        <div className={'info-item-para ' + findActiveTabs(index)} >
-          <p>Location: {location}</p>
-          <div className='google-map'>
-            <iframe src={gmap_url} 
-                    title={location} >
-            </iframe>
-          </div>
-          <p>Date: {date}</p>
-          <p>URL: <a href={info_url}>{info_url}</a></p>
-          <p>Blurb: {blurb}</p>
+      <React.Fragment key={index}>
+        <p>Location: {location}</p>
+        <div className='google-map'>
+          <iframe src={gmap_url} 
+                  title={location} >
+          </iframe>
         </div>
-      </li>
+        <p>Date: {date}</p>
+        <p>URL: <a href={info_url}>{info_url}</a></p>
+        <p>Blurb: {blurb}</p>
+      </React.Fragment>
     );
   }
 
   function generateEvents(){
     return EVENTS.map((event, index) => 
-      createEvent(event.title,
-        event.gmap_url,
+      createEvent(event.gmap_url,
         event.location,
         event.date,
         event.info_url,
@@ -142,19 +113,14 @@ export function Events() {
     );
   }
 
+  const customDivs = (generateEvents());
+
   return (
-    <>
-      <span className='anchor' id='Events'></span>
-      <div className='home-item'>
-        <h1>
-        Events
-        </h1>
-        <div className='events-items'>
-          <ul>
-            {generateEvents()}
-          </ul>
-        </div>
-      </div>
-    </>
+    <div>
+      <HomeMenu anchorId={anchorId}
+                headerTitle={headerTitle}
+                renderItems={renderItems}
+                customDivs={customDivs} />
+    </div>
   );
 }

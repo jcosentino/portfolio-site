@@ -1,11 +1,16 @@
-@import 'styles/style_constants.scss';
-
-.experience-items ul {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
+.experience-company-logo {
+    max-height: 30vh;
+    max-width: 30vw;
+    margin-top: 1em;
 }
 
-.experience-items li {
-    margin: $home-list-margin;
+.experience-data-range {
+    width: 50vw;
+    height: 60vh;
+}
+
+@media screen and (orientation: portrait) {
+    .experience-data-range {
+        width: 100%;
+    }
 }
