@@ -12,9 +12,7 @@ const EXPERIENCE_ROLES = [
     "duration": "4/1/2018,3/3/2019",
     "company_logo": "prudential.jpg",
     "info_url": "https://www.prudential.com/",
-    "key_tech": "angular.png,typescript.jpg,spring.png",
-    "code_link": "",
-    "host_link": ""
+    "key_tech": "angular.png,typescript.jpg,spring.png"
   },
   {
     "title": "Goodwill Industries NY / NJ",
@@ -22,9 +20,7 @@ const EXPERIENCE_ROLES = [
     "duration": "12/10/2018,3/1/2019",
     "company_logo": "goodwill.png",
     "info_url": "https://www.goodwillnynj.org/",
-    "key_tech": 'nodejs.png',
-    "code_link": "",
-    "host_link": ""
+    "key_tech": 'nodejs.png'
   },
   {
     "title": "Bloomberg LP",
@@ -32,9 +28,7 @@ const EXPERIENCE_ROLES = [
     "duration": "4/2/2018,6/28/2018",
     "company_logo": "bloomberg.jpg",
     "info_url": "https://www.bloomberg.com/",
-    "key_tech": "rails.png,reactjs.jpg",
-    "code_link": "",
-    "host_link": ""
+    "key_tech": "rails.png,reactjs.jpg"
   },
   {
     "title": "College of Staten Island OTS",
@@ -42,9 +36,7 @@ const EXPERIENCE_ROLES = [
     "duration": "3/9/2016,2/8/2018",
     "company_logo": "cunycsi.jpg",
     "info_url": "https://www.csi.cuny.edu/online-resources/office-information-technology-services",
-    "key_tech": "",
-    "code_link": "",
-    "host_link": ""
+    "key_tech": ""
   },
   {
     "title": "RFCUNY",
@@ -52,9 +44,7 @@ const EXPERIENCE_ROLES = [
     "duration": "4/15/2016,9/15/2017",
     "company_logo": "rfcuny.jpg",
     "info_url": "https://www.rfcuny.org/RFWebsite/",
-    "key_tech": "nodejs.png",
-    "code_link": "",
-    "host_link": ""
+    "key_tech": "nodejs.png"
   }
 ];
 
@@ -64,10 +54,6 @@ export function Experience(){
   const renderItems = EXPERIENCE_ROLES.map(exp => exp.title);
   const isPotrait = window.matchMedia('(orientation: portrait)').matches;
   const monthsCount = isPotrait ? 0 : 2;
-
-  function activeLink(link){
-    return link === '' ? 'inactive-exp-link' : '';
-  }
 
   function keyTech(tech){
     const techList = tech.split(',');
@@ -88,8 +74,6 @@ export function Experience(){
                        company_logo,
                        info_url,
                        key_tech,
-                       code_link,
-                       host_link,
                        index){
     const dates = duration.split(',');
     const startDate = dates[0];
@@ -121,8 +105,6 @@ export function Experience(){
                    dragSelectionEnabled={false}
           />
         <div className='key_tech_icons'>{keyTech(key_tech)}</div>
-        <p className={activeLink(code_link)}>Code: {code_link}</p>
-        <p className={activeLink(host_link)}>Hosted application: {host_link}</p>
       </React.Fragment>
     );
   }
@@ -135,21 +117,19 @@ export function Experience(){
         exp.company_logo,
         exp.info_url,
         exp.key_tech,
-        exp.code_link,
-        exp.host_link,
         index
       )
     );
   }
 
-  const customDivs = (generateEvents());
+  const customDiv = (generateEvents());
 
   return (
     <div>
       <HomeMenu anchorId={anchorId}
                 headerTitle={headerTitle}
                 renderItems={renderItems}
-                customDivs={customDivs} />
+                customDiv={customDiv} />
     </div>
   );
 }

@@ -7,7 +7,7 @@ export function HomeMenu(props) {
     anchorId,
     headerTitle,
     renderItems,
-    customDivs
+    customDiv
   } = props;
 
   function openItem(index){
@@ -43,7 +43,7 @@ export function HomeMenu(props) {
           {title}
         </button>
         <div className={'info-item-para ' + findActiveTabs(index)} >
-            {customDivs[index]}
+            {customDiv[index]}
         </div>
       </li>
     );

@@ -113,14 +113,14 @@ export function Events(){
     );
   }
 
-  const customDivs = (generateEvents());
+  const customDiv = (generateEvents());
 
   return (
     <div>
       <HomeMenu anchorId={anchorId}
                 headerTitle={headerTitle}
                 renderItems={renderItems}
-                customDivs={customDivs} />
+                customDiv={customDiv} />
     </div>
   );
 }

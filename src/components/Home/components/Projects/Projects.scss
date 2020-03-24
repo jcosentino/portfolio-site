@@ -1,9 +1,3 @@
-.projects-items ul {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-}
-
-.projects-items li {
-    margin: 0.6em;
+.inactive-project-item {
+    display: none;
 }
