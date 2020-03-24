@@ -93,7 +93,6 @@ export function Experience(){
         <p>Location: {location}</p>
         <DateRange className='experience-data-range'
                    editableDateInputs={false}
-                   onChange={() => {}}
                    ranges={[{
                     "startDate": new Date(startDate),
                     "endDate": new Date(endDate)
