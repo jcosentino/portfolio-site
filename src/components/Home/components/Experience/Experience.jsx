@@ -12,7 +12,7 @@ const EXPERIENCE_ROLES = [
     "duration": "4/1/2018,3/3/2019",
     "company_logo": "prudential.jpg",
     "info_url": "https://www.prudential.com/",
-    "key_tech": "angular.png,typscript.jpg,spring.png",
+    "key_tech": "angular.png,typescript.jpg,spring.png",
     "code_link": "",
     "host_link": ""
   },
@@ -65,6 +65,21 @@ export function Experience(){
   const isPotrait = window.matchMedia('(orientation: portrait)').matches;
   const monthsCount = isPotrait ? 0 : 2;
 
+  function activeLink(link){
+    return link === '' ? 'inactive-exp-link' : '';
+  }
+
+  function keyTech(tech){
+    const techList = tech.split(',');
+    if(techList[0] === ''){ return ''; }
+    return techList.map(techItem => 
+      <img src={`software/${techItem}`}
+           className='experience-key_tech-icon'
+           alt={techItem}
+           title={techItem} />
+    );
+  }
+
   function createEvent(title,
                        location,
                        duration,
@@ -103,9 +118,9 @@ export function Experience(){
                    showMonthAndYearPickers={false}
                    dragSelectionEnabled={false}
           />
-        <div>{key_tech}</div>
-        <div>{code_link}</div>
-        <div>{host_link}</div>
+        <div className='key_tech_icons'>{keyTech(key_tech)}</div>
+        <p class={activeLink(code_link)}>Code: {code_link}</p>
+        <p className={activeLink(host_link)}>Hosted application: {host_link}</p>
       </React.Fragment>
     );
   }
