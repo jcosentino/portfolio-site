@@ -4,6 +4,7 @@ import { HomeMenu } from '../Shared';
 import 'react-date-range/dist/styles.css'; // react-date-range main css file
 import 'react-date-range/dist/theme/default.css'; // react-date-range theme css file
 import { DateRange } from 'react-date-range';
+import { TechIconsDisplay } from '../Shared/TechIconsDiplay/TechIconsDisplay';
 
 const EXPERIENCE_ROLES = [
   {
@@ -12,7 +13,11 @@ const EXPERIENCE_ROLES = [
     "duration": "4/1/2018,3/3/2019",
     "company_logo": "prudential.jpg",
     "info_url": "https://www.prudential.com/",
-    "key_tech": "angular.png,typescript.jpg,spring.png"
+    "key_tech": [
+      "angular.png",
+      "typescript.jpg",
+      "spring.png"
+    ]
   },
   {
     "title": "Goodwill Industries NY / NJ",
@@ -20,7 +25,9 @@ const EXPERIENCE_ROLES = [
     "duration": "12/10/2018,3/1/2019",
     "company_logo": "goodwill.png",
     "info_url": "https://www.goodwillnynj.org/",
-    "key_tech": 'nodejs.png'
+    "key_tech": [
+      "nodejs.png"
+    ]
   },
   {
     "title": "Bloomberg LP",
@@ -28,7 +35,10 @@ const EXPERIENCE_ROLES = [
     "duration": "4/2/2018,6/28/2018",
     "company_logo": "bloomberg.jpg",
     "info_url": "https://www.bloomberg.com/",
-    "key_tech": "rails.png,reactjs.jpg"
+    "key_tech": [
+      "rails.png",
+      "reactjs.jpg"
+    ]
   },
   {
     "title": "College of Staten Island OTS",
@@ -36,7 +46,7 @@ const EXPERIENCE_ROLES = [
     "duration": "3/9/2016,2/8/2018",
     "company_logo": "cunycsi.jpg",
     "info_url": "https://www.csi.cuny.edu/online-resources/office-information-technology-services",
-    "key_tech": ""
+    "key_tech": []
   },
   {
     "title": "RFCUNY",
@@ -44,7 +54,9 @@ const EXPERIENCE_ROLES = [
     "duration": "4/15/2016,9/15/2017",
     "company_logo": "rfcuny.jpg",
     "info_url": "https://www.rfcuny.org/RFWebsite/",
-    "key_tech": "nodejs.png"
+    "key_tech": [
+      "nodejs.png"
+    ]
   }
 ];
 
@@ -54,19 +66,6 @@ export function Experience(){
   const renderItems = EXPERIENCE_ROLES.map(exp => exp.title);
   const isPotrait = window.matchMedia('(orientation: portrait)').matches;
   const monthsCount = isPotrait ? 0 : 2;
-
-  function keyTech(tech){
-    const techList = tech.split(',');
-    if(techList[0] === ''){ return ''; }
-    return techList.map(techItem => 
-      <React.Fragment key={techItem}>
-        <img src={`software/${techItem}`}
-            className='experience-key_tech-icon'
-            alt={techItem}
-            title={techItem} />
-      </React.Fragment>
-    );
-  }
 
   function createEvent(title,
                        location,
@@ -104,7 +103,7 @@ export function Experience(){
                    showMonthAndYearPickers={false}
                    dragSelectionEnabled={false}
           />
-        <div className='key_tech_icons'>{keyTech(key_tech)}</div>
+        <TechIconsDisplay iconsList={key_tech} />
       </React.Fragment>
     );
   }

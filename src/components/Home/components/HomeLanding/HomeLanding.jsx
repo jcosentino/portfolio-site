@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import { CLICK_IMAGE } from 'constants/constants';
+import React from 'react';
 import './HomeLanding.scss';
-// import { Fade } from 'react-slideshow-image';
 import { ImagePanel } from '../Shared/ImagePanel/ImagePanel';
 
 const PHOTOS = [

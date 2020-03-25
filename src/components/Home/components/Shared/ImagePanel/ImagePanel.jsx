@@ -14,12 +14,14 @@ export function ImagePanel(props){
 
     function createPhoto(photo, caption){
         return (
-            <div className='each-fade'>
-                <div className='image-container'>
-                    <img src={photo} alt={photo} title={caption} />
+            <React.Fragment key={photo}>
+                <div className='each-fade'>
+                    <div className='image-panel-container'>
+                        <img src={photo} alt={photo} title={caption} />
+                    </div>
+                    <h2>{caption}</h2>
                 </div>
-                <h2>{caption}</h2>
-            </div>
+            </React.Fragment>
         );
     }
 

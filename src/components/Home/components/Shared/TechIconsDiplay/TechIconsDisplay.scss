@@ -1,0 +1,52 @@
+.experience-company-logo {
+    max-height: 30vh;
+    max-width: 30vw;
+    margin-top: 1em;
+}
+
+.experience-data-range {
+    width: 50vw;
+    height: 70vh;
+    margin-bottom: 1em;
+}
+
+.key_tech_icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.key_tech_icons img {
+    margin: 1em;
+    transform: rotate(0deg) scale(1.0);
+    transition: all 1.5s ease;
+}
+
+.key_tech_icons img:hover {
+    transform: scale(0.5);
+    transition: all 1.0s ease;
+}
+
+.key_tech-icon {
+    width: 10vw;
+}
+
+@media screen and (orientation: portrait) {
+    .experience-data-range {
+        width: 100%;
+    }
+
+    .experience-key_tech-icon {
+        width: 15vw;
+    }
+
+    .key_tech_icons img img:hover {
+        transform: none;
+        transition: none;
+    }
+
+    .key_tech_icons img:hover {
+        transform: none;
+        transition: none;
+    }
+}

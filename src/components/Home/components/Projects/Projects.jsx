@@ -1,6 +1,7 @@
 import React from 'react';
 import './Projects.scss';
-import { HomeMenu } from '../Shared';
+import { HomeMenu, TechIconsDisplay } from '../Shared';
+import { ImagePanel } from '../Shared/ImagePanel/ImagePanel';
 
 const IN_PROGRESS = 'In Progess...'
 
@@ -9,7 +10,13 @@ const PROJECTS = [
     "project": "Doctor Appointment Scheduler",
     "blurb": "bvjbn fvcjbnjf",
     "time": `${IN_PROGRESS}`,
-    "key_tech": "angular.png,reactjs.jpg,python.png,aws.jpg,typescript.jpg",
+    "key_tech": [
+      "angular.png",
+      "reactjs.jpg",
+      "python.png",
+      "aws.jpg",
+      "typescript.jpg"
+    ],
     "code_links": [
       "https://github.com/jcosentino/doctor-appointment-scheduler-angular",
       "https://github.com/jcosentino/doctor-appointment-scheduler-reactjs",
@@ -17,54 +24,69 @@ const PROJECTS = [
     ],
     "host_link": "",
     "screenshots": [
-      "doctor_app_frontend.png",
-      "doctor_app_backend.png"
+      "project_screenshots/doctor_app_frontend.png",
+      "project_screenshots/doctor_app_backend.png"
     ]
   },
   {
     "project": "Portfolio Website",
     "blurb": "fgbshbhfdvsngfbfdbfd",
     "time": "3/24/2020",
-    "key_tech": "angular.png,typescript.jpg,spring.png",
+    "key_tech": [
+      "angular.png",
+      "typescript.jpg",
+      "spring.png"
+    ],
     "code_links": [
       "https://github.com/jcosentino/portfolio-site"
     ],
     "host_link": "https://jcosentino.me/",
     "screenshots": [
-      "portfolio_site.png"
+      "project_screenshots/portfolio_site.png"
     ]
   },
   {
     "project": "Goodwill PO Search / Indexer",
     "blurb": "fdsgvgdgvfds",
     "time": "2/28/2019",
-    "key_tech": "nodejs.jpg",
+    "key_tech": [
+      "nodejs.png"
+    ],
     "code_links": [
       "https://github.com/jcosentino/po_search_app"
     ],
     "host_link": "",
     "screenshots": [
-      "po_search_app.png"
+      "project_screenshots/po_search_app.png"
     ]
   },
   {
     "project": "RFCUNY Honors Research",
     "blurb": "testtest",
     "time": "9/15/2017",
-    "key_tech": "nodejs.jpg",
+    "key_tech": [
+      "nodejs.png"
+    ],
     "code_links": [],
     "host_link": "",
     "screenshots": [
-      "research_app_1.png",
-      "research_app_2.png",
-      "research_app_3.png"
+      "project_screenshots/research_app_1.png",
+      "project_screenshots/research_app_2.png",
+      "project_screenshots/research_app_3.png"
     ]
   },
   {
     "project": "CUNY Tech Prep - NYC TTP",
-    "blurb": 'testestrewr',
+    "blurb": `CUNY Tech Prep is a year-long JavaScript bootcamp hosted by the 
+              New York City Tech Talent Pipeline. They teach NodeJS, ReactJS, SQL
+              concepts, OOP, data structures, and other topics not taught in-depth
+              in school.`,
     "time": "6/23/2017",
-    "key_tech": "nodejs.jpg,reactjs.jpg,sql.png",
+    "key_tech": [
+      "nodejs.png",
+      "reactjs.jpg",
+      "sql.png"
+    ],
     "code_links": [],
     "host_link": "https://cunytechprep.nyc/",
     "screenshots": []
@@ -81,21 +103,28 @@ export function Projects(){
   }
 
   function codeLinks(code_links){
-    return code_links.map(code_link => 
-      <React.Fragment key={code_link}>
-        <p>Code Link:<br></br>
-          <a href={code_link}
-            target='blank' rel='noopener noreferrer'>
+    return (
+      <>
+        <p>
+          <span className='project-label'>Code Links:</span><br></br>
+          {code_links.map(code_link => 
+          <React.Fragment key={code_link}>
+            <a href={code_link}
+               target='blank' rel='noopener noreferrer'>
               {code_link}
-          </a>
+            </a><br></br>
+          </React.Fragment>
+        )}
         </p>
-      </React.Fragment>
+      </>
     );
   }
 
   function screenShots(screenshots){
-    return screenshots.map(sn => 
-      <p>{sn}</p>
+    return (
+      <div className='project-img-section'>
+        <ImagePanel photoList={screenshots} captionTags={[]} />
+      </div>
     );
   }
 
@@ -108,18 +137,23 @@ export function Projects(){
     ){
       return (
         <div className='project-item'>
-          <p>About this app:<br></br>{blurb}</p>
-          <p>Completed: {time}</p>
+          <p><span className='project-label'>About this app:</span><br></br>
+            <span className='project-about-section'>{blurb}</span>
+          </p>
+          <p>
+            <span className='project-label'>Completed: </span>
+            <span className='project-completed-section'>{time}</span>
+          </p>
           <div className='project-key_tech'>
-            {key_tech}
+            {<TechIconsDisplay iconsList={key_tech} />}
           </div>
           <div className={activeLink(code_link)}>
             {codeLinks(code_link)}
           </div>
           <div className={activeLink(host_link)}>
-            <p>Hosted at:<br></br>
+            <p><span className='project-label'>Hosted at:</span><br></br>
               <a href={host_link}
-                target='blank' rel='noopener noreferrer'>
+                 target='blank' rel='noopener noreferrer'>
                   {host_link}
               </a>
             </p>
