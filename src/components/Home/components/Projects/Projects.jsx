@@ -8,7 +8,13 @@ const IN_PROGRESS = 'In Progess...'
 const PROJECTS = [
   {
     "project": "Doctor Appointment Scheduler",
-    "blurb": "bvjbn fvcjbnjf",
+    "blurb": `I wanted to re-create my college team's doctor 
+              appointment schedule application. The original used
+              C#, .NET, and MySQL. The new application will offer
+              both, Angular and React + TypeScript, GUIs. The backend
+              is written in Flask, a Python-based web framework.
+              For datastore, MySQL is utilized. It has not yet 
+              been uploaded to AWS; it is a work-in-progress.`,
     "time": `${IN_PROGRESS}`,
     "key_tech": [
       "angular.png",
@@ -30,7 +36,7 @@ const PROJECTS = [
   },
   {
     "project": "Portfolio Website",
-    "blurb": "fgbshbhfdvsngfbfdbfd",
+    "blurb": `It is the code that powers this very website.`,
     "time": "3/24/2020",
     "key_tech": [
       "angular.png",
@@ -47,7 +53,10 @@ const PROJECTS = [
   },
   {
     "project": "Goodwill PO Search / Indexer",
-    "blurb": "fdsgvgdgvfds",
+    "blurb": `This application was built in under a month, and it was designed to
+              searched a Shared Drive and pull purchase order .pdf files and 
+              image files. The purchase orders did not maintain a common style,
+              so there was a great deal of parsing that needed to get done.`,
     "time": "2/28/2019",
     "key_tech": [
       "nodejs.png"
@@ -62,7 +71,12 @@ const PROJECTS = [
   },
   {
     "project": "RFCUNY Honors Research",
-    "blurb": "testtest",
+    "blurb": `This was my honors research project from my undergraduate program.
+              Two of my colleagues and I added to a visual system, which was 
+              designed for cyber-defense competitions, features such as:
+              Nagios3 monitoring for up and down URLs using http-checker,
+              Implementation of Flapjack.io into project,
+              Caching of results in Redis database, etc.`,
     "time": "9/15/2017",
     "key_tech": [
       "nodejs.png"
