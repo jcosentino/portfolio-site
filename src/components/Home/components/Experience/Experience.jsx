@@ -10,7 +10,7 @@ const EXPERIENCE_ROLES = [
   {
     "title": "Prudential Financial",
     "location": "Newark, NJ",
-    "duration": "4/1/2018,3/3/2019",
+    "duration": "4/1/2019,3/3/2020",
     "company_logo": "prudential.jpg",
     "info_url": "https://www.prudential.com/",
     "key_tech": [
@@ -64,8 +64,9 @@ export function Experience(){
   const anchorId = 'Experience';
   const headerTitle = 'Experience';
   const renderItems = EXPERIENCE_ROLES.map(exp => exp.title);
-  const isPotrait = window.matchMedia('(orientation: portrait)').matches;
-  const monthsCount = isPotrait ? 0 : 2;
+  // const isPotrait = window.matchMedia('(orientation: portrait)').matches;
+  // const monthsCount = isPotrait ? 0 : 2;
+  const monthsCount = 2;
 
   function createEvent(title,
                        location,
