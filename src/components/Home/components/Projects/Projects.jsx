@@ -3,7 +3,7 @@ import './Projects.scss';
 import { HomeMenu, TechIconsDisplay } from '../Shared';
 import { ImagePanel } from '../Shared/ImagePanel/ImagePanel';
 
-const IN_PROGRESS = 'In Progess...'
+const IN_PROGRESS = 'In Progress...'
 
 const PROJECTS = [
   {
