@@ -3,7 +3,8 @@
         "baseUrl": "./src",
         "paths": {
             "constants/*": ["./src/constants/*"],
-            "styles/*": ["./src/styles/*"]
+            "styles/*": ["./src/styles/*"],
+            "redux_items/*": ["src/redux_items/*"]
         }
     }
 }
