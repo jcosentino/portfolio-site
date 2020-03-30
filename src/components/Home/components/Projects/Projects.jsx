@@ -145,11 +145,11 @@ function screenShots(screenshots){
 }
 
 function createProject(blurb,
-                        time,
-                        key_tech,
-                        code_link,
-                        host_link,
-                        screenshots
+                       time,
+                       key_tech,
+                       code_link,
+                       host_link,
+                       screenshots
   ){
     return (
       <div className='project-item'>
