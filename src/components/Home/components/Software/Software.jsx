@@ -28,6 +28,11 @@ const SOFTWARE = [
     "alt": "React JS"
   },
   {
+    "url": "https://redux.js.org/",
+    "imageSrc": "software/redux.png",
+    "alt": "Redux"
+  },
+  {
     "url": "https://rubyonrails.org/",
     "imageSrc": "software/rails.png",
     "alt": "Ruby On Rails"
@@ -36,6 +41,11 @@ const SOFTWARE = [
     "url": "https://spring.io/",
     "imageSrc": "software/spring.png",
     "alt": "Spring"
+  },
+  {
+    "url": "https://www.w3schools.com/sql/sql_intro.asp",
+    "imageSrc": "software/sql.png",
+    "alt": "SQL"
   },
   {
     "url": "https://www.typescriptlang.org/",

@@ -1,6 +1,7 @@
 import React from 'react';
 import './HomeLanding.scss';
 import { ImagePanel } from '../Shared/ImagePanel/ImagePanel';
+import { FULL_NAME } from 'constants/constants';
 
 const PHOTOS = [
   {
@@ -40,7 +41,7 @@ export function HomeLanding(){
   return (
     <>
       <div className='home-img-section'>
-        <h1>John Cosentino</h1>
+      <h1>{FULL_NAME}</h1>
         <div className='post-h1-break'></div>
         <ImagePanel photoList={photoList} captionTags={captionTags} />
       </div>

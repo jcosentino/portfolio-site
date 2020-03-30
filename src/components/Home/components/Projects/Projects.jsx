@@ -40,6 +40,7 @@ const PROJECTS = [
     "time": "3/24/2020",
     "key_tech": [
       "angular.png",
+      'redux.png',
       "typescript.jpg",
       "spring.png"
     ],
@@ -66,7 +67,9 @@ const PROJECTS = [
     ],
     "host_link": "",
     "screenshots": [
-      "project_screenshots/po_search_app.png"
+      "project_screenshots/po_search_app_1.png",
+      "project_screenshots/po_search_app_2.png",
+      "project_screenshots/po_search_app_3.png"
     ]
   },
   {
