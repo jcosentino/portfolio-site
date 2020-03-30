@@ -52,7 +52,7 @@ const PROJECTS = [
     ]
   },
   {
-    "project": "Goodwill PO Search / Indexer",
+    "project": "Purchase Order Search / Indexer",
     "blurb": `This application was built in under a month, and it was designed to
               searched a Shared Drive and pull purchase order .pdf files and 
               image files. The purchase orders did not maintain a common style,
