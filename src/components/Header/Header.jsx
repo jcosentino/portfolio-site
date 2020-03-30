@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import { UP_ARROW_KEY, DOWN_ARROW_KEY } from 'constants/constants';
+import { useSelector } from 'react-redux';
 
 const HEADER_ITEMS = [
   'Experience',
@@ -11,7 +12,11 @@ const HEADER_ITEMS = [
   'About'
 ];
 
+const ACTIVE_TAB_CLASS = 'active-tab';
+
 export function Header() {
+  const activeTab = useSelector(state => state.activeTab);
+  
   function scrollToTop(){ // fixes for Edge and Internet Explorer
     if(!!document.documentMode || !!window.StyleMedia){
       window.scrollTo(0, 0);
@@ -35,6 +40,10 @@ export function Header() {
     }
   }
 
+  function isActiveTab(tab, activeTab){
+    return tab === activeTab ? ACTIVE_TAB_CLASS : '';
+  }
+
   function generateHeaderItems(){
     const items = [];
     items.push(
@@ -46,7 +55,11 @@ export function Header() {
     );
 
     HEADER_ITEMS.map(item => items.push(
-      <div key={items}><a href={'#' + item}>{item}</a></div>
+      <div key={item}>
+        <a href={'#' + item} className={isActiveTab(item, activeTab)}>
+          {item}
+        </a>
+      </div>
     ));
     
     items.push(

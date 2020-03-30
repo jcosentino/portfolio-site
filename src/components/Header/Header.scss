@@ -32,6 +32,10 @@
     color: black;
 }
 
+.active-tab {
+    background-color: $header-active-background-color;
+}
+
 .scroll-arrow-up {
     width: $scroll-arrow-size;
     font-size: $scroll-arrow-size;
@@ -69,7 +73,9 @@
         border-radius: 0 5em 5em 0;
     }
 
-    .Header a:hover, .scroll-arrow-up:hover, .scroll-arrow-down:hover {
+    .Header a:hover,
+            .scroll-arrow-up:hover,
+            .scroll-arrow-down:hover {
         background-color: $header-background-color;
         color: white;
     }

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.scss';
+import { useDispatch } from 'react-redux';
 import {
   HomeLanding,
   Experience,
@@ -9,16 +10,26 @@ import {
   Events,
   About,
    } from './components';
-   
+import { changeActiveTab } from 'actions/index';
+
 function FadeInSection(props) {
   const [isVisible, setVisible] = React.useState(false);
   const homeRef = React.useRef();
+  const dispatch = useDispatch();
+
   React.useEffect(() => {
     const observer = new IntersectionObserver(divs => {
-      divs.forEach(div => setVisible(div.isIntersecting));
+      divs.forEach(div => {
+        setVisible(div.isIntersecting)
+        dispatch(changeActiveTab(
+          div.target.querySelector('h1').innerText
+                    .replace(/[^\x00-\x7F]/g, '')) // remove emojis
+        )
+      });
     });
     observer.observe(homeRef.current);
   }, []);
+
   return (
     <div className={`home-fade-in ${isVisible ? 'visible' : ''}`}
          ref={homeRef}

@@ -64,8 +64,6 @@ export function Experience(){
   const anchorId = 'Experience';
   const headerTitle = 'Experience';
   const renderItems = EXPERIENCE_ROLES.map(exp => exp.title);
-  // const isPotrait = window.matchMedia('(orientation: portrait)').matches;
-  // const monthsCount = isPotrait ? 0 : 2;
   const monthsCount = 2;
 
   function createEvent(title,
