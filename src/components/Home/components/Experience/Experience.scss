@@ -4,8 +4,20 @@
     margin-top: 1em;
 }
 
-.experience-data-range {
+.experience-date-range {
     width: 50vw;
     height: 70vh;
     margin-bottom: 1em;
+}
+
+@media screen and (orientation: portrait) {
+    .experience-date-range {
+        width: 60vw;
+        height: inherit;
+        margin: 1em;
+    }
+
+    .rdrMonth { /* font for the calendar itself */
+        font-size: 2vw;
+    }
 }

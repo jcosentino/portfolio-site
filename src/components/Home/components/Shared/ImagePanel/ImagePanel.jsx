@@ -8,8 +8,9 @@ export function ImagePanel(props){
     const fadeProperties = {
         duration: 5000,
         transitionDuration: 500,
-        infinite: false,
+        infinite: true,
         indicators: true,
+        pauseOnHover: true
     }
 
     function createPhoto(photo, caption){

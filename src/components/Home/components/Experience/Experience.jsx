@@ -90,17 +90,17 @@ export function Experience(){
           </a>
         </div>
         <p>Location: {location}</p>
-        <DateRange className='experience-data-range'
-                   editableDateInputs={false}
-                   ranges={[{
+        <DateRange className='experience-date-range'
+                  editableDateInputs={false}
+                  ranges={[{
                     "startDate": new Date(startDate),
                     "endDate": new Date(endDate)
-                   }]}
-                   months={monthsCount}
-                   direction='horizontal'
-                   showMonthArrow={false}
-                   showMonthAndYearPickers={false}
-                   dragSelectionEnabled={false}
+                  }]}
+                  months={monthsCount}
+                  direction='horizontal'
+                  showMonthArrow={false}
+                  showMonthAndYearPickers={false}
+                  dragSelectionEnabled={false}
           />
         <TechIconsDisplay iconsList={key_tech} />
       </React.Fragment>
