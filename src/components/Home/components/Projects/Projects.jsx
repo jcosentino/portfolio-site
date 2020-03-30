@@ -110,94 +110,94 @@ const PROJECTS = [
   }
 ];
 
-export function Projects(){
-  const anchorId = 'Projects';
-  const headerTitle = 'Projects';
-  const renderItems = PROJECTS.map(proj => proj.project);
+const anchorId = 'Projects';
+const headerTitle = 'Projects';
+const renderItems = PROJECTS.map(proj => proj.project);
 
-  function activeLink(link){
-    return (link === '' || link.length === 0) ? 'inactive-project-item' : '';
-  }
+function activeLink(link){
+  return (link === '' || link.length === 0) ? 'inactive-project-item' : '';
+}
 
-  function codeLinks(code_links){
+function codeLinks(code_links){
+  return (
+    <>
+      <p>
+        <span className='project-label'>Code Links:</span><br></br>
+        {code_links.map(code_link => 
+        <React.Fragment key={code_link}>
+          <a href={code_link}
+              target='blank' rel='noopener noreferrer'>
+            {code_link}
+          </a><br></br>
+        </React.Fragment>
+      )}
+      </p>
+    </>
+  );
+}
+
+function screenShots(screenshots){
+  return (
+    <div className='project-img-section'>
+      <ImagePanel photoList={screenshots} captionTags={[]} />
+    </div>
+  );
+}
+
+function createProject(blurb,
+                        time,
+                        key_tech,
+                        code_link,
+                        host_link,
+                        screenshots
+  ){
     return (
-      <>
-        <p>
-          <span className='project-label'>Code Links:</span><br></br>
-          {code_links.map(code_link => 
-          <React.Fragment key={code_link}>
-            <a href={code_link}
-               target='blank' rel='noopener noreferrer'>
-              {code_link}
-            </a><br></br>
-          </React.Fragment>
-        )}
+      <div className='project-item'>
+        <p><span className='project-label'>About this app:</span><br></br>
+          <span className='project-about-section'>{blurb}</span>
         </p>
-      </>
-    );
-  }
-
-  function screenShots(screenshots){
-    return (
-      <div className='project-img-section'>
-        <ImagePanel photoList={screenshots} captionTags={[]} />
+        <p>
+          <span className='project-label'>Completed: </span>
+          <span className='project-completed-section'>{time}</span>
+        </p>
+        <div className='project-key_tech'>
+          {<TechIconsDisplay iconsList={key_tech} />}
+        </div>
+        <div className={activeLink(code_link)}>
+          {codeLinks(code_link)}
+        </div>
+        <div className={activeLink(host_link)}>
+          <p><span className='project-label'>Hosted at:</span><br></br>
+            <a href={host_link}
+                target='blank' rel='noopener noreferrer'>
+                {host_link}
+            </a>
+          </p>
+        </div>
+        <div className={activeLink(screenshots)}>
+          {screenShots(screenshots)}
+        </div>
       </div>
     );
   }
 
-  function createProject(blurb,
-                         time,
-                         key_tech,
-                         code_link,
-                         host_link,
-                         screenshots
-    ){
-      return (
-        <div className='project-item'>
-          <p><span className='project-label'>About this app:</span><br></br>
-            <span className='project-about-section'>{blurb}</span>
-          </p>
-          <p>
-            <span className='project-label'>Completed: </span>
-            <span className='project-completed-section'>{time}</span>
-          </p>
-          <div className='project-key_tech'>
-            {<TechIconsDisplay iconsList={key_tech} />}
-          </div>
-          <div className={activeLink(code_link)}>
-            {codeLinks(code_link)}
-          </div>
-          <div className={activeLink(host_link)}>
-            <p><span className='project-label'>Hosted at:</span><br></br>
-              <a href={host_link}
-                 target='blank' rel='noopener noreferrer'>
-                  {host_link}
-              </a>
-            </p>
-          </div>
-          <div className={activeLink(screenshots)}>
-            {screenShots(screenshots)}
-          </div>
-        </div>
-      );
-    }
+function generateProjects(){
+  return PROJECTS.map(proj =>
+  <>
+    {createProject(proj.blurb,
+                    proj.time,
+                    proj.key_tech,
+                    proj.code_links,
+                    proj.host_link,
+                    proj.screenshots
+    )}
+  </>
+  );
+}
 
-  function generateProjects(){
-    return PROJECTS.map(proj =>
-    <>
-      {createProject(proj.blurb,
-                     proj.time,
-                     proj.key_tech,
-                     proj.code_links,
-                     proj.host_link,
-                     proj.screenshots
-      )}
-    </>
-    );
-  }
+const customDiv = (generateProjects());
 
-  const customDiv = (generateProjects());
-
+export function Projects(){
   return (
     <div>
       <HomeMenu anchorId={anchorId}

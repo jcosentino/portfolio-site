@@ -34,10 +34,10 @@ const PHOTOS = [
   }
 ];
 
-export function HomeLanding(){
-  const photoList = PHOTOS.map(photo => photo.src);
-  const captionTags = PHOTOS.map(photo => photo.caption);
+const photoList = PHOTOS.map(photo => photo.src);
+const captionTags = PHOTOS.map(photo => photo.caption);
 
+export function HomeLanding(){
   return (
     <>
       <div className='home-img-section'>

@@ -60,68 +60,68 @@ const EXPERIENCE_ROLES = [
   }
 ];
 
+const anchorId = 'Experience';
+const headerTitle = 'Experience';
+const renderItems = EXPERIENCE_ROLES.map(exp => exp.title);
+const monthsCount = 2;
+
+function createEvent(title,
+                     location,
+                     duration,
+                     company_logo,
+                     info_url,
+                     key_tech,
+                     index){
+  const dates = duration.split(',');
+  const startDate = dates[0];
+  // Need to account for current job(s)
+  const endDate = dates[1] === 'current' ? new Date() : dates[1];
+
+  return (
+    <React.Fragment key={index}>
+      <div className='company-logo-title'>
+        <a href={info_url}
+           target='blank' rel='noopener noreferrer'>
+          <img src={`companies/${company_logo}`}
+               className='experience-company-logo'
+               alt={title}
+               title={title} />
+        </a>
+      </div>
+      <p>Location: {location}</p>
+      <DateRange className='experience-date-range'
+                editableDateInputs={false}
+                ranges={[{
+                  "startDate": new Date(startDate),
+                  "endDate": new Date(endDate)
+                }]}
+                months={monthsCount}
+                direction='horizontal'
+                showMonthArrow={false}
+                showMonthAndYearPickers={false}
+                dragSelectionEnabled={false}
+        />
+      <TechIconsDisplay iconsList={key_tech} />
+    </React.Fragment>
+  );
+}
+
+function generateEvents(){
+  return EXPERIENCE_ROLES.map((exp, index) => 
+    createEvent(exp.title,
+      exp.location,
+      exp.duration,
+      exp.company_logo,
+      exp.info_url,
+      exp.key_tech,
+      index
+    )
+  );
+}
+
+const customDiv = (generateEvents());
+
 export function Experience(){
-  const anchorId = 'Experience';
-  const headerTitle = 'Experience';
-  const renderItems = EXPERIENCE_ROLES.map(exp => exp.title);
-  const monthsCount = 2;
-
-  function createEvent(title,
-                       location,
-                       duration,
-                       company_logo,
-                       info_url,
-                       key_tech,
-                       index){
-    const dates = duration.split(',');
-    const startDate = dates[0];
-    // Need to account for current job(s)
-    const endDate = dates[1] === 'current' ? new Date() : dates[1];
-
-    return (
-      <React.Fragment key={index}>
-        <div className='company-logo-title'>
-          <a href={info_url}
-             target='blank' rel='noopener noreferrer'>
-            <img src={`companies/${company_logo}`}
-                 className='experience-company-logo'
-                 alt={title}
-                 title={title} />
-          </a>
-        </div>
-        <p>Location: {location}</p>
-        <DateRange className='experience-date-range'
-                  editableDateInputs={false}
-                  ranges={[{
-                    "startDate": new Date(startDate),
-                    "endDate": new Date(endDate)
-                  }]}
-                  months={monthsCount}
-                  direction='horizontal'
-                  showMonthArrow={false}
-                  showMonthAndYearPickers={false}
-                  dragSelectionEnabled={false}
-          />
-        <TechIconsDisplay iconsList={key_tech} />
-      </React.Fragment>
-    );
-  }
-
-  function generateEvents(){
-    return EXPERIENCE_ROLES.map((exp, index) => 
-      createEvent(exp.title,
-        exp.location,
-        exp.duration,
-        exp.company_logo,
-        exp.info_url,
-        exp.key_tech,
-        index
-      )
-    );
-  }
-
-  const customDiv = (generateEvents());
-
   return (
     <div>
       <HomeMenu anchorId={anchorId}

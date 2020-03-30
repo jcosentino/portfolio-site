@@ -54,24 +54,24 @@ const SOFTWARE = [
   }
 ];
 
+function createSoftwareComp(url, imageSrc, alt){
+  return (
+    <li key={alt}>
+      <a href={url}
+        target='blank' rel='noopener noreferrer'>
+          <img src={imageSrc} alt={alt} title={alt} />
+      </a>
+    </li>
+  );
+}
+
+function generateSoftwareItems(){
+  return SOFTWARE.map(soft => 
+    createSoftwareComp(soft.url, soft.imageSrc, soft.alt)
+  );
+}
+
 export function Software(){
-  function createSoftwareComp(url, imageSrc, alt){
-    return (
-      <li key={alt}>
-        <a href={url}
-          target='blank' rel='noopener noreferrer'>
-            <img src={imageSrc} alt={alt} title={alt} />
-        </a>
-      </li>
-    );
-  }
-
-  function generateSoftwareItems(){
-    return SOFTWARE.map(soft => 
-      createSoftwareComp(soft.url, soft.imageSrc, soft.alt)
-    );
-  }
-
   return (
     <>
       <span className='anchor' id='Software'></span>

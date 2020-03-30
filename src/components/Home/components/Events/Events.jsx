@@ -80,44 +80,44 @@ const EVENTS = [
   }
 ];
 
+const anchorId = 'Events';
+const headerTitle = 'Events';
+const renderItems = EVENTS.map(event => event.title);
+
+function createEvent(gmap_url, location, date, info_url, blurb, index){
+  return (
+    <React.Fragment key={index}>
+      <p>Location: {location}</p>
+      <div className='google-map'>
+        <iframe src={gmap_url} 
+                title={location} >
+        </iframe>
+      </div>
+      <p>Date: {date}</p>
+      <p>URL: <a href={info_url} target='blank' rel='noopener noreferrer'>
+                {info_url}
+              </a>
+      </p>
+      <p>Blurb: {blurb}</p>
+    </React.Fragment>
+  );
+}
+
+function generateEvents(){
+  return EVENTS.map((event, index) => 
+    createEvent(event.gmap_url,
+      event.location,
+      event.date,
+      event.info_url,
+      event.blurb,
+      index
+    )
+  );
+}
+
+const customDiv = (generateEvents());
+
 export function Events(){
-  const anchorId = 'Events';
-  const headerTitle = 'Events';
-  const renderItems = EVENTS.map(event => event.title);
-
-  function createEvent(gmap_url, location, date, info_url, blurb, index){
-    return (
-      <React.Fragment key={index}>
-        <p>Location: {location}</p>
-        <div className='google-map'>
-          <iframe src={gmap_url} 
-                  title={location} >
-          </iframe>
-        </div>
-        <p>Date: {date}</p>
-        <p>URL: <a href={info_url} target='blank' rel='noopener noreferrer'>
-                  {info_url}
-                </a>
-        </p>
-        <p>Blurb: {blurb}</p>
-      </React.Fragment>
-    );
-  }
-
-  function generateEvents(){
-    return EVENTS.map((event, index) => 
-      createEvent(event.gmap_url,
-        event.location,
-        event.date,
-        event.info_url,
-        event.blurb,
-        index
-      )
-    );
-  }
-
-  const customDiv = (generateEvents());
-
   return (
     <div>
       <HomeMenu anchorId={anchorId}

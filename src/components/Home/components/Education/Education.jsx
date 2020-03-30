@@ -80,42 +80,42 @@ const EDUCATION = [
   }
 ];
 
+function generateClassNames(class_names){
+  return class_names.map(klass => 
+    <React.Fragment key={klass.class_name}>
+      <p><span className='edu-classes-arrow'>&#8605;</span>
+        <a href={klass.url}
+            target='blank' rel='noopener noreferrer'>
+            {klass.class_name}
+        </a>
+      </p>
+    </React.Fragment>
+  );
+}
+
+function createEduComponent(degree, grad_date, class_names){
+  return (
+    <React.Fragment key={`${degree} ${grad_date}-${class_names.length}`}>
+      <li>
+        <div className='degree-heading'>
+          {degree}<br></br>
+          <span className='grad-date-label'>{grad_date}</span>
+        </div>
+        <div className='edu-class-list'>
+          {generateClassNames(class_names)}
+        </div>
+      </li>
+    </React.Fragment>
+  );
+}
+
+function generateEduComponents(){
+  return EDUCATION.map(edu => 
+    createEduComponent(edu.degree, edu.grad_date, edu.class_names)
+  );
+}
+
 export function Education(){
-  function generateClassNames(class_names){
-    return class_names.map(klass => 
-      <React.Fragment key={klass.class_name}>
-        <p><span className='edu-classes-arrow'>&#8605;</span>
-          <a href={klass.url}
-              target='blank' rel='noopener noreferrer'>
-              {klass.class_name}
-          </a>
-        </p>
-      </React.Fragment>
-    );
-  }
-
-  function createEduComponent(degree, grad_date, class_names){
-    return (
-      <React.Fragment key={`${degree} ${grad_date}-${class_names.length}`}>
-        <li>
-          <div className='degree-heading'>
-            {degree}<br></br>
-            <span className='grad-date-label'>{grad_date}</span>
-          </div>
-          <div className='edu-class-list'>
-            {generateClassNames(class_names)}
-          </div>
-        </li>
-      </React.Fragment>
-    );
-  }
-
-  function generateEduComponents(){
-    return EDUCATION.map(edu => 
-      createEduComponent(edu.degree, edu.grad_date, edu.class_names)
-    );
-  }
-
   return (
     <>
       <span className='anchor' id='Education'></span>
