@@ -16,7 +16,8 @@ const EXPERIENCE_ROLES = [
     "key_tech": [
       "angular.png",
       "typescript.jpg",
-      "spring.png"
+      "spring.png",
+      "sql.png"
     ]
   },
   {
@@ -37,7 +38,8 @@ const EXPERIENCE_ROLES = [
     "info_url": "https://www.bloomberg.com/",
     "key_tech": [
       "rails.png",
-      "reactjs.jpg"
+      "reactjs.jpg",
+      "sql.png"
     ]
   },
   {
