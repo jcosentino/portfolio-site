@@ -63,7 +63,7 @@ const EXPERIENCE_ROLES = [
 const anchorId = 'Experience';
 const headerTitle = 'Experience';
 const renderItems = EXPERIENCE_ROLES.map(exp => exp.title);
-const monthsCount = 2;
+const monthsCount = 1;
 
 function createEvent(title,
                      location,
