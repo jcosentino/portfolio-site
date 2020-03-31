@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './Home.scss';
 import { useDispatch } from 'react-redux';
 import {
@@ -23,8 +23,8 @@ const HOME_TEMS = [
 ];
 
 function FadeInSection(props) {
-  const [isVisible, setVisible] = React.useState(false);
-  const homeRef = React.useRef();
+  const [isVisible, setVisible] = useState(false);
+  const homeRef = useRef();
   const dispatch = useDispatch();
 
   useEffect(() => {
