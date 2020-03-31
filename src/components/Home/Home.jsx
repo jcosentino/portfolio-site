@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Home.scss';
 import { useDispatch } from 'react-redux';
 import {
@@ -12,12 +12,22 @@ import {
    } from './components';
 import { changeActiveTab } from 'redux_items/actions/index';
 
+const HOME_TEMS = [
+  <HomeLanding />,
+  <Experience />,
+  <Education />,
+  <Projects />,
+  <Software />,
+  <Events />,
+  <About />
+];
+
 function FadeInSection(props) {
   const [isVisible, setVisible] = React.useState(false);
   const homeRef = React.useRef();
   const dispatch = useDispatch();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const observer = new IntersectionObserver(divs => {
       divs.forEach(div => {
         setVisible(div.isIntersecting)
@@ -46,16 +56,6 @@ function createHomeItem(div){
     </FadeInSection>
   );
 }
-
-const HOME_TEMS = [
-  <HomeLanding />,
-  <Experience />,
-  <Education />,
-  <Projects />,
-  <Software />,
-  <Events />,
-  <About />
-];
 
 const HOME_ITEM_DIVS = HOME_TEMS.map(div => 
   createHomeItem(div)
