@@ -33,7 +33,7 @@ function FadeInSection(props) {
         setVisible(div.isIntersecting)
         dispatch(changeActiveTab(
           div.target.querySelector('h1').innerText
-                    .replace(`/[^\x00-\x7F]/g`, '')) // remove emojis
+                    .replace(/[^\x00-\x7F]/g, '')) // remove emojis
         )
       });
     });
