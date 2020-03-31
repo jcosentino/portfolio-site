@@ -6,8 +6,12 @@
 
 .experience-date-range {
     width: 50vw;
-    height: 70vh;
+    height: auto;
     margin-bottom: 1em;
+}
+
+.rdrMonth { /* font for the calendar itself */
+    font-size: 1vw;
 }
 
 @media screen and (orientation: portrait) {
