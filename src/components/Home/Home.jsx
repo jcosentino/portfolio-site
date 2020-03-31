@@ -31,10 +31,12 @@ function FadeInSection(props) {
     const observer = new IntersectionObserver(divs => {
       divs.forEach(div => {
         setVisible(div.isIntersecting)
-        dispatch(changeActiveTab(
-          div.target.querySelector('h1').innerText
-                    .replace(/[^\x00-\x7F]/g, '')) // remove emojis
-        )
+        if(isVisible){
+          dispatch(changeActiveTab(
+            div.target.querySelector('h1').innerText
+                      .replace(/[^\x00-\x7F]/g, '')) // remove emojis
+          )
+        }
       });
     });
     observer.observe(homeRef.current);
