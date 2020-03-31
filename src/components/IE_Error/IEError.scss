@@ -1,0 +1,17 @@
+body::before {
+    content: none;
+}
+
+.ie-error {
+    height: 100%;
+    width: 100%;
+    padding: 1em;
+    font-size: 3vh;
+    text-align: center;
+}
+
+@media screen and (orientation: portrait) {
+    .ie-error {
+        font-size: 3vw;
+    }
+}

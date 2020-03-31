@@ -11,3 +11,11 @@ export const PROJECTS = 'Projects';
 export const SOFTWARE = 'Software';
 export const EVENTS = 'Events';
 export const ABOUT = 'About';
+
+// App
+export const INTERNET_EXPLORER = 'ie';
+
+// IE Error
+export const IE_ERROR_MSG = `Internet Explorer is not supported by
+                             this website. Please use a different browser.`;
+export const IE_HELP_LINK = 'This link might be useful.';

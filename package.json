@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "date-fns": "^2.11.0",
+    "detect-browser": "^5.0.0",
     "node-sass": "^4.13.1",
     "react": "^16.9.0",
     "react-date-range": "^1.0.3",
