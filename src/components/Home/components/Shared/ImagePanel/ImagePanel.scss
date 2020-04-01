@@ -1,12 +1,14 @@
 @import 'styles/style_constants';
 
+.image-panel-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
 .image-panel-container img {
-    display: block;
-    margin: 0 auto 0 auto;
     max-width: 60vw;
     max-height: 60vh;
-    width: auto;
-    height: auto;
     transition: all 1.2s ease;
     -webkit-transition: all 1.2 ease;
 }

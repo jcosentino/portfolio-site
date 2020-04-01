@@ -175,6 +175,7 @@ function createProject(blurb,
           </p>
         </div>
         <div className={activeLink(screenshots)}>
+          <p className='project-label'>Screenshots:</p>
           {screenShots(screenshots)}
         </div>
       </div>
