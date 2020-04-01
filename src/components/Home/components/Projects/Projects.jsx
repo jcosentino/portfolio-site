@@ -37,7 +37,7 @@ const PROJECTS = [
   {
     "project": "Portfolio Website",
     "blurb": `It is the code that powers this very website.`,
-    "time": "3/24/2020",
+    "time": "4/1/2020",
     "key_tech": [
       "angular.png",
       'redux.png',

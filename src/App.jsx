@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { Home, Header, Footer, IEError } from './components';
+import { Home, Header, Footer, IEError, Modal } from './components';
 import { BrowserRouter, Switch, Redirect } from 'react-router-dom';
 import { detect } from 'detect-browser';
 import { INTERNET_EXPLORER } from 'constants/constants';
@@ -15,6 +15,7 @@ function App(){
     <>
       <BrowserRouter>
         <div className='App'>
+          <Modal />
           <div className='mobile-container'>
             <Header />
             <Home />

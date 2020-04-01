@@ -2,6 +2,9 @@
 $anchor-tag-height: 9vh;
 $anchor-tag-reverse-height: -$anchor-tag-height;
 
+// Root Design
+$background-color: rgb(30, 104, 105);
+
 // Header
 $scroll-arrow-color: white;
 $scroll-arrow-size: 2em;
@@ -45,5 +48,7 @@ $banner-para-color: rgb(198, 198, 238);
 // Shared
 $banner-item-font-size: 1em;
 
-// Root Design
-$background-color: rgb(30, 104, 105);
+// Modal
+$popup-background-color: rosybrown;
+$popup-modal-close-background-color: #ffffff;
+$popup-modal-close-hover-background-color: rgb(135, 126, 194);

@@ -1,32 +1,41 @@
 import React from 'react';
 import './Footer.scss';
-import { EMAIL } from 'constants/constants';
+import { TWITTER_LINK,
+         EMAIL_LINK,
+         LINKEDIN_LINK,
+         GITHUB_LINK,
+         RESUME_LINK,
+         TWITTER,
+         EMAIL_TEXT,
+         LINKEDIN,
+         GITHUB,
+         RESUME_TEXT } from 'constants/constants';
 
 const FOOTER_DATA = [
   {
-    "url": "https://twitter.com/jcosentino91",
+    "url": TWITTER_LINK,
     "imageSrc": "twitter.png",
-    "alt": "Twitter"
+    "alt": TWITTER
   },
   {
-    "url": `mailto:${EMAIL}?subject`,
+    "url": `mailto:${EMAIL_LINK}?subject`,
     "imageSrc": "email.png",
-    "alt": "Email"
+    "alt": EMAIL_TEXT
   },
   {
-    "url": "https://www.linkedin.com/in/john-cosentino/",
+    "url": LINKEDIN_LINK,
     "imageSrc": "linkedin.png",
-    "alt": "LinkedIn"
+    "alt": LINKEDIN
   },
   {
-    "url": "https://github.com/jcosentino",
+    "url": GITHUB_LINK,
     "imageSrc": "github.png",
-    "alt": "GitHub"
+    "alt": GITHUB
   },
   {
-    "url": "https://www.dropbox.com/s/2gkajc8ufdh2t57/Resume%20%28March%202020%20e%29.pdf",
+    "url": RESUME_LINK,
     "imageSrc": "download.png",
-    "alt": "Resume"
+    "alt": RESUME_TEXT
   }
 ];
 

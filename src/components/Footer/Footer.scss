@@ -63,15 +63,3 @@
         padding: 0 2vw 0 2vw;
     }
 }
-
-// Fixes issues with Internet Explorer alignment
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .footer-content {
-        justify-content: center;
-    }
-
-    .footer-content img {
-        padding: 0 2vw 0 2vw;
-    }
- }
- 
