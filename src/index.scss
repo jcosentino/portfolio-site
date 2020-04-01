@@ -5,17 +5,6 @@ html {
   width: 100%;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: $background-color;
-  background-size: cover;
-  background-repeat: round;
-  background-image: url('/background.jpg');
-}
-
 body {
   height: 100%;
   width: 100%;
@@ -26,6 +15,12 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $background-color;
+  background: url('/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 code {
