@@ -32,6 +32,10 @@ const EDUCATION = [
         "class_name": "CSC 450: Honors Workshop",
         "url": "https://csicuny.smartcatalogiq.com/en/current/Undergraduate-Catalog/Courses/CSC-Computer-Science/400/CSC-450"
       }
+    ],
+    "extras": [
+      "Studied Abroad in Tokyo, Japan - January 2017",
+      "Graduated with Honors in Computer Science"
     ]
   },
   {
@@ -54,7 +58,8 @@ const EDUCATION = [
         "class_name": "MTH 233: Calculus III",
         "url": "https://csicuny.smartcatalogiq.com/2018-2019/Undergraduate-Catalog/Courses/MTH-Mathematics/200/MTH-233"
       }
-    ]
+    ],
+    "extras": []
   },
   {
     "degree": "Bachelor of Science - Psychology",
@@ -76,7 +81,8 @@ const EDUCATION = [
         "class_name": "PSY 232: Cognitive and Behavioral Neuroscience",
         "url": "https://csicuny.smartcatalogiq.com/2019-2020/Undergraduate-Catalog/Courses/PSY-Psychology/200/PSY-232"
       }
-    ]
+    ],
+    "extras": []
   }
 ];
 
@@ -93,7 +99,15 @@ function generateClassNames(class_names){
   );
 }
 
-function createEduComponent(degree, grad_date, class_names){
+function loadExtras(extras){
+  return extras.map(extra => 
+    <p>
+      &bull;{extra}&bull;
+    </p>
+  );
+}
+
+function createEduComponent(degree, grad_date, class_names, extras){
   return (
     <React.Fragment key={`${degree} ${grad_date}-${class_names.length}`}>
       <li>
@@ -104,6 +118,9 @@ function createEduComponent(degree, grad_date, class_names){
         <div className='edu-class-list'>
           {generateClassNames(class_names)}
         </div>
+        <div>
+        {loadExtras(extras)}
+        </div>
       </li>
     </React.Fragment>
   );
@@ -111,7 +128,7 @@ function createEduComponent(degree, grad_date, class_names){
 
 function generateEduComponents(){
   return EDUCATION.map(edu => 
-    createEduComponent(edu.degree, edu.grad_date, edu.class_names)
+    createEduComponent(edu.degree, edu.grad_date, edu.class_names, edu.extras)
   );
 }
 
