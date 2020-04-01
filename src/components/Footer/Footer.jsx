@@ -22,6 +22,11 @@ const FOOTER_DATA = [
     "url": "https://github.com/jcosentino",
     "imageSrc": "github.png",
     "alt": "GitHub"
+  },
+  {
+    "url": "https://www.dropbox.com/s/2gkajc8ufdh2t57/Resume%20%28March%202020%20e%29.pdf",
+    "imageSrc": "download.png",
+    "alt": "Resume"
   }
 ];
 
@@ -31,7 +36,7 @@ export function Footer() {
       <a href={url}
          target='blank' rel='noopener noreferrer'
          key={alt}>
-        <img src={imageSrc} alt={alt} />
+        <img src={imageSrc} alt={alt} title={alt} />
       </a>
     );
   }
