@@ -13,13 +13,34 @@ import {
 import { changeActiveTab } from 'redux_items/actions/index';
 
 const HOME_TEMS = [
-  <HomeLanding />,
-  <Experience />,
-  <Education />,
-  <Projects />,
-  <Software />,
-  <Events />,
-  <About />
+  {
+    "component": <HomeLanding />,
+    "heading": "HomeLanding"
+  },
+  {
+    "component": <Experience />,
+    "heading": "Experience"
+  },
+  {
+    "component": <Education />,
+    "heading": "Education"
+  },
+  {
+    "component": <Projects />,
+    "heading": "Projects"
+  },
+  {
+    "component": <Software />,
+    "heading": "Software"
+  },
+  {
+    "component": <Events />,
+    "heading": "Events"
+  },
+  {
+    "component": <About />,
+    "heading": "About"
+  }
 ];
 
 function FadeInSection(props) {
@@ -51,10 +72,10 @@ function FadeInSection(props) {
   );
 }
 
-function createHomeItem(div){
+function createHomeItem(home_item){
   return (
-    <FadeInSection tab={div.type.name}>
-      {div}
+    <FadeInSection tab={home_item.heading}>
+      {home_item.component}
     </FadeInSection>
   );
 }
