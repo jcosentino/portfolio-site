@@ -23,6 +23,7 @@ const HOME_TEMS = [
 ];
 
 function FadeInSection(props) {
+  const { tab } = props;
   const [isVisible, setVisible] = useState(false);
   const homeRef = useRef();
   const dispatch = useDispatch();
@@ -31,19 +32,18 @@ function FadeInSection(props) {
     const observer = new IntersectionObserver(divs => {
       divs.forEach(div => {
         setVisible(div.isIntersecting)
-        if(isVisible){
-          dispatch(changeActiveTab(
-            div.target.querySelector('h1').innerText
-                      .replace(/[^\x00-\x7F]/g, '')) // remove emojis
-          )
-        }
       });
     });
     observer.observe(homeRef.current);
   });
 
+  function isTabVisible(visibility, tabName){
+    if(visibility){ dispatch(changeActiveTab(tabName)); }
+    return visibility ? 'visible' : '';
+  }
+
   return (
-    <div className={`home-fade-in ${isVisible ? 'visible' : ''}`}
+    <div className={`home-fade-in ${isTabVisible(isVisible, tab)}`}
          ref={homeRef}
     >
       {props.children}
@@ -53,7 +53,7 @@ function FadeInSection(props) {
 
 function createHomeItem(div){
   return (
-    <FadeInSection>
+    <FadeInSection tab={div.type.name}>
       {div}
     </FadeInSection>
   );
