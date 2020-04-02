@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.scss';
 import { UP_ARROW_KEY, DOWN_ARROW_KEY } from 'constants/constants';
 import { useSelector } from 'react-redux';
@@ -15,28 +15,36 @@ const HEADER_ITEMS = [
 const ACTIVE_TAB_CLASS = 'active-tab';
 
 export function Header() {
+  const [screenOrientation, setScreenOrientation] = useState('');
   const activeTab = useSelector(state => state.activeTab);
-  
-  function scrollToTop(){ // fixes for Edge and Internet Explorer
-    if(!!document.documentMode || !!window.StyleMedia){
-      window.scrollTo(0, 0);
-    } else {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      });
-    }
+  window.addEventListener('resize', setScreenOrientation);
+
+  function isPortait(){
+    console.log(`Screen orientation was checked: ${screenOrientation ? true : false}`);
+    return window.matchMedia('(orientation: portrait)').matches;
   }
 
-  function scrollToBottom(){
+  function scrollToDirection(direction){
+    if(isPortait()){
+      window.location.href = `#${direction}`;
+      return;
+    }
+     // fixes for Edge and Internet Explorer
     if(!!document.documentMode || !!window.StyleMedia){
-      window.scrollTo(0, document.body.scrollHeight);
-    } else{
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: 'smooth'
-      });
+      const end = direction === 'Top' ? 0 : document.body.scrollHeight;
+      window.scrollTo(0, end);
+    } else {
+      const scrollObj = direction === 'Top' 
+            ? {
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+              }
+            : {
+              top: document.body.scrollHeight,
+              behavior: 'smooth'
+            };
+      window.scrollTo(scrollObj);
     }
   }
 
@@ -48,7 +56,7 @@ export function Header() {
     const items = [];
     items.push(
       <div className='scroll-arrow-up'
-            onClick={scrollToTop}
+            onClick={() => scrollToDirection('Top')}
             key={UP_ARROW_KEY}>
                     &#8593;
       </div>
@@ -64,7 +72,7 @@ export function Header() {
     
     items.push(
       <div className='scroll-arrow-down'
-          onClick={scrollToBottom}
+          onClick={() => scrollToDirection('Bottom')}
           key={DOWN_ARROW_KEY}>
                   &#8595;
       </div>
@@ -73,8 +81,11 @@ export function Header() {
   }
   
   return (
-    <div className='Header'>
-      {generateHeaderItems()}
-    </div>
+    <>
+      <div id='Top'></div>
+      <div className='Header' id='header-mobile'>
+        {generateHeaderItems()}
+      </div>
+    </>
   );
 }

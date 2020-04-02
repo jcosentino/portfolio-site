@@ -57,11 +57,14 @@ export function Footer() {
   }
 
   return (
-    <div className='Footer'>
-      <div className='footer-content'>
-        {generateFooterComps()}
+    <>
+      <div className='Footer'>
+        <div className='footer-content'>
+          {generateFooterComps()}
+        </div>
       </div>
-    </div>
+      <div id='Bottom'></div>
+    </>
   );
 }
 
