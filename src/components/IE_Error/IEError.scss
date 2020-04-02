@@ -6,11 +6,13 @@
 }
 
 @media screen and (orientation: portrait) {
-    body {
-        overflow: hidden;
-    }
-
     .ie-error {
         font-size: 3vw;
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    body {
+        overflow: hidden;
     }
 }
