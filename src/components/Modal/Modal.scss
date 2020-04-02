@@ -7,9 +7,6 @@
     text-align: center;
     box-shadow: 0.2em 0.2em grey;
     border-radius: 1.5em;
-}
-
-.popup-content {
     font-size: 3vh;
 }
 
@@ -58,12 +55,16 @@
     background-color: $popup-modal-close-hover-background-color;
 }
 
-@media screen and (orientation: portrait) {
-    .modal-content {
-        font-size: 2.5vh;
-    }
+.modal-content-span {
+    padding: 0.5em;
+}
 
+@media screen and (orientation: portrait) {
     .modal-close:hover {
         background-color: $popup-modal-close-background-color;
+    }
+
+    .modal-content-span {
+        padding: 1em;
     }
  }
