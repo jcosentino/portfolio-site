@@ -45,6 +45,10 @@
 }
 
 @media screen and (orientation: portrait) {
+    .info-item-banner {
+        font-size: $banner-item-mobile-font-size;
+    }
+
     .info-item-banner:hover {
         background-color: $banner-background-color;
         color: inherit;
