@@ -3,6 +3,9 @@
 html {
   height: 100%;
   width: 100%;
+  @media screen and (orientation: portrait) {
+    overflow: hidden;
+  }
 }
 
 body {
@@ -22,6 +25,12 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-attachment: fixed;
+
+  @media screen and (orientation: portrait) {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 code {
