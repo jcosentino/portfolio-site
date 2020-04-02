@@ -39,10 +39,9 @@ const PROJECTS = [
     "blurb": `It is the code that powers this very website.`,
     "time": "4/1/2020",
     "key_tech": [
-      "angular.png",
-      'redux.png',
-      "typescript.jpg",
-      "spring.png"
+      "reactjs.jpg",
+      "redux.png",
+      "nodejs.png"
     ],
     "code_links": [
       "https://github.com/jcosentino/portfolio-site"
