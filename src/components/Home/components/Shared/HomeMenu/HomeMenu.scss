@@ -41,8 +41,7 @@
 }
 
 .info-item-para-inactive {
-    position: absolute;
-    left: -1000vw;
+    display: none;
 }
 
 @media screen and (orientation: portrait) {
