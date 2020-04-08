@@ -5,7 +5,7 @@ import { BrowserRouter, Switch, Redirect } from 'react-router-dom';
 import { detect } from 'detect-browser';
 import { INTERNET_EXPLORER } from 'constants/constants';
 
-function App(){
+function App(): JSX.Element {
   // Check if Internet Explorer
   if(detect()?.name === INTERNET_EXPLORER){
     return <IEError />;

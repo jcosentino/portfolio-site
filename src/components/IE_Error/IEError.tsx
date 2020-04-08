@@ -2,7 +2,7 @@ import React from 'react';
 import './IEError.scss';
 import { IE_ERROR_MSG, IE_HELP_LINK } from 'constants/constants';
 
-export function IEError(){
+export function IEError(): JSX.Element{
   return (
     <div className='ie-error'>
         <h1>{IE_ERROR_MSG}</h1>

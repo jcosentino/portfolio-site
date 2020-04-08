@@ -10,8 +10,9 @@ import { TWITTER_LINK,
          LINKEDIN,
          GITHUB,
          RESUME_TEXT } from 'constants/constants';
+import { IFooter } from 'custom_types/Footer/footer_types';
 
-const FOOTER_DATA = [
+const FOOTER_DATA: IFooter.FooterData[] = [
   {
     "url": TWITTER_LINK,
     "imageSrc": "twitter.png",
@@ -39,8 +40,8 @@ const FOOTER_DATA = [
   }
 ];
 
-export function Footer() {
-  function createFooterComp(url, imageSrc, alt){
+export function Footer(): JSX.Element {
+  function createFooterComp(url: string, imageSrc: string, alt: string){
     return (
       <a href={url}
          target='blank' rel='noopener noreferrer'
@@ -50,8 +51,8 @@ export function Footer() {
     );
   }
 
-  function generateFooterComps(){
-    return FOOTER_DATA.map(data => 
+  function generateFooterComps(): JSX.Element[] {
+    return FOOTER_DATA.map((data: IFooter.FooterData) => 
       createFooterComp(data.url, `footer/${data.imageSrc}`, data.alt)
     );
   }

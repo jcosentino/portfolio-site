@@ -1,8 +1,9 @@
 import React from 'react';
 import './Events.scss';
 import { HomeMenu } from '../Shared';
+import { IEvents } from 'custom_types/Events/events_types';
 
-const EVENTS = [
+const EVENTS: IEvents.EventItem[] = [
   {
     "title": "Microsoft Recruitment Event",
     "gmap_url": "https://maps.google.com/maps?q=15010%20NE%2036th%20St%20%2392%2C%20Redmond%2C%20WA%2098052&t=&z=13&ie=UTF8&iwloc=&output=embed",
@@ -80,11 +81,17 @@ const EVENTS = [
   }
 ];
 
-const anchorId = 'Events';
-const headerTitle = 'Events';
-const renderItems = EVENTS.map(event => event.title);
+const anchorId: string = 'Events';
+const headerTitle: string = 'Events';
+const renderItems: string[] = EVENTS.map((event: IEvents.EventItem) => event.title);
 
-function createEvent(gmap_url, location, date, info_url, blurb, index){
+function createEvent(gmap_url: string,
+                     location: string,
+                     date: string,
+                     info_url: string,
+                     blurb: string,
+                     index: number
+  ): React.ReactFragment {
   return (
     <React.Fragment key={index}>
       <p>Location: {location}</p>
@@ -103,8 +110,8 @@ function createEvent(gmap_url, location, date, info_url, blurb, index){
   );
 }
 
-function generateEvents(){
-  return EVENTS.map((event, index) => 
+function generateEvents(): React.ReactFragment {
+  return EVENTS.map((event: IEvents.EventItem, index: number) => 
     createEvent(event.gmap_url,
       event.location,
       event.date,
@@ -115,9 +122,9 @@ function generateEvents(){
   );
 }
 
-const customDiv = (generateEvents());
+const customDiv: React.ReactFragment = (generateEvents());
 
-export function Events(){
+export function Events(): JSX.Element {
   return (
     <div>
       <HomeMenu anchorId={anchorId}
