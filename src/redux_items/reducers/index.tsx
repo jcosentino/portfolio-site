@@ -4,7 +4,7 @@ const initialState = {
     'activeTab': ''
 };
 
-function rootReducer(state=initialState, action) {
+function rootReducer(state=initialState, action: { type: string; payload: any; }) {
     if(action.type === CHANGE_ACTIVE_TAB){
         return {
             'activeTab': action.payload

@@ -7,7 +7,7 @@ import { INTERNET_EXPLORER } from 'constants/constants';
 
 function App(){
   // Check if Internet Explorer
-  if(detect().name === INTERNET_EXPLORER){
+  if(detect()?.name === INTERNET_EXPLORER){
     return <IEError />;
   }
 
