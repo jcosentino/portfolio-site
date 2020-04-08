@@ -10,9 +10,9 @@ import { TWITTER_LINK,
          LINKEDIN,
          GITHUB,
          RESUME_TEXT } from 'constants/constants';
-import { IFooter } from 'custom_types/Footer/footer_types';
+import { IShared } from 'custom_types/Shared/shared_types';
 
-const FOOTER_DATA: IFooter.FooterData[] = [
+const FOOTER_DATA: IShared.ImgIconData[] = [
   {
     "url": TWITTER_LINK,
     "imageSrc": "twitter.png",
@@ -52,7 +52,7 @@ export function Footer(): JSX.Element {
   }
 
   function generateFooterComps(): JSX.Element[] {
-    return FOOTER_DATA.map((data: IFooter.FooterData) => 
+    return FOOTER_DATA.map((data: IShared.ImgIconData) => 
       createFooterComp(data.url, `footer/${data.imageSrc}`, data.alt)
     );
   }

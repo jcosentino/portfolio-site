@@ -1,7 +1,8 @@
 import React from 'react';
 import './Software.scss';
+import { IShared } from 'custom_types/Shared/shared_types';
 
-const SOFTWARE = [
+const SOFTWARE: IShared.ImgIconData[] = [
   {
     "url": "https://angular.io/",
     "imageSrc": "software/angular.png",
@@ -54,7 +55,7 @@ const SOFTWARE = [
   }
 ];
 
-function createSoftwareComp(url, imageSrc, alt){
+function createSoftwareComp(url: string, imageSrc: string, alt: string): JSX.Element {
   return (
     <li key={alt}>
       <a href={url}
@@ -65,13 +66,13 @@ function createSoftwareComp(url, imageSrc, alt){
   );
 }
 
-function generateSoftwareItems(){
-  return SOFTWARE.map(soft => 
+function generateSoftwareItems(): JSX.Element[] {
+  return SOFTWARE.map((soft: IShared.ImgIconData) => 
     createSoftwareComp(soft.url, soft.imageSrc, soft.alt)
   );
 }
 
-export function Software(){
+export function Software(): JSX.Element {
   return (
     <>
       <span className='anchor' id='Software'></span>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Header.scss';
 import { UP_ARROW_KEY, DOWN_ARROW_KEY } from 'constants/constants';
 import { useSelector } from 'react-redux';
-import { IReduxTypes } from 'custom_types/redux_items/redux_types';
+import { IReduxTypes } from 'custom_types/redux_types';
 
 const HEADER_ITEMS: string[] = [
   'Experience',

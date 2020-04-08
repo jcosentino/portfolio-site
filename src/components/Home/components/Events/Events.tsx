@@ -1,7 +1,7 @@
 import React from 'react';
 import './Events.scss';
 import { HomeMenu } from '../Shared';
-import { IEvents } from 'custom_types/Events/events_types';
+import { IEvents } from 'custom_types/events_types';
 
 const EVENTS: IEvents.EventItem[] = [
   {
@@ -110,7 +110,7 @@ function createEvent(gmap_url: string,
   );
 }
 
-function generateEvents(): React.ReactFragment {
+function generateEvents(): React.ReactFragment[] {
   return EVENTS.map((event: IEvents.EventItem, index: number) => 
     createEvent(event.gmap_url,
       event.location,
@@ -122,7 +122,7 @@ function generateEvents(): React.ReactFragment {
   );
 }
 
-const customDiv: React.ReactFragment = (generateEvents());
+const customDiv: React.ReactFragment[] = (generateEvents());
 
 export function Events(): JSX.Element {
   return (

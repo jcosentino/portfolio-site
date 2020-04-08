@@ -1,6 +1,6 @@
 import React, { ReactFragment } from 'react';
 import './Education.scss';
-import { IEducation } from 'custom_types/Education/education_types';
+import { IEducation } from 'custom_types/education_types';
 
 const CSI_LINK: string = 'https://www.csi.cuny.edu/';
 
