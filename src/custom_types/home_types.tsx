@@ -3,4 +3,9 @@ export namespace IHome {
         component: JSX.Element;
         heading: string;
     }
+
+    export interface FadeInSectionProps {
+        tab: string;
+        children?: JSX.Element;
+    }
 }

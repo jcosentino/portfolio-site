@@ -45,8 +45,8 @@ const HOME_TEMS: IHome.HomeItem[] = [
   }
 ];
 
-function FadeInSection(props: any): JSX.Element {
-  const { tab } = props; // change props typing
+function FadeInSection(props: IHome.FadeInSectionProps): JSX.Element {
+  const { tab } = props;
   const [isVisible, setVisible] = useState<boolean>(false);
   const homeRef: MutableRefObject<any> = useRef();
   const dispatch: Dispatch<any> = useDispatch();
