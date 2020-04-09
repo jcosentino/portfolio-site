@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './Projects.scss';
 import { HomeMenu, TechIconsDisplay } from '../Shared';
 import { ImagePanel } from '../Shared/ImagePanel/ImagePanel';
@@ -123,12 +123,12 @@ function codeLinks(code_links){
       <p>
         <span className='project-label'>Code Links:</span><br></br>
         {code_links.map(code_link => 
-        <React.Fragment key={code_link}>
+        <Fragment key={code_link}>
           <a href={code_link}
               target='blank' rel='noopener noreferrer'>
             {code_link}
           </a><br></br>
-        </React.Fragment>
+        </Fragment>
       )}
       </p>
     </>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './TechIconsDisplay.scss';
 
 export function TechIconsDisplay(props){
@@ -6,12 +6,12 @@ export function TechIconsDisplay(props){
 
     function createTechIcon(iconFile){
         return (
-            <React.Fragment key={iconFile}>
+            <Fragment key={iconFile}>
                 <img src={`software/${iconFile}`}
                      className='key_tech-icon'
                      alt={iconFile}
                      title={iconFile} />
-            </React.Fragment>
+            </Fragment>
         );
     }
 

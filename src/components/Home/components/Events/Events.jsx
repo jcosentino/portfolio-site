@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './Events.scss';
 import { HomeMenu } from '../Shared';
 
@@ -86,7 +86,7 @@ const renderItems = EVENTS.map(event => event.title);
 
 function createEvent(gmap_url, location, date, info_url, blurb, index){
   return (
-    <React.Fragment key={index}>
+    <Fragment key={index}>
       <p>Location: {location}</p>
       <div className='google-map'>
         <iframe src={gmap_url} 
@@ -99,7 +99,7 @@ function createEvent(gmap_url, location, date, info_url, blurb, index){
               </a>
       </p>
       <p>Blurb: {blurb}</p>
-    </React.Fragment>
+    </Fragment>
   );
 }
 

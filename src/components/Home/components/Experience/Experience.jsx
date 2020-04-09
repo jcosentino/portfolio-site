@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './Experience.scss';
 import { HomeMenu } from '../Shared';
 import 'react-date-range/dist/styles.css'; // react-date-range main css file
@@ -80,7 +80,7 @@ function createEvent(title,
   const endDate = dates[1] === 'current' ? new Date() : dates[1];
 
   return (
-    <React.Fragment key={index}>
+    <Fragment key={index}>
       <div className='company-logo-title'>
         <a href={info_url}
            target='blank' rel='noopener noreferrer'>
@@ -104,7 +104,7 @@ function createEvent(title,
                 dragSelectionEnabled={false}
         />
       <TechIconsDisplay iconsList={key_tech} />
-    </React.Fragment>
+    </Fragment>
   );
 }
 

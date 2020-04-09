@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './ImagePanel.scss';
 import { Fade } from 'react-slideshow-image';
 
@@ -15,14 +15,14 @@ export function ImagePanel(props){
 
     function createPhoto(photo, caption){
         return (
-            <React.Fragment key={photo}>
+            <Fragment key={photo}>
                 <div className='each-fade'>
                     <div className='image-panel-container'>
                         <img src={photo} alt={photo} title={caption} />
                     </div>
                     <h2>{caption}</h2>
                 </div>
-            </React.Fragment>
+            </Fragment>
         );
     }
 

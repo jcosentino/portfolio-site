@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './Education.scss';
 
 const CSI_LINK = 'https://www.csi.cuny.edu/';
@@ -88,14 +88,14 @@ const EDUCATION = [
 
 function generateClassNames(class_names){
   return class_names.map(klass => 
-    <React.Fragment key={klass.class_name}>
+    <Fragment key={klass.class_name}>
       <p><span className='edu-classes-arrow'>&#8605;</span>
         <a href={klass.url}
             target='blank' rel='noopener noreferrer'>
             {klass.class_name}
         </a>
       </p>
-    </React.Fragment>
+    </Fragment>
   );
 }
 
@@ -109,7 +109,7 @@ function loadExtras(extras){
 
 function createEduComponent(degree, grad_date, class_names, extras){
   return (
-    <React.Fragment key={`${degree} ${grad_date}-${class_names.length}`}>
+    <Fragment key={`${degree} ${grad_date}-${class_names.length}`}>
       <li>
         <div className='degree-heading'>
           {degree}<br></br>
@@ -122,7 +122,7 @@ function createEduComponent(degree, grad_date, class_names, extras){
         {loadExtras(extras)}
         </div>
       </li>
-    </React.Fragment>
+    </Fragment>
   );
 }
 
