@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Header.scss';
 import { UP_ARROW_KEY, DOWN_ARROW_KEY } from 'constants/constants';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeActiveTab } from 'redux_items/actions/index';
 
 const HEADER_ITEMS = [
   'Experience',
@@ -17,6 +18,7 @@ const ACTIVE_TAB_CLASS = 'active-tab';
 export function Header() {
   const [screenOrientation, setScreenOrientation] = useState('');
   const activeTab = useSelector(state => state.activeTab);
+  const dispatch = useDispatch();
   window.addEventListener('resize', setScreenOrientation);
 
   function isPortait(){
@@ -63,7 +65,7 @@ export function Header() {
     );
 
     HEADER_ITEMS.map(item => items.push(
-      <div key={item}>
+      <div key={item} onClick={() => dispatch(changeActiveTab((item)))}>
         <a href={'#' + item} className={isActiveTab(item, activeTab)}>
           {item}
         </a>
