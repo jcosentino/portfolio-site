@@ -1,6 +1,6 @@
 import React from 'react';
 import './Software.scss';
-import { IShared } from 'custom_types/Shared/shared_types';
+import { IShared } from 'custom_types/MultiComponent/shared_types';
 
 const SOFTWARE: IShared.ImgIconData[] = [
   {
@@ -55,7 +55,7 @@ const SOFTWARE: IShared.ImgIconData[] = [
   }
 ];
 
-function createSoftwareComp(url: string, imageSrc: string, alt: string): JSX.Element {
+function createSoftwareComp(imageSrc: string = '', url: string = '', alt: string = ''): JSX.Element {
   return (
     <li key={alt}>
       <a href={url}
@@ -68,7 +68,7 @@ function createSoftwareComp(url: string, imageSrc: string, alt: string): JSX.Ele
 
 function generateSoftwareItems(): JSX.Element[] {
   return SOFTWARE.map((soft: IShared.ImgIconData) => 
-    createSoftwareComp(soft.url, soft.imageSrc, soft.alt)
+    createSoftwareComp(soft.imageSrc, soft.url, soft.alt)
   );
 }
 

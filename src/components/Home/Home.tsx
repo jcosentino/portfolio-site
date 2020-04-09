@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, MutableRefObject } from 'react';
 import './Home.scss';
 import { useDispatch } from 'react-redux';
 import {
@@ -11,8 +11,10 @@ import {
   About,
    } from './components';
 import { changeActiveTab } from 'redux_items/actions/index';
+import { IHome } from 'custom_types/home_types';
+import { Dispatch } from 'redux';
 
-const HOME_TEMS = [
+const HOME_TEMS: IHome.HomeItem[] = [
   {
     "component": <HomeLanding />,
     "heading": "HomeLanding"
@@ -43,11 +45,11 @@ const HOME_TEMS = [
   }
 ];
 
-function FadeInSection(props) {
-  const { tab } = props;
-  const [isVisible, setVisible] = useState(false);
-  const homeRef = useRef();
-  const dispatch = useDispatch();
+function FadeInSection(props: any): JSX.Element {
+  const { tab } = props; // change props typing
+  const [isVisible, setVisible] = useState<boolean>(false);
+  const homeRef: MutableRefObject<any> = useRef();
+  const dispatch: Dispatch<any> = useDispatch();
 
   useEffect(() => {
     const observer = new IntersectionObserver(divs => {
@@ -58,7 +60,7 @@ function FadeInSection(props) {
     observer.observe(homeRef.current);
   });
 
-  function isTabVisible(visibility, tabName){
+  function isTabVisible(visibility: boolean, tabName: string): string {
     if(visibility){ dispatch(changeActiveTab(tabName)); }
     return visibility ? 'visible' : '';
   }
@@ -72,7 +74,7 @@ function FadeInSection(props) {
   );
 }
 
-function createHomeItem(home_item){
+function createHomeItem(home_item: IHome.HomeItem): JSX.Element {
   return (
     <FadeInSection tab={home_item.heading}>
       {home_item.component}
@@ -80,11 +82,11 @@ function createHomeItem(home_item){
   );
 }
 
-const HOME_ITEM_DIVS = HOME_TEMS.map(div => 
+const HOME_ITEM_DIVS: JSX.Element[] = HOME_TEMS.map((div: IHome.HomeItem) => 
   createHomeItem(div)
 );
 
-export function Home(){
+export function Home(): JSX.Element {
   return (
     <div className='Home'>
       {HOME_ITEM_DIVS[0]}

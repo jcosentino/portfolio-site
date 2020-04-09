@@ -2,10 +2,11 @@ import React from 'react';
 import './Projects.scss';
 import { HomeMenu, TechIconsDisplay } from '../Shared';
 import { ImagePanel } from '../Shared/ImagePanel/ImagePanel';
+import { IProjects } from 'custom_types/projects_types';
 
-const IN_PROGRESS = 'In Progress...'
+const IN_PROGRESS: string = 'In Progress...'
 
-const PROJECTS = [
+const PROJECTS: IProjects.ProjectItem[] = [
   {
     "project": "Doctor Appointment Scheduler",
     "blurb": `I wanted to re-create my college team's doctor 
@@ -109,15 +110,15 @@ const PROJECTS = [
   }
 ];
 
-const anchorId = 'Projects';
-const headerTitle = 'Projects';
-const renderItems = PROJECTS.map(proj => proj.project);
+const anchorId: string = 'Projects';
+const headerTitle: string = 'Projects';
+const renderItems: string[] = PROJECTS.map((proj: IProjects.ProjectItem) => proj.project);
 
-function activeLink(link){
+function activeLink(link: string | string[]): string {
   return (link === '' || link.length === 0) ? 'inactive-project-item' : '';
 }
 
-function codeLinks(code_links){
+function codeLinks(code_links: string[]): React.ReactFragment {
   return (
     <>
       <p>
@@ -129,13 +130,13 @@ function codeLinks(code_links){
             {code_link}
           </a><br></br>
         </React.Fragment>
-      )}
+        )}
       </p>
     </>
   );
 }
 
-function screenShots(screenshots){
+function screenShots(screenshots: string[]): JSX.Element {
   return (
     <div className='project-img-section'>
       <ImagePanel photoList={screenshots} captionTags={[]} />
@@ -143,13 +144,13 @@ function screenShots(screenshots){
   );
 }
 
-function createProject(blurb,
-                       time,
-                       key_tech,
-                       code_link,
-                       host_link,
-                       screenshots
-  ){
+function createProject(blurb: string,
+                       time: string,
+                       key_tech: string[],
+                       code_links: string[],
+                       host_link: string,
+                       screenshots: string[]
+  ): JSX.Element {
     return (
       <div className='project-item'>
         <p><span className='project-label'>About this app:</span><br></br>
@@ -162,8 +163,8 @@ function createProject(blurb,
         <div className='project-key_tech'>
           {<TechIconsDisplay iconsList={key_tech} />}
         </div>
-        <div className={activeLink(code_link)}>
-          {codeLinks(code_link)}
+        <div className={activeLink(code_links)}>
+          {codeLinks(code_links)}
         </div>
         <div className={activeLink(host_link)}>
           <p><span className='project-label'>Hosted at:</span><br></br>
@@ -181,8 +182,8 @@ function createProject(blurb,
     );
   }
 
-function generateProjects(){
-  return PROJECTS.map(proj =>
+function generateProjects(): React.ReactFragment[] {
+  return PROJECTS.map((proj: IProjects.ProjectItem) =>
   <>
     {createProject(proj.blurb,
                     proj.time,
@@ -195,9 +196,9 @@ function generateProjects(){
   );
 }
 
-const customDiv = (generateProjects());
+const customDiv: React.ReactFragment[] = (generateProjects());
 
-export function Projects(){
+export function Projects(): JSX.Element {
   return (
     <div>
       <HomeMenu anchorId={anchorId}

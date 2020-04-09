@@ -5,8 +5,9 @@ import 'react-date-range/dist/styles.css'; // react-date-range main css file
 import 'react-date-range/dist/theme/default.css'; // react-date-range theme css file
 import { DateRange } from 'react-date-range';
 import { TechIconsDisplay } from '../Shared/TechIconsDiplay/TechIconsDisplay';
+import { IExperience } from 'custom_types/experience_types';
 
-const EXPERIENCE_ROLES = [
+const EXPERIENCE_ROLES: IExperience.ExperienceRole[] = [
   {
     "title": "Prudential Financial",
     "location": "Newark, NJ",
@@ -62,22 +63,23 @@ const EXPERIENCE_ROLES = [
   }
 ];
 
-const anchorId = 'Experience';
-const headerTitle = 'Experience';
-const renderItems = EXPERIENCE_ROLES.map(exp => exp.title);
-const monthsCount = 1;
+const anchorId: string = 'Experience';
+const headerTitle: string = 'Experience';
+const renderItems: string[] = EXPERIENCE_ROLES.map(exp => exp.title);
+const monthsCount: number = 1;
 
-function createEvent(title,
-                     location,
-                     duration,
-                     company_logo,
-                     info_url,
-                     key_tech,
-                     index){
-  const dates = duration.split(',');
-  const startDate = dates[0];
+function createEvent(title: string,
+                     location: string,
+                     duration: string,
+                     company_logo: string,
+                     info_url: string,
+                     key_tech: string[],
+                     index: number
+  ): React.ReactFragment {
+  const dates: string[] = duration.split(',');
+  const startDate: string = dates[0];
   // Need to account for current job(s)
-  const endDate = dates[1] === 'current' ? new Date() : dates[1];
+  const endDate: Date | string = dates[1] === 'current' ? new Date() : dates[1];
 
   return (
     <React.Fragment key={index}>
@@ -91,7 +93,8 @@ function createEvent(title,
         </a>
       </div>
       <p>Location: {location}</p>
-      <DateRange className='experience-date-range'
+      {/* <DateRange 
+                className='experience-date-range'
                 editableDateInputs={false}
                 ranges={[{
                   "startDate": new Date(startDate),
@@ -102,14 +105,14 @@ function createEvent(title,
                 showMonthArrow={false}
                 showMonthAndYearPickers={false}
                 dragSelectionEnabled={false}
-        />
+        />   */}
       <TechIconsDisplay iconsList={key_tech} />
     </React.Fragment>
   );
 }
 
-function generateEvents(){
-  return EXPERIENCE_ROLES.map((exp, index) => 
+function generateEvents(): React.ReactFragment[] {
+  return EXPERIENCE_ROLES.map((exp: IExperience.ExperienceRole, index: number) => 
     createEvent(exp.title,
       exp.location,
       exp.duration,
@@ -121,9 +124,9 @@ function generateEvents(){
   );
 }
 
-const customDiv = (generateEvents());
+const customDiv: React.ReactFragment[] = (generateEvents());
 
-export function Experience(){
+export function Experience(): JSX.Element {
   return (
     <div>
       <HomeMenu anchorId={anchorId}

@@ -1,11 +1,12 @@
 import React from 'react';
 import './ImagePanel.scss';
-import { Fade } from 'react-slideshow-image';
+// import { Fade } from 'react-slideshow-image';
+import { IImagePanel } from 'custom_types/imagepanel_types';
 
-export function ImagePanel(props){
+export function ImagePanel(props: IImagePanel.ImagePanelProps): JSX.Element {
     const { photoList, captionTags } = props;
 
-    const fadeProperties = {
+    const fadeProperties: IImagePanel.ImagePanelProperties = {
         duration: 5000,
         transitionDuration: 500,
         infinite: true,
@@ -13,7 +14,7 @@ export function ImagePanel(props){
         pauseOnHover: true
     }
 
-    function createPhoto(photo, caption){
+    function createPhoto(photo: string, caption: (string | undefined)): React.ReactFragment {
         return (
             <React.Fragment key={photo}>
                 <div className='each-fade'>
@@ -26,13 +27,14 @@ export function ImagePanel(props){
         );
     }
 
-    function generatePhotoSlideShow(fadeProperties){
+    function generatePhotoSlideShow(fadeProperties: IImagePanel.ImagePanelProperties): any { // change type
         return (
-            <Fade {...fadeProperties}>
-                {photoList.map((photo, index) => 
-                    createPhoto(photo, captionTags[index])
-                )}
-            </Fade>
+            <></>
+            // <Fade {...fadeProperties}>
+            //     {photoList.map((photo, index) => 
+            //         createPhoto(photo, captionTags[index])
+            //     )}
+            // </Fade>
         );
     }
 
