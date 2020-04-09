@@ -54,6 +54,12 @@ export function Header() {
     return tab === activeTab ? ACTIVE_TAB_CLASS : '';
   }
 
+  function activeTabClick(tabName){
+    setTimeout(() => {
+      dispatch(changeActiveTab((tabName)));
+    }, 600) // transition time for .home-fade-in
+  }
+
   function generateHeaderItems(){
     const items = [];
     items.push(
@@ -65,7 +71,7 @@ export function Header() {
     );
 
     HEADER_ITEMS.map(item => items.push(
-      <div key={item} onClick={() => dispatch(changeActiveTab((item)))}>
+      <div key={item} onClick={() => activeTabClick(item)}>
         <a href={'#' + item} className={isActiveTab(item, activeTab)}>
           {item}
         </a>
