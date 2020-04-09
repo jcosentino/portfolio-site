@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment, ReactFragment } from 'react';
 import './Projects.scss';
 import { HomeMenu, TechIconsDisplay } from '../Shared';
 import { ImagePanel } from '../Shared/ImagePanel/ImagePanel';
@@ -118,18 +118,18 @@ function activeLink(link: string | string[]): string {
   return (link === '' || link.length === 0) ? 'inactive-project-item' : '';
 }
 
-function codeLinks(code_links: string[]): React.ReactFragment {
+function codeLinks(code_links: string[]): ReactFragment {
   return (
     <>
       <p>
         <span className='project-label'>Code Links:</span><br></br>
         {code_links.map(code_link => 
-        <React.Fragment key={code_link}>
+        <Fragment key={code_link}>
           <a href={code_link}
               target='blank' rel='noopener noreferrer'>
             {code_link}
           </a><br></br>
-        </React.Fragment>
+        </Fragment>
         )}
       </p>
     </>
@@ -182,7 +182,7 @@ function createProject(blurb: string,
     );
   }
 
-function generateProjects(): React.ReactFragment[] {
+function generateProjects(): ReactFragment[] {
   return PROJECTS.map((proj: IProjects.ProjectItem) =>
   <>
     {createProject(proj.blurb,
@@ -196,7 +196,7 @@ function generateProjects(): React.ReactFragment[] {
   );
 }
 
-const customDiv: React.ReactFragment[] = (generateProjects());
+const customDiv: ReactFragment[] = (generateProjects());
 
 export function Projects(): JSX.Element {
   return (

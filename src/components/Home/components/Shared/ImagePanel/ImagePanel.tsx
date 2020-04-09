@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment, ReactFragment } from 'react';
 import './ImagePanel.scss';
 // import { Fade } from 'react-slideshow-image';
 import { IImagePanel } from 'custom_types/imagepanel_types';
@@ -14,16 +14,16 @@ export function ImagePanel(props: IImagePanel.ImagePanelProps): JSX.Element {
         pauseOnHover: true
     }
 
-    function createPhoto(photo: string, caption: (string | undefined)): React.ReactFragment {
+    function createPhoto(photo: string, caption: (string | undefined)): ReactFragment {
         return (
-            <React.Fragment key={photo}>
+            <Fragment key={photo}>
                 <div className='each-fade'>
                     <div className='image-panel-container'>
                         <img src={photo} alt={photo} title={caption} />
                     </div>
                     <h2>{caption}</h2>
                 </div>
-            </React.Fragment>
+            </Fragment>
         );
     }
 

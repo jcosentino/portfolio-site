@@ -50,7 +50,7 @@ export function HomeMenu(props: IHomeMenu.HomeMenuProps): JSX.Element {
     );
   }
 
-  function generateEvents(): React.ReactFragment {
+  function generateEvents(): ReactFragment {
     return renderItems.map((item, index) => 
       createEvent(item, index)
     );

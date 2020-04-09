@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment, ReactFragment } from 'react';
 import './Experience.scss';
 import { HomeMenu } from '../Shared';
 import 'react-date-range/dist/styles.css'; // react-date-range main css file
@@ -90,13 +90,13 @@ function createEvent(title: string,
                      info_url: string,
                      key_tech: string[],
                      index: number
-  ): React.ReactFragment {
+  ): ReactFragment {
   const startDate: string = duration.startDate;
   // Need to account for current job(s)
   const endDate: Date | string = duration.endDate === 'current' ? new Date() : duration.endDate;
 
   return (
-    <React.Fragment key={index}>
+    <Fragment key={index}>
       <div className='company-logo-title'>
         <a href={info_url}
            target='blank' rel='noopener noreferrer'>
@@ -121,11 +121,11 @@ function createEvent(title: string,
                 dragSelectionEnabled={false}
         />   */}
       <TechIconsDisplay iconsList={key_tech} />
-    </React.Fragment>
+    </Fragment>
   );
 }
 
-function generateEvents(): React.ReactFragment[] {
+function generateEvents(): ReactFragment[] {
   return EXPERIENCE_ROLES.map((exp: IExperience.ExperienceRole, index: number) => 
     createEvent(exp.title,
       exp.location,
@@ -138,7 +138,7 @@ function generateEvents(): React.ReactFragment[] {
   );
 }
 
-const customDiv: React.ReactFragment[] = (generateEvents());
+const customDiv: ReactFragment[] = (generateEvents());
 
 export function Experience(): JSX.Element {
   return (

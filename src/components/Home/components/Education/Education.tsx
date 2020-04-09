@@ -1,4 +1,4 @@
-import React, { ReactFragment } from 'react';
+import React, { Fragment, ReactFragment } from 'react';
 import './Education.scss';
 import { IEducation } from 'custom_types/education_types';
 
@@ -87,16 +87,16 @@ const EDUCATION: IEducation.EducationItem[] = [
   }
 ];
 
-function generateClassNames(class_names: IEducation.EduClassName[]): React.ReactFragment[] {
+function generateClassNames(class_names: IEducation.EduClassName[]): ReactFragment[] {
   return class_names.map((klass: IEducation.EduClassName) => 
-    <React.Fragment key={klass.class_name}>
+    <Fragment key={klass.class_name}>
       <p><span className='edu-classes-arrow'>&#8605;</span>
         <a href={klass.url}
             target='blank' rel='noopener noreferrer'>
             {klass.class_name}
         </a>
       </p>
-    </React.Fragment>
+    </Fragment>
   );
 }
 
@@ -114,7 +114,7 @@ function createEduComponent(degree: string,
                             extras: string[]
   ): ReactFragment {
   return (
-    <React.Fragment key={`${degree} ${grad_date}-${class_names.length}`}>
+    <Fragment key={`${degree} ${grad_date}-${class_names.length}`}>
       <li>
         <div className='degree-heading'>
           {degree}<br></br>
@@ -127,11 +127,11 @@ function createEduComponent(degree: string,
         {loadExtras(extras)}
         </div>
       </li>
-    </React.Fragment>
+    </Fragment>
   );
 }
 
-function generateEduComponents(): React.ReactFragment[] {
+function generateEduComponents(): ReactFragment[] {
   return EDUCATION.map((edu: IEducation.EducationItem) => 
     createEduComponent(edu.degree, edu.grad_date, edu.class_names, edu.extras)
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment, ReactFragment } from 'react';
 import './Events.scss';
 import { HomeMenu } from '../Shared';
 import { IEvents } from 'custom_types/events_types';
@@ -91,9 +91,9 @@ function createEvent(gmap_url: string,
                      info_url: string,
                      blurb: string,
                      index: number
-  ): React.ReactFragment {
+  ): ReactFragment {
   return (
-    <React.Fragment key={index}>
+    <Fragment key={index}>
       <p>Location: {location}</p>
       <div className='google-map'>
         <iframe src={gmap_url} 
@@ -106,11 +106,11 @@ function createEvent(gmap_url: string,
               </a>
       </p>
       <p>Blurb: {blurb}</p>
-    </React.Fragment>
+    </Fragment>
   );
 }
 
-function generateEvents(): React.ReactFragment[] {
+function generateEvents(): ReactFragment[] {
   return EVENTS.map((event: IEvents.EventItem, index: number) => 
     createEvent(event.gmap_url,
       event.location,
@@ -122,7 +122,7 @@ function generateEvents(): React.ReactFragment[] {
   );
 }
 
-const customDiv: React.ReactFragment[] = (generateEvents());
+const customDiv: ReactFragment[] = (generateEvents());
 
 export function Events(): JSX.Element {
   return (
