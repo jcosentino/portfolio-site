@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, ReactFragment } from 'react';
 import './HomeMenu.scss';
+import { IHomeMenu } from 'custom_types/homemenu_types';
 
-export function HomeMenu(props){
-  const [activeItems, setActiveItems] = useState([]);
+export function HomeMenu(props: IHomeMenu.HomeMenuProps): JSX.Element {
+  const [activeItems, setActiveItems] = useState<boolean[]>([]);
   const { 
     anchorId,
     headerTitle,
@@ -10,19 +11,19 @@ export function HomeMenu(props){
     customDiv
   } = props;
 
-  function openItem(index){
-    const openItems = activeItems.slice(0);
+  function openItem(index: number): void {
+    const openItems: boolean[] = activeItems.slice(0);
     openItems[index] = true;
     setActiveItems(openItems);
   }
 
-  function closeItem(index){
-    const openItems = activeItems.slice(0);
+  function closeItem(index: number): void {
+    const openItems: boolean[] = activeItems.slice(0);
     openItems[index] = false;
     setActiveItems(openItems);
   }
 
-  function handleClick(index){
+  function handleClick(index: number): void {
     if(activeItems[index]){
       closeItem(index);
     } else {
@@ -30,12 +31,12 @@ export function HomeMenu(props){
     }
   }
 
-  function findActiveTabs(index, type='subitem'){
+  function findActiveTabs(index: number, type: string = 'subitem'): string {
     return type === 'subitem' ? activeItems[index] ? '' : 'info-item-para-inactive'
                            : activeItems[index] ? 'info-item-banner-opened' : '';
   }
 
-  function createEvent(title, index){
+  function createEvent(title: string, index: number): JSX.Element {
     return (
       <li key={index}>
         <button type='button' className={'info-item-banner ' + findActiveTabs(index, 'button')}
@@ -49,7 +50,7 @@ export function HomeMenu(props){
     );
   }
 
-  function generateEvents(){
+  function generateEvents(): ReactFragment {
     return renderItems.map((item, index) => 
       createEvent(item, index)
     );

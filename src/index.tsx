@@ -4,10 +4,20 @@ import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, Store } from 'redux';
 import rootReducer from 'redux_items/reducers/index';
 
-const store = createStore(rootReducer);
+type StoreType = Store<
+        {
+            activeTab: string;
+        },
+        {
+            type: string;
+            payload: any;
+        }
+    >;
+
+const store: StoreType = createStore(rootReducer);
 
 ReactDOM.render(
     <Provider store={store}>

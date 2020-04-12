@@ -1,9 +1,10 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, ReactFragment } from 'react';
 import './Education.scss';
+import { IEducation } from 'custom_types/education_types';
 
-const CSI_LINK = 'https://www.csi.cuny.edu/';
+const CSI_LINK: string = 'https://www.csi.cuny.edu/';
 
-const EDUCATION = [
+const EDUCATION: IEducation.EducationItem[] = [
   {
     "degree": "Bachelor of Science - Computer Science",
     "grad_date": "June 2017",
@@ -86,8 +87,8 @@ const EDUCATION = [
   }
 ];
 
-function generateClassNames(class_names){
-  return class_names.map(klass => 
+function generateClassNames(class_names: IEducation.EduClassName[]): ReactFragment[] {
+  return class_names.map((klass: IEducation.EduClassName) => 
     <Fragment key={klass.class_name}>
       <p><span className='edu-classes-arrow'>&#8605;</span>
         <a href={klass.url}
@@ -99,15 +100,19 @@ function generateClassNames(class_names){
   );
 }
 
-function loadExtras(extras){
-  return extras.map(extra => 
+function loadExtras(extras: string[]): JSX.Element[] {
+  return extras.map((extra: string) => 
     <p>
       &bull;{extra}&bull;
     </p>
   );
 }
 
-function createEduComponent(degree, grad_date, class_names, extras){
+function createEduComponent(degree: string,
+                            grad_date: string,
+                            class_names: IEducation.EduClassName[],
+                            extras: string[]
+  ): ReactFragment {
   return (
     <Fragment key={`${degree} ${grad_date}-${class_names.length}`}>
       <li>
@@ -126,13 +131,13 @@ function createEduComponent(degree, grad_date, class_names, extras){
   );
 }
 
-function generateEduComponents(){
-  return EDUCATION.map(edu => 
+function generateEduComponents(): ReactFragment[] {
+  return EDUCATION.map((edu: IEducation.EducationItem) => 
     createEduComponent(edu.degree, edu.grad_date, edu.class_names, edu.extras)
   );
 }
 
-export function Education(){
+export function Education(): JSX.Element {
   return (
     <>
       <span className='anchor' id='Education'></span>

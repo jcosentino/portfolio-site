@@ -10,8 +10,9 @@ import { TWITTER_LINK,
          LINKEDIN,
          GITHUB,
          RESUME_TEXT } from 'constants/constants';
+import { IShared } from 'custom_types/MultiComponent/shared_types';
 
-const FOOTER_DATA = [
+const FOOTER_DATA: IShared.ImgIconData[] = [
   {
     "url": TWITTER_LINK,
     "imageSrc": "twitter.png",
@@ -39,8 +40,8 @@ const FOOTER_DATA = [
   }
 ];
 
-export function Footer() {
-  function createFooterComp(url, imageSrc, alt){
+export function Footer(): JSX.Element {
+  function createFooterComp(imageSrc: string, url: string = '', alt: string = ''){
     return (
       <a href={url}
          target='blank' rel='noopener noreferrer'
@@ -50,9 +51,9 @@ export function Footer() {
     );
   }
 
-  function generateFooterComps(){
-    return FOOTER_DATA.map(data => 
-      createFooterComp(data.url, `footer/${data.imageSrc}`, data.alt)
+  function generateFooterComps(): JSX.Element[] {
+    return FOOTER_DATA.map((data: IShared.ImgIconData) => 
+      createFooterComp(`footer/${data.imageSrc}`, data.url, data.alt)
     );
   }
 
