@@ -1,6 +1,6 @@
 import React, { Fragment, ReactFragment } from 'react';
 import './ImagePanel.scss';
-// import { Fade } from 'react-slideshow-image';
+import { Fade } from 'react-slideshow-image';
 import { IImagePanel } from 'custom_types/imagepanel_types';
 
 export function ImagePanel(props: IImagePanel.ImagePanelProps): JSX.Element {
@@ -27,14 +27,13 @@ export function ImagePanel(props: IImagePanel.ImagePanelProps): JSX.Element {
         );
     }
 
-    function generatePhotoSlideShow(fadeProperties: IImagePanel.ImagePanelProperties): any { // change type
+    function generatePhotoSlideShow(fadeProperties: IImagePanel.ImagePanelProperties): JSX.Element {
         return (
-            <></>
-            // <Fade {...fadeProperties}>
-            //     {photoList.map((photo, index) => 
-            //         createPhoto(photo, captionTags[index])
-            //     )}
-            // </Fade>
+            <Fade {...fadeProperties}>
+                {photoList.map((photo, index) => 
+                    createPhoto(photo, captionTags[index])
+                )}
+            </Fade>
         );
     }
 
