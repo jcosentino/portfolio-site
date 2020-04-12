@@ -107,7 +107,7 @@ function createEvent(title: string,
         </a>
       </div>
       <p>Location: {location}</p>
-      {/* <DateRange 
+      <DateRange 
                 className='experience-date-range'
                 editableDateInputs={false}
                 ranges={[{
@@ -119,7 +119,7 @@ function createEvent(title: string,
                 showMonthArrow={false}
                 showMonthAndYearPickers={false}
                 dragSelectionEnabled={false}
-        />   */}
+        />  
       <TechIconsDisplay iconsList={key_tech} />
     </Fragment>
   );
