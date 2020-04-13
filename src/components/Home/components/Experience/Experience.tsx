@@ -1,10 +1,9 @@
 import React, { Fragment, ReactFragment } from 'react';
 import './Experience.scss';
-import 'react-calendar/dist/Calendar.css';
 import { HomeMenu } from '../Shared';
-import Calendar from 'react-calendar';
 import { TechIconsDisplay } from '../Shared/TechIconsDiplay/TechIconsDisplay';
 import { IExperience } from 'custom_types/experience_types';
+import { CalendarItem } from '../Shared/CalendarItem/CalendarItem';
 
 const EXPERIENCE_ROLES: IExperience.ExperienceRole[] = [
   {
@@ -42,7 +41,7 @@ const EXPERIENCE_ROLES: IExperience.ExperienceRole[] = [
     "location": "New York, NY",
     "duration": {
       "startDate": "4/2/2018",
-      "endDate": "6/28/2018"
+      "endDate": "6/29/2018"
     },
     "company_logo": "bloomberg.jpg",
     "info_url": "https://www.bloomberg.com/",
@@ -107,14 +106,8 @@ function createEvent(title: string,
       </div>
       <p>Location: {location}</p>
       <div className='experience-calendar-container'>
-        <Calendar 
-          className='experience-calendar-item'
-          value = {[new Date(startDate)]}
-        />
-        <Calendar 
-          className='experience-calendar-item'
-          value = {[new Date(endDate)]}
-        />
+        <CalendarItem cal_date={new Date(startDate)} />
+        <CalendarItem cal_date={new Date(endDate)} />
       </div>
       <TechIconsDisplay iconsList={key_tech} />
     </Fragment>
