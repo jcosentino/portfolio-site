@@ -1,9 +1,8 @@
 import React, { Fragment, ReactFragment } from 'react';
 import './Experience.scss';
+import 'react-calendar/dist/Calendar.css';
 import { HomeMenu } from '../Shared';
-import 'react-date-range/dist/styles.css'; // react-date-range main css file
-import 'react-date-range/dist/theme/default.css'; // react-date-range theme css file
-import { DateRange } from 'react-date-range';
+import Calendar from 'react-calendar';
 import { TechIconsDisplay } from '../Shared/TechIconsDiplay/TechIconsDisplay';
 import { IExperience } from 'custom_types/experience_types';
 
@@ -107,19 +106,16 @@ function createEvent(title: string,
         </a>
       </div>
       <p>Location: {location}</p>
-      <DateRange 
-                className='experience-date-range'
-                editableDateInputs={false}
-                ranges={[{
-                  "startDate": new Date(startDate),
-                  "endDate": new Date(endDate)
-                }]}
-                months={monthsCount}
-                direction='horizontal'
-                showMonthArrow={false}
-                showMonthAndYearPickers={false}
-                dragSelectionEnabled={false}
-        />  
+      <div className='experience-calendar-container'>
+        <Calendar 
+          className='experience-calendar-item'
+          value = {[new Date(startDate)]}
+        />
+        <Calendar 
+          className='experience-calendar-item'
+          value = {[new Date(endDate)]}
+        />
+      </div>
       <TechIconsDisplay iconsList={key_tech} />
     </Fragment>
   );

@@ -1,37 +1,138 @@
 .experience-company-logo {
     max-height: 30vh;
     max-width: 30vw;
-    margin-top: 1em;
+    margin-top: 1vh;
 }
 
-.experience-date-range {
-    width: 50vw;
-    height: auto;
-    margin-bottom: 1em;
+.experience-calendar-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    margin-bottom: 1vh;
+    pointer-events: none;
 }
 
-.rdrMonth { /* font for the calendar itself */
+.react-calendar { // override built-in theme
+    width: auto !important;
+    padding-bottom: 1vh !important;
+}
+
+.experience-calendar-item {
+    font-size: 1.3vw;
+}
+
+.react-calendar__navigation { // override built-in theme
+    margin: 0 !important;
+}
+
+.react-calendar__navigation__label {
     font-size: 2vw;
 }
 
-@media screen and (orientation: portrait) {
-    .experience-date-range {
-        width: 60vw;
-        height: inherit;
+.react-calendar__month-view__days > button {
+    font-size: 1vw;
+}
+
+.react-calendar__navigation__arrow {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) and (orientation: landscape){
+    .experience-calendar-item {
+        font-size: 1.5vw;
     }
 
-    .rdrMonth { /* font for the calendar itself */
-        font-size: 2vw;
+    .react-calendar__navigation__label {
+        font-size: 3vw;
     }
 
-    @media only screen and (max-width: 600px) {
-        .experience-date-range {
-            width: 55vw;
-            height: inherit;
+    .react-calendar__month-view__days > button {
+        font-size: 1.5vw;
+    }
+}
+
+@media only screen and (max-width: 800px) and (orientation: landscape){
+    .experience-calendar-item {
+        font-size: 1.4vw;
+    }
+}
+
+@media only screen and (max-width: 700px) and (orientation: landscape){
+    .experience-calendar-item {
+        font-size: 1.4vw;
+    }
+}
+
+@media screen and (orientation: portrait){ 
+    .experience-calendar-container {
+        grid-template-columns: none;
+        grid-template-rows: 50% 50%;
+        row-gap: 2vh;
+    }
+    
+    .experience-calendar-item {
+        font-size: 1.3vh;
+        margin: 0 1vw;
+        height: auto;
+    }
+    
+    .react-calendar__navigation__label {
+        font-size: 2vh;
+    }
+    
+    .react-calendar__month-view__days > button {
+        font-size: 0.9vh;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .experience-calendar-item {
+            font-size: 1.5vh;
+        }
+    
+        .react-calendar__navigation__label {
+            font-size: 3vh;
+        }
+    
+        .react-calendar__month-view__days > button {
+            font-size: 1.5vh;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .experience-calendar-item {
+            font-size: 1.3vh;
         }
 
-        .rdrMonth {
-            font-size: 2.5vw;
+        .react-calendar__navigation__label {
+            font-size: 2.9vh;
+        }
+    }
+
+    @media only screen and (max-width: 300px) {
+        .experience-calendar-item {
+            font-size: 1.2vh;
+        }
+
+        .react-calendar__navigation__label {
+            font-size: 2.8vh;
+        }
+
+        .react-calendar__month-view__days > button {
+            font-size: 1.3vh;
+        }
+    }
+
+    @media only screen and (max-width: 280px) {
+        .experience-calendar-item {
+            font-size: 0.9vh;
+        }
+
+        .react-calendar__navigation__label {
+            font-size: 2.6vh;
+        }
+
+        .react-calendar__month-view__days > button {
+            font-size: 1.1vh;
         }
     }
 }
