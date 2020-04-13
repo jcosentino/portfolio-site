@@ -19,6 +19,7 @@ const PROJECTS: IProjects.ProjectItem[] = [
     "time": `${IN_PROGRESS}`,
     "key_tech": [
       "angular.png",
+      "jasmine.png",
       "reactjs.jpg",
       "python.png",
       "aws.jpg",
@@ -38,11 +39,13 @@ const PROJECTS: IProjects.ProjectItem[] = [
   {
     "project": "Portfolio Website",
     "blurb": `It is the code that powers this very website.`,
-    "time": "4/2/2020",
+    "time": "4/13/2020",
     "key_tech": [
       "reactjs.jpg",
       "redux.png",
-      "nodejs.png"
+      "nodejs.png",
+      "typescript.jpg",
+      "webpack.png"
     ],
     "code_links": [
       "https://github.com/jcosentino/portfolio-site"

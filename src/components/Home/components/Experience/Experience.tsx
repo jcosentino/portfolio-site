@@ -18,9 +18,10 @@ const EXPERIENCE_ROLES: IExperience.ExperienceRole[] = [
     "info_url": "https://www.prudential.com/",
     "key_tech": [
       "angular.png",
-      "typescript.jpg",
+      "jasmine.png",
       "spring.png",
-      "sql.png"
+      "sql.png",
+      "typescript.jpg"
     ]
   },
   {

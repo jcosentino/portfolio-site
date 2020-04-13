@@ -19,6 +19,11 @@ const SOFTWARE: IShared.ImgIconData[] = [
     "alt": "Flask"
   },
   {
+    "url": "https://jasmine.github.io/",
+    "imageSrc": "software/jasmine.png",
+    "alt": "Jasmine"
+  },
+  {
     "url": "https://nodejs.org/",
     "imageSrc": "software/nodejs.png",
     "alt": "Node JS"
@@ -52,6 +57,11 @@ const SOFTWARE: IShared.ImgIconData[] = [
     "url": "https://www.typescriptlang.org/",
     "imageSrc": "software/typescript.jpg",
     "alt": "TypeScript"
+  },
+  {
+    "url": "https://webpack.js.org/",
+    "imageSrc": "software/webpack.png",
+    "alt": "Webpack"
   }
 ];
 
