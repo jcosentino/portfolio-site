@@ -31,21 +31,17 @@ export function HomeMenu(props: IHomeMenu.HomeMenuProps): JSX.Element {
     }
   }
 
-  function findActiveTabs(index: number, type: string = 'subitem'): string {
-    return type === 'subitem' ? activeItems[index] ? '' : 'info-item-para-inactive'
-                           : activeItems[index] ? 'info-item-banner-opened' : '';
-  }
-
   function createEvent(title: string, index: number): JSX.Element {
     return (
       <li key={index}>
-        <button type='button' className={'info-item-banner ' + findActiveTabs(index, 'button')}
+        <button type='button' className={'info-item-banner'}
                 onClick={() => handleClick(index)} >
           {title}
         </button>
-        <div className={'info-item-para ' + findActiveTabs(index)} >
+        {activeItems[index] && 
+         <div className='info-item-para'>
             {customDiv[index]}
-        </div>
+        </div>}
       </li>
     );
   }

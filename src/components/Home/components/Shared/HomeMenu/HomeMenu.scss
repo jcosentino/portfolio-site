@@ -40,10 +40,6 @@
     overflow: hidden;
 }
 
-.info-item-para-inactive {
-    display: none;
-}
-
 @media screen and (orientation: portrait) {
     .info-item-banner {
         font-size: $banner-item-mobile-font-size;

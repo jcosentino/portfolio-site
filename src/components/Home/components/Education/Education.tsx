@@ -102,7 +102,7 @@ function generateClassNames(class_names: IEducation.EduClassName[]): ReactFragme
 
 function loadExtras(extras: string[]): JSX.Element[] {
   return extras.map((extra: string) => 
-    <p>
+    <p key={extra}>
       &bull;{extra}&bull;
     </p>
   );

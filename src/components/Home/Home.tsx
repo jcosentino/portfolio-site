@@ -76,9 +76,11 @@ function FadeInSection(props: IHome.FadeInSectionProps): JSX.Element {
 
 function createHomeItem(home_item: IHome.HomeItem): JSX.Element {
   return (
-    <FadeInSection tab={home_item.heading}>
-      {home_item.component}
-    </FadeInSection>
+    <React.Fragment key={home_item.heading}>
+      <FadeInSection tab={home_item.heading}>
+        {home_item.component}
+      </FadeInSection>
+    </React.Fragment>
   );
 }
 

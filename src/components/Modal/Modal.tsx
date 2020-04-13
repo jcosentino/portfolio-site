@@ -35,10 +35,12 @@ export function Modal(){
                     {MODAL_HELPER_TEXT}<br></br>
                     <span role='img' aria-label='pointing down'>👇</span>
                 </span>
+                {/* eslint-disable-next-line */}
                 <a href={GITHUB_LINK}
-                target='blank' rel='noopener noreferrer'>
+                   target='blank' rel='noopener noreferrer'>
                     <img src={GITHUB_IMG} alt={GITHUB} title={GITHUB} />
                 </a>
+                {/* eslint-disable-next-line */}
                 <a className='modal-close' onClick={closeDialog}>
                     &times;
                 </a>

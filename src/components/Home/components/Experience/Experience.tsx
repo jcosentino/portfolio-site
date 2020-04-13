@@ -81,7 +81,6 @@ const EXPERIENCE_ROLES: IExperience.ExperienceRole[] = [
 const anchorId: string = 'Experience';
 const headerTitle: string = 'Experience';
 const renderItems: string[] = EXPERIENCE_ROLES.map(exp => exp.title);
-const monthsCount: number = 1;
 
 function createEvent(title: string,
                      location: string,

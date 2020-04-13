@@ -7,8 +7,9 @@
 .experience-calendar-container {
     display: grid;
     grid-template-columns: 50% 50%;
+    column-gap: 0.5vw;
     justify-items: center;
-    margin-bottom: 1vh;
+    margin: 1vh;
     pointer-events: none;
 }
 
