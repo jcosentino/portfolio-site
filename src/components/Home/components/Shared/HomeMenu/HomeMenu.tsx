@@ -31,10 +31,14 @@ export function HomeMenu(props: IHomeMenu.HomeMenuProps): JSX.Element {
     }
   }
 
+  function findActiveTabs(index: number): string {
+    return activeItems[index] ? 'info-item-banner-opened' : '';
+  }
+
   function createEvent(title: string, index: number): JSX.Element {
     return (
       <li key={index}>
-        <button type='button' className={'info-item-banner'}
+        <button type='button' className={`info-item-banner ${findActiveTabs(index)}`}
                 onClick={() => handleClick(index)} >
           {title}
         </button>
