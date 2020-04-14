@@ -110,7 +110,9 @@ const PROJECTS: IProjects.ProjectItem[] = [
     ],
     "code_links": [],
     "host_link": "https://cunytechprep.nyc/",
-    "screenshots": []
+    "screenshots": [
+      "project_screenshots/ctp_project_1.png"
+    ]
   }
 ];
 

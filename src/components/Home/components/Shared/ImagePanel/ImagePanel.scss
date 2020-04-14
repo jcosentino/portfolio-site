@@ -5,6 +5,7 @@
     max-height: 60vh;
     transition: all 1.2s ease;
     -webkit-transition: all 1.2 ease;
+    cursor: zoom-in;
 }
 
 .image-panel-container img:hover {
@@ -13,8 +14,21 @@
     -webkit-transition: all 1.2s ease;
 }
 
+.img-enlarge img {
+    transform: scale(2);
+    cursor: zoom-out;
+}
+
 @media screen and (orientation: portrait) {
+    .image-panel-container img {
+        cursor: default;;
+    }
+
     .home-img-section img:hover {
         filter: none;
+    }
+
+    .img-enlarge img {
+        cursor: normal;
     }
 }
