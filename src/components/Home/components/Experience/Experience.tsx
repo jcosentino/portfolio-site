@@ -86,7 +86,7 @@ const END_DATE_LABEL: string = 'End Date';
 function createDateItem(dateEntryLabel: string, calDate: Date): JSX.Element {
   return (
     <div className='date-item'>
-      <p>{dateEntryLabel}</p>
+      <p className='date-item-label'>{dateEntryLabel}</p>
       <CalendarItem cal_date={calDate} />
     </div>
   );
