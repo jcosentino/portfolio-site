@@ -25,15 +25,15 @@
 }
 
 .info-item-banner:before {
-    content: '\2192';
+    content: '\273A';
     position: absolute;
     left: 0;
-    width: 5vw;
-    text-align: right;
 }
 
 .info-item-banner-opened:before {
-    content: '\2193';
+    content: '\27A9';
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
 }
 
 .info-item-para {
