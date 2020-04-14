@@ -32,8 +32,8 @@ const PROJECTS: IProjects.ProjectItem[] = [
     ],
     "host_link": "",
     "screenshots": [
-      "project_screenshots/doctor_app_frontend.png",
-      "project_screenshots/doctor_app_backend.png"
+      "project_screenshots/doctor_app_frontend_1.png",
+      "project_screenshots/doctor_app_backend_1.png"
     ]
   },
   {
@@ -52,7 +52,8 @@ const PROJECTS: IProjects.ProjectItem[] = [
     ],
     "host_link": "https://jcosentino.me/",
     "screenshots": [
-      "project_screenshots/portfolio_site.png"
+      "project_screenshots/portfolio_site_1.png",
+      "project_screenshots/portfolio_site_2.png"
     ]
   },
   {
@@ -81,7 +82,7 @@ const PROJECTS: IProjects.ProjectItem[] = [
               Two of my colleagues and I added to a visual system, which was 
               designed for cyber-defense competitions, features such as:
               Nagios3 monitoring for up and down URLs using http-checker,
-              Implementation of Flapjack.io into project,
+              implementation of Flapjack.io into project,
               Caching of results in Redis database, etc.`,
     "time": "9/15/2017",
     "key_tech": [

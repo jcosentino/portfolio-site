@@ -77,9 +77,20 @@ const EXPERIENCE_ROLES: IExperience.ExperienceRole[] = [
   }
 ];
 
-const anchorId: string = 'Experience';
-const headerTitle: string = 'Experience';
-const renderItems: string[] = EXPERIENCE_ROLES.map(exp => exp.title);
+const ANCHOR_ID: string = 'Experience';
+const HEADER_TITLE: string = 'Experience';
+const RENDER_ITEMS: string[] = EXPERIENCE_ROLES.map(exp => exp.title);
+const START_DATE_LABEL: string = 'Start Date';
+const END_DATE_LABEL: string = 'End Date';
+
+function createDateItem(dateEntryLabel: string, calDate: Date): JSX.Element {
+  return (
+    <div className='date-item'>
+      <p>{dateEntryLabel}</p>
+      <CalendarItem cal_date={calDate} />
+    </div>
+  );
+}
 
 function createEvent(title: string,
                      location: string,
@@ -106,8 +117,8 @@ function createEvent(title: string,
       </div>
       <p>Location: {location}</p>
       <div className='experience-calendar-container'>
-        <CalendarItem cal_date={new Date(startDate)} />
-        <CalendarItem cal_date={new Date(endDate)} />
+        {createDateItem(START_DATE_LABEL, new Date(startDate))}
+        {createDateItem(END_DATE_LABEL, new Date(endDate))}
       </div>
       <TechIconsDisplay iconsList={key_tech} />
     </Fragment>
@@ -127,15 +138,15 @@ function generateEvents(): ReactFragment[] {
   );
 }
 
-const customDiv: ReactFragment[] = (generateEvents());
+const CUSTOM_DIV: ReactFragment[] = (generateEvents());
 
 export function Experience(): JSX.Element {
   return (
     <div>
-      <HomeMenu anchorId={anchorId}
-                headerTitle={headerTitle}
-                renderItems={renderItems}
-                customDiv={customDiv} />
+      <HomeMenu anchorId={ANCHOR_ID}
+                headerTitle={HEADER_TITLE}
+                renderItems={RENDER_ITEMS}
+                customDiv={CUSTOM_DIV} />
     </div>
   );
 }
