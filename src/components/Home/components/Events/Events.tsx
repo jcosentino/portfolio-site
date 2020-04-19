@@ -5,7 +5,7 @@ import { IEvents } from 'custom_types/events_types';
 
 const EVENTS: IEvents.EventItem[] = [
   {
-    "title": "Microsoft Recruitment Event",
+    "title": "Microsoft Information Event",
     "gmap_url": "https://maps.google.com/maps?q=15010%20NE%2036th%20St%20%2392%2C%20Redmond%2C%20WA%2098052&t=&z=13&ie=UTF8&iwloc=&output=embed",
     "location": "Microsoft HQ @ Redmond, WA",
     "date": "January 27-30, 2020",
@@ -32,6 +32,14 @@ const EVENTS: IEvents.EventItem[] = [
     "blurb": "EFF hosted a happy hour meetup, coming all the way from San Francisco, CA."
   },
   {
+    "title": "Disability inclusion at Facebook NY Fireside Chat",
+    "gmap_url": "https://www.google.com/maps/embed/v1/place?q=770+Broadway+770+Broadway,+New+York,+NY+10003,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8",
+    "location": "Facebook @ New York, NY",
+    "date": "April 18, 2018",
+    "info_url": "http://www.mydiversability.com/calendar/2018/4/18/outing-disability-inclusion-fb",
+    "blurb": "Attended a disability inclusion discussion at Facebook in NYC."
+  },
+  {
     "title": "Lime Connect NYC Recruitment Reception",
     "gmap_url": "https://maps.google.com/maps?q=50%20Vanderbilt%20Ave%2C%20New%20York%2C%20NY%2010017%2C%20USA&t=&z=13&ie=UTF8&iwloc=&output=embed",
     "location": "Vanderbilt @ New York, NY",
@@ -46,14 +54,6 @@ const EVENTS: IEvents.EventItem[] = [
     "date": "April 28-30, 2017",
     "info_url": "https://cunystartups.com/2017-spring-hackathon/",
     "blurb": "My team made a \"Ball in a Cup\" using C# and Unity3d."
-  },
-  {
-    "title": "Saturday Python Study Group",
-    "gmap_url": "https://maps.google.com/maps?q=568%20broadway%2C%20new%20york&t=&z=13&ie=UTF8&iwloc=&output=embed",
-    "location": "WeWork Charging Bull, New York, NY",
-    "date": "February 25, 2017",
-    "info_url": "https://www.meetup.com/learn-python-nyc/events/mztggmywkbcb/",
-    "blurb": "Python experts tutored newbies and advanced Python users alike."
   },
   {
     "title": "Tokyo .NET Developers Meetup",
