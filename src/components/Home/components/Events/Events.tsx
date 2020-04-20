@@ -32,7 +32,7 @@ const EVENTS: IEvents.EventItem[] = [
     "blurb": "EFF hosted a happy hour meetup, coming all the way from San Francisco, CA."
   },
   {
-    "title": "Disability inclusion at Facebook NY Fireside Chat",
+    "title": "Disability Inclusion at Facebook NY Fireside Chat",
     "gmap_url": "https://www.google.com/maps/embed/v1/place?q=770+Broadway+770+Broadway,+New+York,+NY+10003,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8",
     "location": "Facebook @ New York, NY",
     "date": "April 18, 2018",
