@@ -33,6 +33,7 @@ const PROJECTS: IProjects.ProjectItem[] = [
     "host_link": "",
     "screenshots": [
       "project_screenshots/doctor_app_frontend_1.png",
+      "project_screenshots/doctor_app_frontend_2.png",
       "project_screenshots/doctor_app_backend_1.png"
     ]
   },
