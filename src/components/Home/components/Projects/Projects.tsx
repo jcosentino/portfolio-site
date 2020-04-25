@@ -70,7 +70,7 @@ const PROJECTS: IProjects.ProjectItem[] = [
     "code_links": [
       "https://github.com/jcosentino/po_search_app"
     ],
-    "host_link": "",
+    "host_link": "http://ec2-54-174-168-44.compute-1.amazonaws.com:3215",
     "screenshots": [
       "project_screenshots/po_search_app_1.png",
       "project_screenshots/po_search_app_2.png",
