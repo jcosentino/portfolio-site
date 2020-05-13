@@ -3,6 +3,7 @@ import './Projects.scss';
 import { HomeMenu, TechIconsDisplay } from '../Shared';
 import { ImagePanel } from '../Shared/ImagePanel/ImagePanel';
 import { IProjects } from 'custom_types/projects_types';
+import { PO_SEARCH_HOST_ROUTE, HOST_URL } from 'constants/external_urls';
 
 const IN_PROGRESS: string = 'In Progress...'
 
@@ -31,6 +32,7 @@ const PROJECTS: IProjects.ProjectItem[] = [
       "https://github.com/jcosentino/doctor-appointment-scheduler-API-flask"
     ],
     "host_link": "",
+    "display_link": "",
     "screenshots": [
       "project_screenshots/doctor_app_frontend_1.png",
       "project_screenshots/doctor_app_frontend_2.png",
@@ -51,7 +53,8 @@ const PROJECTS: IProjects.ProjectItem[] = [
     "code_links": [
       "https://github.com/jcosentino/portfolio-site"
     ],
-    "host_link": "https://jcosentino.me/",
+    "host_link": HOST_URL,
+    "display_link": HOST_URL,
     "screenshots": [
       "project_screenshots/portfolio_site_1.png",
       "project_screenshots/portfolio_site_2.png"
@@ -70,7 +73,8 @@ const PROJECTS: IProjects.ProjectItem[] = [
     "code_links": [
       "https://github.com/jcosentino/po_search_app"
     ],
-    "host_link": "http://ec2-54-174-168-44.compute-1.amazonaws.com:3215",
+    "host_link": PO_SEARCH_HOST_ROUTE,
+    "display_link": `${HOST_URL}${PO_SEARCH_HOST_ROUTE}`,
     "screenshots": [
       "project_screenshots/po_search_app_1.png",
       "project_screenshots/po_search_app_2.png",
@@ -91,6 +95,7 @@ const PROJECTS: IProjects.ProjectItem[] = [
     ],
     "code_links": [],
     "host_link": "",
+    "display_link": "",
     "screenshots": [
       "project_screenshots/research_app_1.png",
       "project_screenshots/research_app_2.png",
@@ -111,6 +116,7 @@ const PROJECTS: IProjects.ProjectItem[] = [
     ],
     "code_links": [],
     "host_link": "https://cunytechprep.nyc/",
+    "display_link": "https://cunytechprep.nyc/",
     "screenshots": [
       "project_screenshots/ctp_project_1.png"
     ]
@@ -156,6 +162,7 @@ function createProject(blurb: string,
                        key_tech: string[],
                        code_links: string[],
                        host_link: string,
+                       display_link: string,
                        screenshots: string[]
   ): JSX.Element {
     return (
@@ -177,7 +184,7 @@ function createProject(blurb: string,
           <p><span className='project-label'>Hosted at:</span><br></br>
             <a href={host_link}
                 target='blank' rel='noopener noreferrer'>
-                {host_link}
+                {display_link}
             </a>
           </p>
         </div>
@@ -197,6 +204,7 @@ function generateProjects(): ReactFragment[] {
                     proj.key_tech,
                     proj.code_links,
                     proj.host_link,
+                    proj.display_link,
                     proj.screenshots
     )}
   </>

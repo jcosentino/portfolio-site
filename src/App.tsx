@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.scss';
 import { Home, Header, Footer, IEError, Modal } from './components';
-import { BrowserRouter, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Redirect, Route } from 'react-router-dom';
 import { detect } from 'detect-browser';
 import { INTERNET_EXPLORER } from 'constants/constants';
+import { PO_SEARCH_HOST_ROUTE, PO_SEARCH_HOST_URL } from 'constants/external_urls';
 
 function App(): JSX.Element {
   // Check if Internet Explorer
@@ -23,6 +24,10 @@ function App(): JSX.Element {
           <Footer />
         </div>
         <Switch>
+          <Route path={PO_SEARCH_HOST_ROUTE}
+                 component={() => { window.location.href = PO_SEARCH_HOST_URL;
+                            return null; } }
+          />
           <Redirect from='*' to='' />
         </Switch>
       </BrowserRouter>

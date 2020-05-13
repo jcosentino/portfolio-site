@@ -6,6 +6,7 @@ export namespace IProjects {
         key_tech: string[];
         code_links: string[];
         host_link: string;
+        display_link: string;
         screenshots: string[];
     }
 }
