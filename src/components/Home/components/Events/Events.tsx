@@ -5,6 +5,16 @@ import { IEvents } from 'custom_types/events_types';
 
 const EVENTS: IEvents.EventItem[] = [
   {
+    "title": "Zillow Virtual Networking Series",
+    "gmap_url": "https://maps.google.com/maps?q=1301%202nd%20Ave%20floor%2031%2C%20Seattle%2C%20WA%2098101&t=&z=13&ie=UTF8&iwloc=&output=embed",
+    "location": "Zillow Group @ Seattle, WA",
+    "date": "May 15, 2020",
+    "info_url": "https://www.zillow.com/careers/",
+    "blurb": `Virtual event detailing the actions that Zillow 
+              has taken to ensure a seamless transition to a remote
+              world during the Covid-19 pandemic.`
+  },
+  {
     "title": "Microsoft Information Event",
     "gmap_url": "https://maps.google.com/maps?q=15010%20NE%2036th%20St%20%2392%2C%20Redmond%2C%20WA%2098052&t=&z=13&ie=UTF8&iwloc=&output=embed",
     "location": "Microsoft HQ @ Redmond, WA",
