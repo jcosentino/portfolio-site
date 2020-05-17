@@ -1,5 +1,3 @@
-@import 'styles/style_constants.scss';
-
 html {
   height: 100%;
   width: 100%;
@@ -18,7 +16,7 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url('/background.jpg') $background-color no-repeat center center fixed;
+  background: url('/background.jpg') rgb(30, 104, 105) no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
