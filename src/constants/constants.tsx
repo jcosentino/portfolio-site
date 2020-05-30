@@ -37,3 +37,6 @@ export const IE_HELP_LINK: string = 'This link might be useful.';
 export const MODAL_HELPER_TEXT: string = `Thank you for visiting my website!
                                   If you would like to see my Github
                                   page, click on the icon below:`;
+
+// Experience
+export const CURRENT_JOB = 'current';

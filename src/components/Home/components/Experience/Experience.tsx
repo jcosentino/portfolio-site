@@ -4,8 +4,20 @@ import { HomeMenu } from '../Shared';
 import { TechIconsDisplay } from '../Shared/TechIconsDiplay/TechIconsDisplay';
 import { IExperience } from 'custom_types/experience_types';
 import { CalendarItem } from '../Shared/CalendarItem/CalendarItem';
+import { CURRENT_JOB } from 'constants/constants';
 
 const EXPERIENCE_ROLES: IExperience.ExperienceRole[] = [
+  {
+    "title": "Virtusa Corporation",
+    "location": "Windsor, CT",
+    "duration": {
+      "startDate": '6/5/2020',
+      "endDate": CURRENT_JOB
+    },
+    "company_logo": "virtusa.png",
+    "info_url": "https://www.virtusa.com/",
+    "key_tech": []
+  },
   {
     "title": "Prudential Financial",
     "location": "Newark, NJ",
@@ -102,7 +114,7 @@ function createEvent(title: string,
   ): ReactFragment {
   const startDate: string = duration.startDate;
   // Need to account for current job(s)
-  const endDate: Date | string = duration.endDate === 'current' ? new Date() : duration.endDate;
+  const endDate: Date | string = duration.endDate === CURRENT_JOB ? new Date() : duration.endDate;
 
   return (
     <Fragment key={index}>
