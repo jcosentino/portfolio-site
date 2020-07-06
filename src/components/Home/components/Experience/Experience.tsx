@@ -9,7 +9,7 @@ import { CURRENT_JOB } from 'constants/constants';
 const EXPERIENCE_ROLES: IExperience.ExperienceRole[] = [
   {
     "title": "Virtusa Corporation",
-    "location": "Windsor, CT",
+    "location": "Buffalo, NY",
     "duration": {
       "startDate": '6/5/2020',
       "endDate": CURRENT_JOB
