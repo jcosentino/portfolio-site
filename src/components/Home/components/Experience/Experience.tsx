@@ -8,18 +8,32 @@ import { CURRENT_JOB } from 'constants/constants';
 
 const EXPERIENCE_ROLES: IExperience.ExperienceRole[] = [
   {
+    "title": "American Express Company",
+    "location": "New York, NY",
+    "duration": {
+      "startDate": '4/26/2021',
+      "endDate": CURRENT_JOB
+    },
+    "company_logo": "americanexpress.png",
+    "info_url": "https://www.americanexpress.com/",
+    "key_tech": []
+  },
+  {
     "title": "Virtusa Corporation",
     "location": "Buffalo, NY",
     "duration": {
       "startDate": '6/5/2020',
-      "endDate": CURRENT_JOB
+      "endDate": '4/16/2021'
     },
     "company_logo": "virtusa.png",
     "info_url": "https://www.virtusa.com/",
-    "key_tech": []
+    "key_tech": [
+      "openshift.png",
+      "spring.png"
+    ]
   },
   {
-    "title": "Prudential Financial",
+    "title": "Prudential Insurance",
     "location": "Newark, NJ",
     "duration": {
       "startDate": '4/1/2019',
@@ -36,7 +50,7 @@ const EXPERIENCE_ROLES: IExperience.ExperienceRole[] = [
     ]
   },
   {
-    "title": "Goodwill Industries NY / NJ",
+    "title": "Goodwill Industries NY",
     "location": "Queens, NY",
     "duration": {
       "startDate": '12/10/2018',
@@ -114,7 +128,10 @@ function createEvent(title: string,
   ): ReactFragment {
   const startDate: string = duration.startDate;
   // Need to account for current job(s)
-  const endDate: Date | string = duration.endDate === CURRENT_JOB ? new Date() : duration.endDate;
+  const endDate: string = duration.endDate === CURRENT_JOB ? '' : duration.endDate;
+  const startDateElemeent: any = createDateItem(START_DATE_LABEL, new Date(startDate));
+  const endDateElement: any = endDate ? createDateItem(END_DATE_LABEL, new Date(endDate))
+                                      : <Fragment className='active-job'></Fragment>;
 
   return (
     <Fragment key={index}>
@@ -129,8 +146,8 @@ function createEvent(title: string,
       </div>
       <p>Location: {location}</p>
       <div className='experience-calendar-container'>
-        {createDateItem(START_DATE_LABEL, new Date(startDate))}
-        {createDateItem(END_DATE_LABEL, new Date(endDate))}
+        {startDateElemeent}
+        {endDateElement}
       </div>
       <TechIconsDisplay iconsList={key_tech} />
     </Fragment>

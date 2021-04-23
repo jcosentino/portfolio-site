@@ -6,7 +6,7 @@
 
 .experience-calendar-container {
     display: grid;
-    grid-template-columns: auto 50%;
+    grid-template-columns: auto auto;
     column-gap: 0.5vw;
     justify-items: center;
     margin: 1vh 1vw;
@@ -17,6 +17,10 @@
     border-bottom: solid black 0.1vh;
     margin: 0 3vw;
     font-weight: bold;
+}
+
+.active-job {
+    display: none;
 }
 
 @media screen and (orientation: portrait){ 

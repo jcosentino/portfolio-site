@@ -29,6 +29,11 @@ const SOFTWARE: IShared.ImgIconData[] = [
     "alt": "Node JS"
   },
   {
+    "url": "https://www.openshift.com/",
+    "imageSrc": "software/openshift.png",
+    "alt": "Openshift"
+  },
+  {
     "url": "https://reactjs.org/",
     "imageSrc": "software/reactjs.jpg",
     "alt": "React JS"
