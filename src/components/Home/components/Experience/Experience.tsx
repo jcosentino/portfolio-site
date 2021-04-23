@@ -131,7 +131,7 @@ function createEvent(title: string,
   const endDate: string = duration.endDate === CURRENT_JOB ? '' : duration.endDate;
   const startDateElemeent: any = createDateItem(START_DATE_LABEL, new Date(startDate));
   const endDateElement: any = endDate ? createDateItem(END_DATE_LABEL, new Date(endDate))
-                                      : <Fragment className='active-job'></Fragment>;
+                                      : <div className='active-job'></div>;
 
   return (
     <Fragment key={index}>
