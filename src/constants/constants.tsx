@@ -26,7 +26,7 @@ export const TWITTER_LINK: string = 'https://twitter.com/jcosentino91';
 export const EMAIL_LINK: string = 'john.s.cosentino@gmail.com';
 export const LINKEDIN_LINK: string = 'https://www.linkedin.com/in/john-cosentino/';
 export const GITHUB_LINK: string = 'https://github.com/jcosentino';
-export const RESUME_LINK: string = 'https://www.dropbox.com/s/2gkajc8ufdh2t57/Resume%20%28March%202020%20e%29.pdf';
+export const RESUME_LINK: string = 'footer/resume.pdf';
 
 // IE Error
 export const IE_ERROR_MSG: string = `Internet Explorer is not supported by
