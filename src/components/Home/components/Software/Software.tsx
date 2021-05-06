@@ -14,6 +14,11 @@ const SOFTWARE: IShared.ImgIconData[] = [
     "alt": "Amazon Web Services"
   },
   {
+    "url": "https://www.drools.org/",
+    "imageSrc": "software/drools.png",
+    "alt": "Drools BRMS"
+  },
+  {
     "url": "https://palletsprojects.com/p/flask/",
     "imageSrc": "software/python.png",
     "alt": "Flask"

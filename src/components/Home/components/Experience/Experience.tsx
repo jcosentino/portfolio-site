@@ -28,6 +28,7 @@ const EXPERIENCE_ROLES: IExperience.ExperienceRole[] = [
     "company_logo": "virtusa.png",
     "info_url": "https://www.virtusa.com/",
     "key_tech": [
+      "drools.png",
       "openshift.png",
       "spring.png"
     ]
