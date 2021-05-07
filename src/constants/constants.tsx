@@ -23,7 +23,7 @@ export const RESUME_TEXT: string = 'Resume';
 
 // Footer Links
 export const TWITTER_LINK: string = 'https://twitter.com/jcosentino91';
-export const EMAIL_LINK: string = 'john.s.cosentino@gmail.com';
+export const EMAIL_LINK: string = 'johnscosentino@gmail.com';
 export const LINKEDIN_LINK: string = 'https://www.linkedin.com/in/john-cosentino/';
 export const GITHUB_LINK: string = 'https://github.com/jcosentino';
 export const RESUME_LINK: string = 'footer/resume.pdf';
