@@ -16,6 +16,7 @@ export const ABOUT: string = 'About';
 
 //Footer
 export const TWITTER: string = 'Twitter';
+export const MEDIUM: string = 'Medium';
 export const EMAIL_TEXT: string = 'Email';
 export const LINKEDIN: string = 'LinkedIn';
 export const GITHUB: string = 'Github';
@@ -23,6 +24,7 @@ export const RESUME_TEXT: string = 'Resume';
 
 // Footer Links
 export const TWITTER_LINK: string = 'https://twitter.com/jcosentino91';
+export const MEDIUM_LINK: string = 'https://medium.com/@jcosentino';
 export const EMAIL_LINK: string = 'johnscosentino@gmail.com';
 export const LINKEDIN_LINK: string = 'https://www.linkedin.com/in/john-cosentino/';
 export const GITHUB_LINK: string = 'https://github.com/jcosentino';

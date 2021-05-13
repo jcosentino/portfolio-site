@@ -9,7 +9,9 @@ import { TWITTER_LINK,
          EMAIL_TEXT,
          LINKEDIN,
          GITHUB,
-         RESUME_TEXT } from 'constants/constants';
+         RESUME_TEXT, 
+         MEDIUM_LINK,
+         MEDIUM } from 'constants/constants';
 import { IShared } from 'custom_types/MultiComponent/shared_types';
 
 const FOOTER_DATA: IShared.ImgIconData[] = [
@@ -17,6 +19,11 @@ const FOOTER_DATA: IShared.ImgIconData[] = [
     "url": TWITTER_LINK,
     "imageSrc": "twitter.png",
     "alt": TWITTER
+  },
+  {
+    "url": MEDIUM_LINK,
+    "imageSrc": "medium.png",
+    "alt": MEDIUM
   },
   {
     "url": `mailto:${EMAIL_LINK}?subject`,
