@@ -83,7 +83,7 @@ const EVENTS: IEvents.EventItem[] = [
   },
   {
     "title": "Google Project Tango Hackathon",
-    "gmap_url": "https://maps.google.com/maps?q=Staten%20Island%20MakerSpace%2C%20450%20Front%20St%2C%20Unit%20B%2C%20Staten%20Island%2C%20NY%2C%20us%2C%2010304&t=&z=13&ie=UTF8&iwloc=&output=embed",
+    "gmap_url": "https://www.google.com/maps/embed/v1/place?q=450+Front+St,+Staten+Island,+NY+10304&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8",
     "location": "MakerSpace NYC @ Staten Island, NY",
     "date": "April 9, 2016",
     "info_url": "https://www.meetup.com/NYCVRU/events/229862118/",

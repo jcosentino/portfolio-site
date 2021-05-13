@@ -3,11 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/react": "^16.14.6",
-    "@types/react-calendar": "^3.1.4",
-    "@types/react-dom": "^16.9.12",
-    "@types/react-redux": "^7.1.16",
-    "@types/react-router-dom": "^5.1.7",
     "caniuse-lite": "^1.0.30001223",
     "date-fns": "^2.21.2",
     "detect-browser": "^5.2.0",
@@ -29,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --ignore-path .gitignore --ext js,jsx,ts,tsx ."
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,6 +43,13 @@
     ]
   },
   "devDependencies": {
+    "@types/react": "^17.0.5",
+    "@types/react-calendar": "^3.1.4",
+    "@types/react-dom": "^17.0.5",
+    "@types/react-redux": "^7.1.16",
+    "@types/react-router-dom": "^5.1.7",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.1",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.2",
     "typescript": "^3.9.9"
