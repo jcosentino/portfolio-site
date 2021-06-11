@@ -1,24 +1,74 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb"
-    ],
+    "extends": "airbnb",
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true
+        }
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "jquery": true
+    },
+    "settings": {
+        "react": {
+            "pragma": "React",
+            "version": "15.1.0"
         },
-        "ecmaVersion": 12,
-        "sourceType": "module"
+        "ecmascript": 6,
+        "jsx": true
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "react-hooks"
     ],
     "rules": {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/prop-types": "off",
+        "strict": 0,
+        "quotes": 0,
+        "no-unused-vars": 1,
+        "camelcase": 1,
+        "no-underscore-dangle": 1,
+        "comma-dangle": [
+            1,
+            "never"
+        ],
+        "indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent": 0,
+        "react/jsx-equals-spacing": [
+            2,
+            "always"
+        ],
+        "no-console": 0,
+        "max-len": 1,
+        "no-param-reassign": 1,
+        "key-spacing": [
+            2,
+            {
+                "align": "colon",
+                "beforeColon": true,
+                "afterColon": true
+            }
+        ],
+        "no-multi-spaces": [
+            2,
+            {
+                "exceptions": {
+                    "VariableDeclarator": true,
+                    "ImportDeclaration": true,
+                    "JSXAttribute": true,
+                    "AssignmentExpression": true
+                }
+            }
+        ]
     }
 }
