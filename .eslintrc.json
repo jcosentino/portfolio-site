@@ -16,10 +16,15 @@
     "settings": {
         "react": {
             "pragma": "React",
-            "version": "15.1.0"
+            "version": "16.14.0"
         },
         "ecmascript": 6,
-        "jsx": true
+        "jsx": true,
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
     },
     "plugins": [
         "react",
@@ -27,6 +32,7 @@
         "react-hooks"
     ],
     "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "react/prop-types": "off",
@@ -70,5 +76,9 @@
                 }
             }
         ]
+    },
+    "globals": {
+        "React": true,
+        "JSX": true
     }
 }

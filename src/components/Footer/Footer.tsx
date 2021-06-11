@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-indent-props */
 import React from 'react';
 import './Footer.scss';
 import {
@@ -53,9 +54,10 @@ export function Footer(): JSX.Element {
     function createFooterComp(imageSrc: string, url: string = '', alt: string = '') {
         return (
             <a
-              href = {url}
-              target = "blank" rel = "noopener noreferrer"
-              key = {alt}
+                href = {url}
+                target = "blank"
+                rel = "noopener noreferrer"
+                key = {alt}
             >
                 <img src = {imageSrc} alt = {alt} title = {alt} />
             </a>
