@@ -7,7 +7,7 @@
     "date-fns": "^2.21.2",
     "detect-browser": "^5.2.0",
     "gud": "^1.0.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.14.0",
     "react-calendar": "^3.4.0",
     "react-dom": "^16.14.0",
