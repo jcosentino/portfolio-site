@@ -1,5 +1,5 @@
-export { Home } from './Home/Home';
-export { Header } from './Header/Header';
-export { Footer } from './Footer/Footer';
-export { IEError } from './IE_Error/IEError';
-export { Modal } from './Modal/Modal';
+export { default as Home } from './Home/Home';
+export { default as Header } from './Header/Header';
+export { default as Footer } from './Footer/Footer';
+export { default as IEError } from './IE_Error/IEError';
+export { default as Modal } from './Modal/Modal';

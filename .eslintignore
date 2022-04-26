@@ -1,0 +1,4 @@
+dist/
+src/serviceWorker.js
+types/
+index.html

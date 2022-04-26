@@ -1,5 +1,5 @@
 export namespace ITechIconsDisplay {
-    export interface TechIconsDisplayProps {
-        iconsList: string[];
-    }
+  export interface TechIconsDisplayProps {
+    iconsList: string[];
+  }
 }

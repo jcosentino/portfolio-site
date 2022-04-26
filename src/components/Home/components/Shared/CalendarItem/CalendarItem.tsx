@@ -4,16 +4,20 @@ import 'react-calendar/dist/Calendar.css';
 import Calendar from 'react-calendar';
 import { ICalendarItem } from 'custom_types/calendaritem_types';
 
-export function CalendarItem(props: ICalendarItem.CalendarItemProps): JSX.Element {
-    const {
-        cal_date
-    } = props;
+function CalendarItem(props: ICalendarItem.CalendarItemProps): JSX.Element {
+  const {
+    calendarDate,
+  } = props;
 
-    const CAL_CLASS = 'calendar-item';
+  const CAL_CLASS = 'calendar-item';
 
-    return <Calendar 
-                    className={CAL_CLASS}
-                    calendarType='US'
-                    value = {cal_date}
-            />
+  return (
+    <Calendar
+      className={CAL_CLASS}
+      calendarType="US"
+      value={calendarDate}
+    />
+  );
 }
+
+export default CalendarItem;

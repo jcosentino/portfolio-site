@@ -2,13 +2,13 @@ import React, { useState, ReactFragment } from 'react';
 import './HomeMenu.scss';
 import { IHomeMenu } from 'custom_types/homemenu_types';
 
-export function HomeMenu(props: IHomeMenu.HomeMenuProps): JSX.Element {
+function HomeMenu(props: IHomeMenu.HomeMenuProps): JSX.Element {
   const [activeItems, setActiveItems] = useState<boolean[]>([]);
-  const { 
+  const {
     anchorId,
     headerTitle,
     renderItems,
-    customDiv
+    customDiv,
   } = props;
 
   function openItem(index: number): void {
@@ -24,7 +24,7 @@ export function HomeMenu(props: IHomeMenu.HomeMenuProps): JSX.Element {
   }
 
   function handleClick(index: number): void {
-    if(activeItems[index]){
+    if (activeItems[index]) {
       closeItem(index);
     } else {
       openItem(index);
@@ -38,32 +38,35 @@ export function HomeMenu(props: IHomeMenu.HomeMenuProps): JSX.Element {
   function createEvent(title: string, index: number): JSX.Element {
     return (
       <li key={index}>
-        <button type='button' className={`info-item-banner ${findActiveTabs(index)}`}
-                onClick={() => handleClick(index)} >
+        <button
+          type="button"
+          className={`info-item-banner ${findActiveTabs(index)}`}
+          onClick={() => handleClick(index)}
+        >
           {title}
         </button>
-        {activeItems[index] && 
-         <div className='info-item-para'>
-            {customDiv[index]}
-        </div>}
+        {activeItems[index]
+         && (
+         <div className="info-item-para">
+           {customDiv[index]}
+         </div>
+         )}
       </li>
     );
   }
 
   function generateEvents(): ReactFragment {
-    return renderItems.map((item, index) => 
-      createEvent(item, index)
-    );
+    return renderItems.map((item, index) => createEvent(item, index));
   }
 
   return (
     <>
-      <span className='anchor' id={anchorId}></span>
-      <div className='home-item'>
+      <span className="anchor" id={anchorId} />
+      <div className="home-item">
         <h1>
-        {headerTitle}
+          {headerTitle}
         </h1>
-        <div className='list-items'>
+        <div className="list-items">
           <ul>
             {generateEvents()}
           </ul>
@@ -72,3 +75,5 @@ export function HomeMenu(props: IHomeMenu.HomeMenuProps): JSX.Element {
     </>
   );
 }
+
+export default HomeMenu;
