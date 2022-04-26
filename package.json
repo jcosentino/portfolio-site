@@ -1,6 +1,10 @@
 {
   "name": "portfolio-site",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "author": "John Cosentino <johnscosentino@gmail.com>",
+  "contributors": [
+    "John Cosentino <johnscosentino@gmail.com>"
+  ],
   "private": true,
   "dependencies": {
     "caniuse-lite": "^1.0.30001223",
